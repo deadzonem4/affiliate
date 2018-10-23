@@ -1,11 +1,12 @@
 import React from "react";
+import MainLayout from '../layout/MainLayout.js';
 
 const ErrorPage = (props) => {
     
     return (
-      <div>
-        <h1>Error Page</h1>
-      </div>
+      <MainLayout>
+				<h1>Error Page</h1>
+			</MainLayout>
     );
 }
 

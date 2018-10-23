@@ -1,14 +1,14 @@
 import React from 'react';
-
+import MainLayout from '../layout/MainLayout.js';
 
 
 class HomePage extends React.Component {
 
   render() {
 		return (
-      <main id="content">
-        <h1>HomePage</h1>
-      </main>
+			<MainLayout>
+				<h1>Home Page</h1>
+			</MainLayout>
 	  );
   };
     
