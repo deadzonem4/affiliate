@@ -15,7 +15,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/affiliate" component={HomePage} />
-          <Route exact path="/affiliate/admin" component={AdminPage} />
+          <Route path="/affiliate/admin/" component={AdminPage} />
           <Route component={ErrorPage} />
         </Switch>
       </BrowserRouter>
