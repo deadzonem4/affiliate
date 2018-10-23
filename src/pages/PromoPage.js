@@ -4,17 +4,17 @@ import MainLayout from '../layout/MainLayout.js';
 
 
 
-class HomePage extends React.Component {
+class PromoPage extends React.Component {
 
   render() {
 		return (
 			<MainLayout>
-				<h1>Home Page</h1>
+				<h1>Promotions Page</h1>
 			</MainLayout>
 	  );
   };
     
 }
 
-export default HomePage;
+export default PromoPage;
 

@@ -5,7 +5,6 @@ import Footer from './Footer.js';
 const MainLayout = (props) => {
   return (
     <div>
-    <p>Main Layout</p>
       <Header/>
       <main id="content">
         {props.children}
