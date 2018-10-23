@@ -11,15 +11,12 @@ import {
 const styles = {};
 
 styles.fill = {
-  background: '#23345c',
-  boxShadow: '0px 2px 11px 1px rgba(0, 0, 0, 0.31)',
-  borderBottom: 'solid 1px #98a3b7'
+  background: '#222222'
 };
 
 class MainMenu extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {isOpen: false};
   }
