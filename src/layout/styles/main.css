@@ -9,10 +9,43 @@ ul{
 a:hover{
 	text-decoration: none;
 }
-header{
+footer{
+	text-align: center;
+	padding: 25px 0 20px;
 	background-color: #222222;
 }
-
+.list-title{
+  font-size: 13px;
+  color: #76767b;
+}
+.payment-list{
+	margin-bottom: 40px;
+}
+.payment-list img{
+	max-height: 35px;
+}
+.payment-list li{
+	margin: 0 2px;
+	display: inline-block;
+}
+.partner-list{
+	max-width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.partner-list li{
+	display: inline-block;
+	margin: 20px 8px;
+}
+.partner-list img{
+	max-height: 80px;
+}
+.copy-right p{
+	color: #6d6d6d;
+	font-size: 12px;
+	margin-bottom: 15px;
+	line-height: 1.3;
+}
 @media only screen and (max-width: 1199px) {
 
 }

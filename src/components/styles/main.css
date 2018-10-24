@@ -1,3 +1,4 @@
+/*---------------------------Upper Header-------------*/
 .nav-link{
 	font-family: OpenSans;
   font-size: 14px;
@@ -15,7 +16,13 @@
 }
 .navbar{
 	padding: 0;
+	background-color: #222222;
 }
 .active{
 	background-color: #cc2027!important;
+}
+/*---------------------------Down Header-------------*/
+.logo-box{
+	background-image: linear-gradient(to top, #840000, #cc2027);
+	padding: 10px 0;
 }

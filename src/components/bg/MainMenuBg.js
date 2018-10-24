@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NavLink as RRNavLink } from 'react-router-dom';
 import '../styles/main.css';
 import {
@@ -28,9 +27,6 @@ class MainMenuBg extends React.Component {
       <div>
         <Navbar color="custom-header" expand="md">
           <div className="container">
-            <Link className="navbar-brand" to="/">
-
-            </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
