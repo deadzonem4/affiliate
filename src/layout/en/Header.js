@@ -1,5 +1,5 @@
 import React from "react";
-import MainMenu from '../components/MainMenu.js';
+import MainMenu from '../../components/MainMenu.js';
 
 const Header = (props) => {
 

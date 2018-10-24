@@ -31,7 +31,7 @@ class MainMenuBg extends React.Component {
       <div>
         <Navbar color="custom-header" expand="md"  style={{...styles.fill}}>
           <div className="container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/bg">
               <p>Лого</p>
             </Link>
             <NavbarToggler onClick={this.toggle} />

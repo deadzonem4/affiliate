@@ -1,5 +1,5 @@
 import React from "react";
-import AdminLayout from '../layout/AdminLayout.js';
+import AdminLayout from '../../layout/AdminLayout.js';
 
 
 class AdminPage extends React.Component {

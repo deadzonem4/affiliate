@@ -1,5 +1,5 @@
 import React from "react";
-import MainMenuBg from '../components/MainMenuBg.js';
+import MainMenuBg from '../../components/MainMenuBg.js';
 
 const HeaderBg = (props) => {
 
