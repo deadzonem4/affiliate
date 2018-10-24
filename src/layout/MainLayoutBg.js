@@ -1,23 +1,22 @@
 import React from "react";
-import Header from './Header.js';
-import Footer from './Footer.js';
+import HeaderBg from './HeaderBg.js';
+import FooterBg from './FooterBg.js';
 
-
-const MainLayout = (props) => {
+const MainLayoutBg = (props) => {
 
     return (
       <div>
-	      <Header/>
+	      <HeaderBg/>
 		    <button onClick={props.languageBg}>bg</button>
         <button onClick={props.languageEn}>en</button>
 	      <main id="content">
 	        {props.children}
 	      </main>
-	      <Footer/>
+	      <FooterBg/>
 	    </div>
     );
 }
 
-export default MainLayout;
+export default MainLayoutBg;
 
 

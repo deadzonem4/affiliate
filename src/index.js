@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/HomePage.js';
 import AboutPage from './pages/AboutPage.js';
@@ -17,18 +17,18 @@ import * as serviceWorker from './serviceWorker';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
-          <Route exact path="/affiliate" component={HomePage} />
-          <Route path="/affiliate/about-us/" component={AboutPage} />
-          <Route path="/affiliate/information/" component={InfoPage} />
-          <Route path="/affiliate/promotions/" component={PromoPage} />
-          <Route path="/affiliate/news/" component={NewsPage} />
-          <Route path="/affiliate/contact/" component={ContactPage} />
-          <Route path="/affiliate/admin/" component={AdminPage} />
+          <Route exact path="/" component={HomePage} />
+          <Route path="/about-us/" component={AboutPage} />
+          <Route path="/information/" component={InfoPage} />
+          <Route path="/promotions/" component={PromoPage} />
+          <Route path="/news/" component={NewsPage} />
+          <Route path="/contact/" component={ContactPage} />
+          <Route path="/admin/" component={AdminPage} />
           <Route component={ErrorPage} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

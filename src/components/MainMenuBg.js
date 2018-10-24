@@ -11,10 +11,11 @@ import {
 const styles = {};
 
 styles.fill = {
-  background: '#222222'
+  background: '#222222',
+  color: '#fff'
 };
 
-class MainMenu extends React.Component {
+class MainMenuBg extends React.Component {
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -31,38 +32,40 @@ class MainMenu extends React.Component {
         <Navbar color="custom-header" expand="md"  style={{...styles.fill}}>
           <div className="container">
             <Link className="navbar-brand" to="/">
-              <p>Logo</p>
+              <p>Лого</p>
             </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Link className="nav-link" to="/">Home</Link>
+                  <Link className="nav-link" to="/">Начало</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/about-us">About us</Link>
+                  <Link className="nav-link" to="/about-us">За нас</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/information">Information</Link>
+                  <Link className="nav-link" to="/information">Информация</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/promotions">Promotions</Link>
+                  <Link className="nav-link" to="/promotions">Промоции</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/news">News</Link>
+                  <Link className="nav-link" to="/news">Новини</Link>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/contact">Contacts</Link>
+                  <Link className="nav-link" to="/contact">Контакти</Link>
                 </NavItem>
               </Nav>
             </Collapse>
+            
           </div>
+          
         </Navbar>
       </div>
     );
   }
 }
-export default MainMenu;
+export default MainMenuBg;
 
 
 
