@@ -1,0 +1,21 @@
+.nav-link{
+	font-family: OpenSans;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #e5e5e5;
+  text-transform: uppercase;
+  margin-right: 5px;
+  padding: 10px 15px!important;
+  transition: ease .2s;
+}
+.nav-link:hover, .nav-link:focus{
+	background-color: #cc2027;
+	color: #fff;
+}
+.navbar{
+	padding: 0;
+}
+.active{
+	background-color: #cc2027!important;
+}

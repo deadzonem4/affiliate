@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
+
+import '../styles/main.css';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem
+  NavItem,
+  NavLink
   } from 'reactstrap';
-
-const styles = {};
-
-styles.fill = {
-  background: '#222222'
-};
 
 class MainMenu extends React.Component {
   constructor(props) {
@@ -28,31 +26,31 @@ class MainMenu extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="custom-header" expand="md"  style={{...styles.fill}}>
+        <Navbar color="custom-header" expand="md">
           <div className="container">
             <Link className="navbar-brand" to="/">
-              <p>Logo</p>
+              
             </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Link className="nav-link" to="/">Home</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/" activeClassName="active" exact path="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/about-us">About us</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">About us</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/information">Information</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/information" activeClassName="active" exact path="/information">Information</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/promotions">Promotions</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/promotions" activeClassName="active" exact path="/promotions">Promotions</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/news">News</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/news" activeClassName="active" exact path="/news">News</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/contact">Contacts</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">Contacts</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

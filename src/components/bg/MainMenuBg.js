@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { NavLink as RRNavLink } from 'react-router-dom';
+import '../styles/main.css';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   Nav,
-  NavItem
+  NavItem,
+  NavLink
   } from 'reactstrap';
 
-const styles = {};
-
-styles.fill = {
-  background: '#222222',
-  color: '#fff'
-};
 
 class MainMenuBg extends React.Component {
   constructor(props) {
@@ -29,31 +26,31 @@ class MainMenuBg extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="custom-header" expand="md"  style={{...styles.fill}}>
+        <Navbar color="custom-header" expand="md">
           <div className="container">
-            <Link className="navbar-brand" to="/bg">
-              <p>Лого</p>
+            <Link className="navbar-brand" to="/">
+
             </Link>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <Link className="nav-link" to="/">Начало</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/" activeClassName="active" exact path="/">Начало</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/about-us">За нас</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">За нас</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/information">Информация</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/information" activeClassName="active" exact path="/information">Информация</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/promotions">Промоции</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/promotions" activeClassName="active" exact path="/promotions">Промоции</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/news">Новини</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/news" activeClassName="active" exact path="/news">Новини</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Link className="nav-link" to="/contact">Контакти</Link>
+                  <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">Контакти</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
@@ -65,6 +62,7 @@ class MainMenuBg extends React.Component {
     );
   }
 }
+
 export default MainMenuBg;
 
 
