@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
-
+import MainSlider from '../../components/en/MainSlider.js';
 
 
 const HomePage = (props) => {
@@ -8,7 +8,7 @@ const HomePage = (props) => {
   return (
   	<div>
       <MainLayout bg={props.languageBg} en={props.languageEn}>
-				<h1>Home page</h1>
+				<MainSlider registerbutton="Register" logbutton="Log-in"/>
 			</MainLayout>
     </div>
   );

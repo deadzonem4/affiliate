@@ -1,25 +1,41 @@
+.time-clock{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
 .current-time{
 	font-size: 14px;
   font-weight: 600;
   color: #e5e5e5;
+  margin: 0 5px;
 }
 .fa-clock{
 	color: #e5e5e5;
 	margin-left: 20px;
-	margin-right: 5px;
 	font-size: 18px;
+}
+.time-clock span{
+	color: #e5e5e5;
+	font-size: 14px;
+	font-weight: 600;
 }
 .lang-bar{
   position: absolute;
-  right: 15px;
+  right: -3px;
   top: 8px;
   z-index: 99;
 }
 .lang-bar span{
+	background-color: #7b0005;
+  padding: 10px;
+  color: #fff;
+  margin-right: 3px;
+  cursor: pointer;
+  border-radius: 0px;
+  transition: ease .2s;
+}
+.lang-bar span:hover{
 	background-color: #cc2027;
-  padding: 3px 5px;
-	color: #fff;
-	margin-right: 5px;
-	cursor: pointer;
-	border-radius: 4px;
 }

@@ -26,12 +26,12 @@ class MainMenuBg extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="custom-header" expand="md">
+        <Navbar color="custom-header" expand="lg">
           <LiveClock/>
           <div className="container">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+              <Nav navbar>
                 <NavItem>
                   <NavLink tag={RRNavLink} className="nav-link" to="/" activeClassName="active" exact path="/">Начало</NavLink>
                 </NavItem>

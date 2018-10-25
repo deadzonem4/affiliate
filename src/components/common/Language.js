@@ -5,8 +5,8 @@ const Language = (props) => {
     
   return (
     <div className="lang-bar">
-    	<span onClick={props.bg}>bg</span>
-      <span onClick={props.en}>en</span>
+    	<span onClick={props.bg}>BG</span>
+      <span onClick={props.en}>EN</span>
     </div>
   );
 }
