@@ -1,0 +1,25 @@
+.current-time{
+	font-size: 14px;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+.fa-clock{
+	color: #e5e5e5;
+	margin-left: 20px;
+	margin-right: 5px;
+	font-size: 18px;
+}
+.lang-bar{
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  z-index: 99;
+}
+.lang-bar span{
+	background-color: #cc2027;
+  padding: 3px 5px;
+	color: #fff;
+	margin-right: 5px;
+	cursor: pointer;
+	border-radius: 4px;
+}

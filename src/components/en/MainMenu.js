@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink as RRNavLink } from 'react-router-dom';
-
+import LiveClock from '../common/LiveClock.js';
 import '../styles/main.css';
 import {
   Collapse,
@@ -26,6 +26,7 @@ class MainMenu extends React.Component {
     return (
       <div>
         <Navbar color="custom-header" expand="md">
+          <LiveClock/>
           <div className="container">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>

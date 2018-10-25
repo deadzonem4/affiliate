@@ -7,9 +7,7 @@ const AboutPage = (props) => {
 
   return (
   	<div>
-  		<button onClick={props.languageBg}>bg</button>
-      <button onClick={props.languageEn}>en</button>
-      <MainLayout>
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
 				<h1>About page</h1>
 			</MainLayout>
     </div>

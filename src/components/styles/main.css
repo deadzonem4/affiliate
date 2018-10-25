@@ -9,6 +9,7 @@
   margin-right: 5px;
   padding: 10px 15px!important;
   transition: ease .2s;
+  cursor: pointer;
 }
 .nav-link:hover, .nav-link:focus{
 	background-color: #cc2027;
@@ -25,4 +26,5 @@
 .logo-box{
 	background-image: linear-gradient(to top, #840000, #cc2027);
 	padding: 10px 0;
+	cursor: pointer;
 }
