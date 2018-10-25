@@ -1,6 +1,9 @@
 body{
 	font-family: 'Open Sans', sans-serif;
 }
+ul,li,a,h1,h2,h3,h4,h5,p,span{
+	font-family: 'Open Sans', sans-serif;
+}
 ul{
 	list-style: none;
 	padding: 0;

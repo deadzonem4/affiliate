@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/main.css';
+import './styles/main.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
 
@@ -12,7 +12,7 @@ const LogoBox = (props) => {
       		<img className="logo" src={logo}  alt="Affiliate"/>
         </Link>
       	<a className="register" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
-    			<span>Register</span>
+    			<span>{props.button}</span>
       	</a>
       </div>
     </div>
