@@ -1,7 +1,7 @@
 {
-  "main.css": "/affiliate/static/css/main.f559b470.chunk.css",
-  "main.js": "/affiliate/static/js/main.eaf0b5d0.chunk.js",
-  "main.js.map": "/affiliate/static/js/main.eaf0b5d0.chunk.js.map",
+  "main.css": "/affiliate/static/css/main.1200b236.chunk.css",
+  "main.js": "/affiliate/static/js/main.8f96daf5.chunk.js",
+  "main.js.map": "/affiliate/static/js/main.8f96daf5.chunk.js.map",
   "static/css/1.dd174e78.chunk.css": "/affiliate/static/css/1.dd174e78.chunk.css",
   "static/js/1.bf1bdfb8.chunk.js": "/affiliate/static/js/1.bf1bdfb8.chunk.js",
   "static/js/1.bf1bdfb8.chunk.js.map": "/affiliate/static/js/1.bf1bdfb8.chunk.js.map",
@@ -15,9 +15,9 @@
   "static/media/pobeda.png": "/affiliate/static/media/pobeda.241ede0f.png",
   "static/media/bfb.png": "/affiliate/static/media/bfb.93b1f1d3.png",
   "static/media/etyr.png": "/affiliate/static/media/etyr.10a2d440.png",
+  "static/css/main.1200b236.chunk.css.map": "/affiliate/static/css/main.1200b236.chunk.css.map",
   "static/css/1.dd174e78.chunk.css.map": "/affiliate/static/css/1.dd174e78.chunk.css.map",
-  "static/css/main.f559b470.chunk.css.map": "/affiliate/static/css/main.f559b470.chunk.css.map",
   "index.html": "/affiliate/index.html",
-  "precache-manifest.a918b01b97bae0b1754c2636d73e1f06.js": "/affiliate/precache-manifest.a918b01b97bae0b1754c2636d73e1f06.js",
+  "precache-manifest.4c4fdc2ec622f2838a0d953f2abfabf3.js": "/affiliate/precache-manifest.4c4fdc2ec622f2838a0d953f2abfabf3.js",
   "service-worker.js": "/affiliate/service-worker.js"
 }
