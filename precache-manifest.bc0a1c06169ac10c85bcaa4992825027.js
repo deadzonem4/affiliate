@@ -4,20 +4,24 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/chernomorec.5dc5c1e2.png"
   },
   {
-    "revision": "8c4d0946dde538098a7a",
-    "url": "/affiliate/static/css/main.416edc28.chunk.css"
+    "revision": "be627b99b5a905a8d552",
+    "url": "/affiliate/static/css/main.35db714f.chunk.css"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "348dbc4b718a14a24d10",
-    "url": "/affiliate/static/js/1.348dbc4b.chunk.js"
+    "revision": "2e5893ce6bcf9af9ed35",
+    "url": "/affiliate/static/js/1.2e5893ce.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
     "url": "/affiliate/static/js/runtime~main.bd91b891.js"
+  },
+  {
+    "revision": "14d14d1e318c627db0ccbedffb942d5b",
+    "url": "/affiliate/static/media/news-slider.14d14d1e.jpg"
   },
   {
     "revision": "ea19e30056f779b34a981e06b7aa0ad9",
@@ -36,8 +40,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "8c4d0946dde538098a7a",
-    "url": "/affiliate/static/js/main.8c4d0946.chunk.js"
+    "revision": "be627b99b5a905a8d552",
+    "url": "/affiliate/static/js/main.be627b99.chunk.js"
   },
   {
     "revision": "162676bc60a06f8371e6b0893536c771",
@@ -56,23 +60,23 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide1.620404a3.jpg"
   },
   {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
-  },
-  {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
-  },
-  {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "348dbc4b718a14a24d10",
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
+  },
+  {
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "2e5893ce6bcf9af9ed35",
     "url": "/affiliate/static/css/1.05d645f7.chunk.css"
   },
   {
-    "revision": "8a4ec1bddca7befd1209da3935544981",
+    "revision": "df6600fcd95818b6af8dee82efd8fe19",
     "url": "/affiliate/index.html"
   }
 ];
