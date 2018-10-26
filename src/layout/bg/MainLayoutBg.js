@@ -1,6 +1,6 @@
 import React from "react";
-import HeaderBg from './HeaderBg.js';
-import FooterBg from './FooterBg.js';
+import HeaderBg from '../../components/bg/HeaderBg.js';
+import FooterBg from '../../components/bg/FooterBg.js';
 import '../styles/main.css';
 import Language from '../../components/common/Language.js';
 

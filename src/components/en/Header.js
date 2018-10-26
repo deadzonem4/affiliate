@@ -1,6 +1,6 @@
 import React from "react";
-import MainMenu from '../../components/common/MainMenu.js';
-import LogoBox from '../../components/common/LogoBox.js';
+import MainMenu from '../common/MainMenu.js';
+import LogoBox from '../common/LogoBox.js';
 import '../styles/main.css';
 
 const Header = (props) => {
