@@ -3,6 +3,7 @@ import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
 import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
+import NewsSlider from '../../components/common/NewsSlider.js';
 
 const HomePageBg = (props) => {
 
@@ -41,6 +42,19 @@ const HomePageBg = (props) => {
 					box3Title="Заглавие 3"
 					box3Text="Lorem Ipsum е елементарен примерен текст, 
 						използван в печатарската и типографската индустрия, стандарт от около 1500 година, когато неизвестен печатар взема"
+				/>
+				<NewsSlider
+					title="Последни новини"
+					button="Всички новини"
+					date1="29/10/2018"
+					text1="Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
+	            типографската индустрия. Lorem Ipsum е индустриален стандарт от около 1500 година, 
+	            когато неизвестен печатар."
+
+					date2="21/10/2018"
+					text2="Lorem Ipsum е индустриален стандарт от около 1500 година, 
+	            когато неизвестен печатар. Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
+	            типографската индустрия. "
 				/>
 			</MainLayoutBg>
     </div>

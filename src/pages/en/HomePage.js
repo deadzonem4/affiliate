@@ -3,6 +3,7 @@ import MainLayout from '../../layout/en/MainLayout.js';
 import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
+import NewsSlider from '../../components/common/NewsSlider.js';
 
 const HomePage = (props) => {
 
@@ -28,7 +29,7 @@ const HomePage = (props) => {
 				<ServiceBox
 					title="Slogan Title"
 					description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-					
+
 					box1Title="Box title 1"
 					box1Text="Lorem ipsum dolor sit amet, consectetur adipiscing 
 						elit. Aenean euismod bibendum laoreet. Proin gravida 
@@ -43,6 +44,21 @@ const HomePage = (props) => {
 					box3Text="Lorem ipsum dolor sit amet, consectetur adipiscing 
 						elit. Aenean euismod bibendum laoreet. Proin gravida 
 						dolor sit amet lacus accumsan et viverra."
+				/>
+				<NewsSlider
+					title="Latest news"
+					button="All news"
+					date1="29/10/2018"
+					text1="Lorem ipsum dolor sit amet, consectetur adipiscing 
+						elit. Aenean euismod bibendum laoreet. Proin gravida 
+						dolor sit amet lacus accumsan et viverra. Aenean euismod bibendum laoreet. Lorem ipsum dolor
+						sit amet."
+
+					date2="21/10/2018"
+					text2="Aenean euismod bibendum laoreet. Proin gravida 
+						dolor sit amet lacus accumsan et viverra.Lorem ipsum dolor
+						sit amet. Aenean euismod bibendum laoreet. Lorem ipsum dolor
+						sit amet, consectetur adipiscing elit."
 				/>
 			</MainLayout>
     </div>
