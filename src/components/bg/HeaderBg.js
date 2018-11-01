@@ -15,7 +15,7 @@ const HeaderBg = (props) => {
         news="Новини"
         contact="Контакти"
         />
-        <LogoBox button="Регистрация"/>
+        <LogoBox buttonReg="Регистрация" buttonLog="Вход"/>
       </header>
     );
 }

@@ -19,7 +19,7 @@ class NewsSlider extends React.Component {
   return (
     <div className="news-slider">
       <div className="news-slider-title">
-        <h2>{this.props.title}</h2>
+        <h2 className="white-title">{this.props.title}</h2>
         <div className="title-white-line"></div>
       </div>
       <Slider {...settings} className="full-width-slider">

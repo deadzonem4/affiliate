@@ -7,9 +7,9 @@ const ServiceBox = (props) => {
     <div className="service-placeholder">
       <div className="container">
         <div className="service-title-box">
-          <h2 className="service-title">{props.title}</h2>
+          <h2 className="dark-title">{props.title}</h2>
           <div className="title-red-line"></div>
-          <p>{props.description}</p>
+          <p className="subtitle-text">{props.description}</p>
         </div>
         <div className="service-content">
           <div className="row">

@@ -4,6 +4,7 @@ import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
+import ContactForm from '../../components/common/ContactForm.js';
 
 const HomePage = (props) => {
 
@@ -60,6 +61,15 @@ const HomePage = (props) => {
 						sit amet. Aenean euismod bibendum laoreet. Lorem ipsum dolor
 						sit amet, consectetur adipiscing elit."
 				/>
+				<ContactForm
+          title ="Contact us"
+          subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          button="Submit"
+          name="Name"
+          email="Email"
+          subject="Subject"
+          message="Message"
+        />
 			</MainLayout>
     </div>
   );

@@ -15,7 +15,7 @@ const Header = (props) => {
         news="News"
         contact="Contacts"
         />
-      <LogoBox button="Registration"/>
+      <LogoBox buttonReg="Registration" buttonLog="Log in" />
     </header>
   );
 }

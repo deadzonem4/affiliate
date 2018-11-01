@@ -11,9 +11,14 @@ const LogoBox = (props) => {
       	<Link className="navbar-brand" to="/">
       		<img className="logo" src={logo}  alt="Affiliate"/>
         </Link>
-      	<a className="register" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
-    			<span>{props.button}</span>
-      	</a>
+        <div className="logo-buttons">
+          <a className="log-in" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
+            <span>{props.buttonLog}</span>
+          </a> 
+        	<a className="register" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
+      			<span>{props.buttonReg}</span>
+        	</a>
+        </div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
+import ContactForm from '../../components/common/ContactForm.js';
 
 const HomePageBg = (props) => {
 
@@ -56,6 +57,15 @@ const HomePageBg = (props) => {
 	            когато неизвестен печатар. Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
 	            типографската индустрия. "
 				/>
+				<ContactForm
+          title ="Свържете се с нас"
+          subtitle = "Eлементарен примерен текст в печатарската индустрия"
+          button="Изпрати"
+          name="Име"
+          email="Имейл"
+          subject="Относно"
+          message="Съобщение"
+        />
 			</MainLayoutBg>
     </div>
   );
