@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/chernomorec.5dc5c1e2.png"
   },
   {
-    "revision": "be627b99b5a905a8d552",
-    "url": "/affiliate/static/css/main.35db714f.chunk.css"
+    "revision": "cb173af8635e99a17300",
+    "url": "/affiliate/static/css/main.7a7c1d1d.chunk.css"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "2e5893ce6bcf9af9ed35",
-    "url": "/affiliate/static/js/1.2e5893ce.chunk.js"
+    "revision": "a22d98e0504447e11fe9",
+    "url": "/affiliate/static/js/1.a22d98e0.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "be627b99b5a905a8d552",
-    "url": "/affiliate/static/js/main.be627b99.chunk.js"
+    "revision": "cb173af8635e99a17300",
+    "url": "/affiliate/static/js/main.cb173af8.chunk.js"
   },
   {
     "revision": "162676bc60a06f8371e6b0893536c771",
@@ -60,23 +60,27 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide1.620404a3.jpg"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/affiliate/static/media/slick.ced611da.eot"
-  },
-  {
-    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
-    "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
+    "revision": "1b81e23518c69c071ef4022f3d2452a6",
+    "url": "/affiliate/static/media/slide2.1b81e235.jpg"
   },
   {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/affiliate/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "2e5893ce6bcf9af9ed35",
-    "url": "/affiliate/static/css/1.05d645f7.chunk.css"
+    "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
+    "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "df6600fcd95818b6af8dee82efd8fe19",
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
+  },
+  {
+    "revision": "a22d98e0504447e11fe9",
+    "url": "/affiliate/static/css/1.f61598b2.chunk.css"
+  },
+  {
+    "revision": "a485263cb3fbd56724464139c4cece38",
     "url": "/affiliate/index.html"
   }
 ];
