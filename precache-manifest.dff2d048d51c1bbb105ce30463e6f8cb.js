@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/chernomorec.5dc5c1e2.png"
   },
   {
-    "revision": "cb173af8635e99a17300",
-    "url": "/affiliate/static/css/main.7a7c1d1d.chunk.css"
+    "revision": "f3ca35627819bf7bc312",
+    "url": "/affiliate/static/css/main.cdbb1ee1.chunk.css"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/affiliate/static/media/slick.ced611da.eot"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "a22d98e0504447e11fe9",
-    "url": "/affiliate/static/js/1.a22d98e0.chunk.js"
+    "revision": "eadb79eff6437896c3e7",
+    "url": "/affiliate/static/js/1.eadb79ef.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "cb173af8635e99a17300",
-    "url": "/affiliate/static/js/main.cb173af8.chunk.js"
+    "revision": "f3ca35627819bf7bc312",
+    "url": "/affiliate/static/js/main.f3ca3562.chunk.js"
   },
   {
     "revision": "162676bc60a06f8371e6b0893536c771",
@@ -64,6 +64,10 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide2.1b81e235.jpg"
   },
   {
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/affiliate/static/media/slick.ced611da.eot"
+  },
+  {
     "revision": "d41f55a78e6f49a5512878df1737e58a",
     "url": "/affiliate/static/media/slick.d41f55a7.ttf"
   },
@@ -72,15 +76,11 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
-  },
-  {
-    "revision": "a22d98e0504447e11fe9",
+    "revision": "eadb79eff6437896c3e7",
     "url": "/affiliate/static/css/1.f61598b2.chunk.css"
   },
   {
-    "revision": "a485263cb3fbd56724464139c4cece38",
+    "revision": "5f06e754b4f20ed0c0e5e75dd4c81a30",
     "url": "/affiliate/index.html"
   }
 ];
