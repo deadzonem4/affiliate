@@ -3,7 +3,7 @@ import MainMenu from '../common/MainMenu.js';
 import LogoBox from '../common/LogoBox.js';
 import '../styles/main.css';
 
-const HeaderBg = (props) => {
+const Header = (props) => {
 
     return (
       <header>
@@ -21,4 +21,4 @@ const HeaderBg = (props) => {
 }
 
 
-export default HeaderBg;
+export default Header;

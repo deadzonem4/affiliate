@@ -34,7 +34,16 @@ class ContactForm extends Component {
     }
     let contact = JSON.stringify(formSuccess)
     console.log(formSuccess)     //javascript object
-    console.log(contact)        //JSON text
+    console.log(contact)       //JSON text
+
+    // const fs = require('fs');
+    // fs.writeFileSync('contact.json', contact); 
+
+
+// var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
+// xhr.open( 'post', '/json', true );
+// xhr.send(contact);
+
   }
 
   validateField(fieldName, value) {

@@ -20,7 +20,7 @@ import bfb from '../../images/partners/bfb.png';
 import privacy from '../../images/partners/privacy.png';
 
 
-const FooterBg = (props) => {
+const Footer = (props) => {
     
   return (
     <footer id="footer">
@@ -63,4 +63,4 @@ const FooterBg = (props) => {
 }
 
 
-export default FooterBg;
+export default Footer;

@@ -5,6 +5,7 @@ import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
 import ContactForm from '../../components/common/ContactForm.js';
+import SocialBox from '../../components/en/SocialBox.js';
 
 const HomePage = (props) => {
 
@@ -70,6 +71,7 @@ const HomePage = (props) => {
           subject="Subject"
           message="Message"
         />
+        <SocialBox/>
 			</MainLayout>
     </div>
   );

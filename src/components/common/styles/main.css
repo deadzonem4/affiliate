@@ -361,6 +361,10 @@
   color: #fff;
   padding: 12px 50px;
 }
+.btn-submit:focus{
+  outline: none;
+  box-shadow: none;
+}
 .winbetForm button[disabled]{
   cursor: not-allowed;
 }
@@ -368,8 +372,8 @@
   margin-bottom: 0;
 }
 input::placeholder{
-    color: #d2d2d2!important;
-    opacity: 1;
+  color: #d2d2d2!important;
+  opacity: 1;
 }
 
 input:-ms-input-placeholder {
@@ -377,17 +381,68 @@ input:-ms-input-placeholder {
 }
 
 input::-ms-input-placeholder {
-   color: #d2d2d2!important;
+  color: #d2d2d2!important;
 }
 textarea::placeholder{
-    color: #d2d2d2!important;
-    opacity: 1;
+  color: #d2d2d2!important;
+  opacity: 1;
 }
 
 textarea:-ms-input-placeholder {
-   color: #d2d2d2!important;
+  color: #d2d2d2!important;
 }
 
 textarea::-ms-input-placeholder {
-   color: #d2d2d2!important;
+  color: #d2d2d2!important;
 }
+/*------------------------------------------SocialBox-------------------------------*/
+.social-box{
+  background-image: linear-gradient(to top, #840000, #cc2027);
+  padding: 40px 0;
+}
+.social-icons{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.social-item{
+  font-size: 26px;
+  background-color: #d9d9d9;
+  border-radius: 100px;
+  width: 42px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease .3s all;
+  -webkit-transition: ease .3s all;
+  margin: 0 3px;
+}
+.social-item a{
+  color: #cf000d;
+}
+.social-text li, .social-text h4{
+  font-size: 13px;
+  line-height: 1.69;
+  text-align: left;
+  color: #ffffff;
+}
+.social-text h4{
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+
+
+
+
+
+
+
+
+
