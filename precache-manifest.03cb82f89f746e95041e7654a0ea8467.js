@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/chernomorec.5dc5c1e2.png"
   },
   {
-    "revision": "efce0ecbfdf6e8d8d29f",
-    "url": "/affiliate/static/css/main.9398206b.chunk.css"
+    "revision": "14794c3fdd090aee5f13",
+    "url": "/affiliate/static/css/main.51287603.chunk.css"
   },
   {
     "revision": "1b81e23518c69c071ef4022f3d2452a6",
     "url": "/affiliate/static/media/slide2.1b81e235.jpg"
   },
   {
-    "revision": "90a4b3f5d886f230d2f8",
-    "url": "/affiliate/static/js/1.90a4b3f5.chunk.js"
+    "revision": "6b8caafba6b46cb04085",
+    "url": "/affiliate/static/js/1.6b8caafb.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "efce0ecbfdf6e8d8d29f",
-    "url": "/affiliate/static/js/main.efce0ecb.chunk.js"
+    "revision": "14794c3fdd090aee5f13",
+    "url": "/affiliate/static/js/main.14794c3f.chunk.js"
   },
   {
     "revision": "162676bc60a06f8371e6b0893536c771",
@@ -60,27 +60,27 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide1.620404a3.jpg"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/affiliate/static/media/slick.ced611da.eot"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "90a4b3f5d886f230d2f8",
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "6b8caafba6b46cb04085",
     "url": "/affiliate/static/css/1.83fcef62.chunk.css"
   },
   {
-    "revision": "8f424706a95455f8fe5622876ada14ef",
+    "revision": "87dd08251e55d794fba94f5c9d0244ab",
     "url": "/affiliate/index.html"
   }
 ];
