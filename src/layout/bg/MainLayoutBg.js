@@ -3,6 +3,7 @@ import Header from '../../components/bg/Header.js';
 import Footer from '../../components/bg/Footer.js';
 import '../styles/main.css';
 import Language from '../../components/common/Language.js';
+import SocialBox from '../../components/bg/SocialBox.js';
 
 const MainLayoutBg = (props) => {
 
@@ -13,6 +14,7 @@ const MainLayoutBg = (props) => {
 	      <main id="content">
 	        {props.children}
 	      </main>
+	      <SocialBox/>
 	      <Footer/>
 	    </div>
     );

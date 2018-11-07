@@ -33,16 +33,7 @@ class MainSlider extends React.Component {
             <div className={this.props.logbutton == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{this.props.logbutton}</span></div>
           </div>
         </div>
-        <div className="slide">
-          <img src={slide2} alt={slide2}/>
-          <div className="slider-overlay">
-            <h2>{this.props.title2}</h2>
-            <p>{this.props.text2} 
-            </p>
-            <div className={this.props.registerbutton2 == null ? 'slider-register-emty' : 'slider-register'}><span>{this.props.registerbutton2}</span></div>
-            <div className={this.props.logbutton2 == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{this.props.logbutton2}</span></div>
-          </div>
-        </div>
+
       </Slider>
     </div>
   );
@@ -51,3 +42,15 @@ class MainSlider extends React.Component {
 
 export default MainSlider;
 
+        // <div className="slide">
+        //   <img src={slide2} alt={slide2}/>
+        //   <div className="slider-overlay">
+        //     <h2>{this.props.title2}</h2>
+        //     <p>{this.props.text2} 
+        //     </p>
+        //     <div className={this.props.registerbutton2 == null ? 'slider-register-emty' : 'slider-register'}><span>{this.props.registerbutton2}</span></div>
+        //     <div className={this.props.logbutton2 == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{this.props.logbutton2}</span></div>
+        //   </div>
+        // </div>
+
+        

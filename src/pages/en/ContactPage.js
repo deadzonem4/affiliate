@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
-
+import ContactForm from '../../components/common/ContactForm.js';
 
 
 const ContactPage = (props) => {
@@ -8,7 +8,15 @@ const ContactPage = (props) => {
   return (
   	<div>
       <MainLayout bg={props.languageBg} en={props.languageEn}>
-				<h1>Contact page</h1>
+				<ContactForm
+          title ="Contact us"
+          subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          button="Submit"
+          name="Name"
+          email="Email"
+          subject="Subject"
+          message="Message"
+        />
 			</MainLayout>
     </div>
   );
