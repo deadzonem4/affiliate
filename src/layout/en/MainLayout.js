@@ -8,7 +8,7 @@ import SocialBox from '../../components/en/SocialBox.js';
 const MainLayout = (props) => {
 
   return (
-    <div>
+    <div className="layout-wrapper">
     	<Language bg={props.bg} en={props.en}/>
       <Header/>
       <main id="content">

@@ -8,7 +8,7 @@ import SocialBox from '../../components/bg/SocialBox.js';
 const MainLayoutBg = (props) => {
 
     return (
-      <div>
+      <div className="layout-wrapper">
       	<Language bg={props.bg} en={props.en}/>
 	      <Header/>
 	      <main id="content">

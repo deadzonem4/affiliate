@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/main.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
-import LogModal from '../common/LogModal.js'
+import LogModal from '../common/LogModal.js';
 
 const LogoBox = (props) => {
 
