@@ -58,21 +58,9 @@ const Footer = (props) => {
           </p>
         </div>
       </div>
-      <div class="modal-body">
-
-</div>
     </footer>
   );
 }
 
 export default Footer;
 
-  // <form role="form" class="inf-form login-form" name="form1" action="https://affiliates.winbetaffiliates.bg/signin.php?bare=1" method="post" id="login_form">
-  //   <div class="form-group">
-  //     <input type="text" class="form-control" id="name" name="username" placeholder="Username" required="" maxlength="50"/>
-  //   </div>
-  //   <div class="form-group">
-  //     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="" maxlength="50"/>
-  //   </div>
-  //   <button type="submit" class="btn btn-lg btn-success btn-block" id="loginSubmit">LOGIN</button>
-  // </form>

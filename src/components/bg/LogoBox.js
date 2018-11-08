@@ -1,7 +1,8 @@
 import React from "react";
-import './styles/main.css';
+import '../styles/main.css';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
+import LogModal from '../common/LogModal.js'
 
 const LogoBox = (props) => {
 
@@ -12,9 +13,7 @@ const LogoBox = (props) => {
       		<img className="logo" src={logo}  alt="Affiliate"/>
         </Link>
         <div className="logo-buttons">
-          <a className="log-in" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
-            <span>{props.buttonLog}</span>
-          </a> 
+          <LogModal button="вход" logButton="вход" title="Заглавие" user="Потребител" password="Парола"/>
         	<a className="register" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
       			<span>{props.buttonReg}</span>
         	</a>

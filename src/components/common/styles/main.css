@@ -74,39 +74,6 @@
 .lang-bar span:hover{
 	background-color: #cc2027;
 }
-/*---------------------------Down Header-------------*/
-.logo-box{
-  background-image: linear-gradient(to top, #840000, #cc2027);
-  padding: 10px 0;
-}
-.register, .log-in{
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
-  text-transform: uppercase;
-  box-shadow: 2.5px 1.7px 0 0 rgba(0, 0, 0, 0.5);
-  background-color: #313131;
-  padding: 5px 20px;
-  transition: ease .2s;
-}
-.log-in{
-  background-color: #5c9731;
-  margin-right: 12px;
-}
-.register:hover, .register:focus{
-  color: #fff;
-  background-color: #222;
-}
-.log-in:hover, .log-in:focus{
-  color: #fff;
-  background-color: #457720;
-}
-.logo-box-content{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 90px;
-}
 /*-------------------------Slider--------------------*/
 .slide img{
   width: 100%;
@@ -440,13 +407,45 @@ textarea::-ms-input-placeholder {
   font-weight: 800;
   margin-bottom: 12px;
 }
-
-
-
-
-
-
-
-
+/*---------------------------------Log in---------------------------*/
+.login-form{
+  max-width: 350px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+.log-in-modal{
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow: none;
+  padding: 5px 30px;
+  transition: ease .2s;
+  border: 0;
+  background-color: #5c9731;
+}
+.log-in-modal:hover, .log-in-modal:focus, .log-in-modal:active{
+  color: #fff;
+  background-color: #457720!important;
+  outline: none;
+  box-shadow: none!important;
+}
+.modal-header{
+  justify-content: center;
+}
+.close{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.close:focus{
+  outline: none;
+}
+.modal-dialog{
+  margin: 10vh auto;
+}
 
 
