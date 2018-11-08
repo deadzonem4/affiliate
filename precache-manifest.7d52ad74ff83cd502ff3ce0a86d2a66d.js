@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/chernomorec.5dc5c1e2.png"
   },
   {
-    "revision": "ab7830eb22b4b3c742ed",
+    "revision": "36897b29f12f91b2131e",
     "url": "/affiliate/static/css/main.5f5d4baf.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide2.1b81e235.jpg"
   },
   {
-    "revision": "18619597c7ee5542ccb3",
-    "url": "/affiliate/static/js/1.18619597.chunk.js"
+    "revision": "71e60d696543e061935a",
+    "url": "/affiliate/static/js/1.71e60d69.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "ab7830eb22b4b3c742ed",
-    "url": "/affiliate/static/js/main.ab7830eb.chunk.js"
+    "revision": "36897b29f12f91b2131e",
+    "url": "/affiliate/static/js/main.36897b29.chunk.js"
   },
   {
     "revision": "162676bc60a06f8371e6b0893536c771",
@@ -60,27 +60,27 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/slide1.620404a3.jpg"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/affiliate/static/media/slick.ced611da.eot"
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
     "revision": "f97e3bbf73254b0112091d0192f17aec",
     "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "18619597c7ee5542ccb3",
+    "revision": "71e60d696543e061935a",
     "url": "/affiliate/static/css/1.83fcef62.chunk.css"
   },
   {
-    "revision": "a0ac7a32f96ece2bf7b83c5e96a1206a",
+    "revision": "f5605e81d048238cce29e978e11ed868",
     "url": "/affiliate/index.html"
   }
 ];
