@@ -8,7 +8,7 @@ class AllNews extends React.Component {
 
     const news = this.props.api.map((filters, index) =>
       <div key={index}>
-        <Link  to={{pathname: `/newsbg${index + 1}`}}>
+        <Link  to={{pathname: `/news${index + 1}`}}>
           <ul className="bet-info">
             <li id="match">
               <span>{filters.home_team}</span>
