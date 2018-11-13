@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
+import MainLayout from '../../layout/bg/MainLayout.js';
 import ContactForm from '../../components/common/ContactForm.js';
 
 
@@ -7,7 +7,7 @@ const ContactPageBg = (props) => {
 
   return (
   	<div>
-      <MainLayoutBg bg={props.languageBg} en={props.languageEn}>
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
 				<ContactForm
           title ="Свържете се с нас"
           subtitle = "Eлементарен примерен текст в печатарската индустрия"
@@ -17,7 +17,7 @@ const ContactPageBg = (props) => {
           subject="Относно"
           message="Съобщение"
         />
-			</MainLayoutBg>
+			</MainLayout>
     </div>
   );
 }

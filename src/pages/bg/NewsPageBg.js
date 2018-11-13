@@ -1,20 +1,49 @@
 import React from 'react';
-import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
+import MainLayout from '../../layout/bg/MainLayout.js';
+import AllNews from '../../templates/AllNews.js'
+import SingleNews from '../../templates/SingleNews.js'
 
+const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=ad861170ddf643485f860929c4cfab22';
 
+class NewsPageBg extends React.Component {
 
-const NewsPageBg = (props) => {
+	constructor(props) {
+    super(props);
+    this.state = {
+      loading : true,
+      homeTeam : '',
+      awayTeam : '',
+      mydata: '',
+      api: ''
+    };
+  }
+  componentWillMount(){
+    fetch(url)
+      .then(response => {
+        if (!response.ok) { throw response }
+        return response.json()
+      })
+      .then(api => {
+        this.setState({ 
+          api: api.data,
+          loading: false
+        });
+      })
+      .catch(error => {
+      });
+  }
 
-  return (
-  	<div>
-      <MainLayoutBg bg={props.languageBg} en={props.languageEn}>
-				<h1>Страница новини</h1>
-			</MainLayoutBg>
-    </div>
-  );
+  render() {
+    if (this.state.loading) {
+      return null;
+    }
+	  return (
+	  	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
+      	<AllNews api={this.state.api}/>
+        <SingleNews api={this.state.api}/>
+      </MainLayout>
+	  );
+	}
 }
 
 export default NewsPageBg;
-
-
-

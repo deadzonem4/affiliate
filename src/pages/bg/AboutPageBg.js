@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
+import MainLayout from '../../layout/bg/MainLayout.js';
 import '../styles/main.css';
 
 
@@ -7,7 +7,7 @@ const AboutPageBg = (props) => {
 
   return (
   	<div>
-      <MainLayoutBg bg={props.languageBg} en={props.languageEn}>
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
 	      <div className="container">
 		      <div className="about-content">
 						<h2 className="dark-title">За нас</h2>
@@ -46,7 +46,7 @@ const AboutPageBg = (props) => {
 						</ul>
 					</div>
 				</div>
-			</MainLayoutBg>
+			</MainLayout>
     </div>
   );
 }

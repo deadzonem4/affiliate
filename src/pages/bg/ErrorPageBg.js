@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
+import MainLayout from '../../layout/bg/MainLayout.js';
 
 
 
@@ -7,9 +7,9 @@ const ErrorPageBg = (props) => {
 
   return (
   	<div>
-      <MainLayoutBg bg={props.languageBg} en={props.languageEn}>
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
 				<h1>Грешна страница</h1>
-			</MainLayoutBg>
+			</MainLayout>
     </div>
   );
 }

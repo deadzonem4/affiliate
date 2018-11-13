@@ -5,7 +5,7 @@ import '../styles/main.css';
 import Language from '../../components/common/Language.js';
 import SocialBox from '../../components/bg/SocialBox.js';
 
-const MainLayoutBg = (props) => {
+const MainLayout = (props) => {
 
     return (
       <div className="layout-wrapper">
@@ -20,6 +20,6 @@ const MainLayoutBg = (props) => {
     );
 }
 
-export default MainLayoutBg;
+export default MainLayout;
 
 

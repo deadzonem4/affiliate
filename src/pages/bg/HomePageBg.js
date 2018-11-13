@@ -1,5 +1,5 @@
 import React from 'react';
-import MainLayoutBg from '../../layout/bg/MainLayoutBg.js';
+import MainLayout from '../../layout/bg/MainLayout.js';
 import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
@@ -10,7 +10,7 @@ const HomePageBg = (props) => {
 
   return (
   	<div>
-      <MainLayoutBg bg={props.languageBg} en={props.languageEn}>
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
 				<MainSlider 
 					registerbutton="Регистрация" 
 					logbutton="Вход" 
@@ -66,7 +66,7 @@ const HomePageBg = (props) => {
           subject="Относно"
           message="Съобщение"
         />
-			</MainLayoutBg>
+			</MainLayout>
     </div>
   );
 }
