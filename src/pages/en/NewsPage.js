@@ -1,8 +1,8 @@
 import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
-import AllNews from '../../templates/AllNews.js'
+import AllNews from '../../templates/en/AllNews.js'
 
-const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=537c7f0eaaa48e1b3434ea434b654898';
+const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=ad861170ddf643485f860929c4cfab22';
 
 class NewsPageBg extends React.Component {
 

@@ -14,6 +14,7 @@ import NewsPage from './pages/en/NewsPage.js';
 import ContactPage from './pages/en/ContactPage.js';
 import AdminPage from './pages/en/AdminPage.js';
 import ErrorPage from './pages/en/ErrorPage.js';
+import SingleNews from './templates/en/SingleNews.js';
 //-------bg
 import HomePageBg from './pages/bg/HomePageBg.js';
 import AboutPageBg from './pages/bg/AboutPageBg.js';
@@ -23,7 +24,7 @@ import NewsPageBg from './pages/bg/NewsPageBg.js';
 import ContactPageBg from './pages/bg/ContactPageBg.js';
 import AdminPageBg from './pages/bg/AdminPageBg.js';
 import ErrorPageBg from './pages/bg/ErrorPageBg.js';
-
+import SingleNewsBg from './templates/bg/SingleNewsBg.js';
 
 
 
@@ -60,6 +61,7 @@ class App extends Component {
           <Route path="/news/" render={(props) => <NewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/admin/" render={(props) => <AdminPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/news:index"} render={(props) => <SingleNews {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>
@@ -73,6 +75,7 @@ class App extends Component {
           <Route path="/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/admin/" render={(props) => <AdminPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/newsbg:index"} render={(props) => <SingleNewsBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>

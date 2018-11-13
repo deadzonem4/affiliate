@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from '../../layout/bg/MainLayout.js';
-import AllNews from '../../templates/AllNews.js'
-import SingleNews from '../../templates/SingleNews.js'
+import AllNews from '../../templates/bg/AllNews.js'
+
 
 const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=ad861170ddf643485f860929c4cfab22';
 
@@ -39,8 +39,8 @@ class NewsPageBg extends React.Component {
     }
 	  return (
 	  	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
-      	<AllNews api={this.state.api}/>
-        <SingleNews api={this.state.api}/>
+
+        <AllNews api={this.state.api}/>
       </MainLayout>
 	  );
 	}
