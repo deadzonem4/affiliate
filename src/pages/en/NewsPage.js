@@ -1,6 +1,7 @@
 import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
 import AllNews from '../../templates/en/AllNews.js'
+import '../styles/main.css';
 
 const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=ad861170ddf643485f860929c4cfab22';
 
@@ -34,7 +35,12 @@ class NewsPageBg extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return null;
+      return (
+        <div className="wait-page">
+          <i className="fas fa-spinner"></i>
+          <h4>Please wait</h4>
+        </div>
+      );
     }
 	  return (
 	  	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
