@@ -11,7 +11,7 @@ class AllNews extends React.Component {
         <Link  to={{pathname: `/news${index + 1}`}}>
           <ul className="bet-info">
             <li id="match">
-              <span>{filters.home_team}</span>
+              <span>{filters.title}</span>
             </li>
           </ul>
         </Link>

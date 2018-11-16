@@ -3,7 +3,7 @@ import MainLayout from '../../layout/en/MainLayout.js';
 import AllNews from '../../templates/en/AllNews.js'
 import '../styles/main.css';
 
-const url = 'https://api.the-odds-api.com/v3/odds/?sport=UPCOMING&region=uk&apiKey=ad861170ddf643485f860929c4cfab22';
+const url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42b08020441f4682a7cfd75a8e51a1e5';
 
 class NewsPageBg extends React.Component {
 
@@ -11,9 +11,6 @@ class NewsPageBg extends React.Component {
     super(props);
     this.state = {
       loading : true,
-      homeTeam : '',
-      awayTeam : '',
-      mydata: '',
       api: ''
     };
   }
@@ -25,7 +22,7 @@ class NewsPageBg extends React.Component {
       })
       .then(api => {
         this.setState({ 
-          api: api.data,
+          api: api.articles,
           loading: false
         });
       })
