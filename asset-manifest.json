@@ -1,7 +1,7 @@
 {
   "main.css": "/affiliate/static/css/main.c744800d.chunk.css",
-  "main.js": "/affiliate/static/js/main.8d1cdc7d.chunk.js",
-  "main.js.map": "/affiliate/static/js/main.8d1cdc7d.chunk.js.map",
+  "main.js": "/affiliate/static/js/main.17b382a1.chunk.js",
+  "main.js.map": "/affiliate/static/js/main.17b382a1.chunk.js.map",
   "static/css/1.83fcef62.chunk.css": "/affiliate/static/css/1.83fcef62.chunk.css",
   "static/js/1.559631df.chunk.js": "/affiliate/static/js/1.559631df.chunk.js",
   "static/js/1.559631df.chunk.js.map": "/affiliate/static/js/1.559631df.chunk.js.map",
@@ -17,11 +17,11 @@
   "static/media/pobeda.png": "/affiliate/static/media/pobeda.241ede0f.png",
   "static/media/bfb.png": "/affiliate/static/media/bfb.93b1f1d3.png",
   "static/media/slide1.jpg": "/affiliate/static/media/slide1.620404a3.jpg",
-  "static/media/slick-theme.css": "/affiliate/static/media/slick.f97e3bbf.svg",
+  "static/media/slick-theme.css": "/affiliate/static/media/slick.ced611da.eot",
   "static/media/cska.png": "/affiliate/static/media/cska.ea19e300.png",
-  "static/css/1.83fcef62.chunk.css.map": "/affiliate/static/css/1.83fcef62.chunk.css.map",
   "static/css/main.c744800d.chunk.css.map": "/affiliate/static/css/main.c744800d.chunk.css.map",
+  "static/css/1.83fcef62.chunk.css.map": "/affiliate/static/css/1.83fcef62.chunk.css.map",
   "index.html": "/affiliate/index.html",
-  "precache-manifest.0c04a308619b6da0a996df678d0a6467.js": "/affiliate/precache-manifest.0c04a308619b6da0a996df678d0a6467.js",
+  "precache-manifest.7080343e39d3b5efde64b30324534e6e.js": "/affiliate/precache-manifest.7080343e39d3b5efde64b30324534e6e.js",
   "service-worker.js": "/affiliate/service-worker.js"
 }
