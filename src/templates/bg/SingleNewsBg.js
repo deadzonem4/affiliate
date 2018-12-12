@@ -1,8 +1,9 @@
 import React from "react";
 import MainLayout from '../../layout/bg/MainLayout.js';
+import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
 import {Link} from "react-router-dom";
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42b08020441f4682a7cfd75a8e51a1e5';
+const url = 'https://dev.winbet-bg.com/api/';
 
 class SingleNewsBg extends React.Component {
 
@@ -20,8 +21,9 @@ class SingleNewsBg extends React.Component {
         return response.json()
       })
       .then(api => {
+
         this.setState({ 
-          api: api.articles,
+          api: api,
           loading: false
         });
       })
@@ -29,7 +31,6 @@ class SingleNewsBg extends React.Component {
       });      
   }
   render() {
-  	console.log(this.state.api[0])
   	if (this.state.loading) {
       return (
         <div className="wait-page">
@@ -41,7 +42,10 @@ class SingleNewsBg extends React.Component {
     return (
     	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
     	  <Link  to="/news">Назад</Link>
-    		<h4>{this.state.api[this.props.match.params.index-1].title} бг</h4>
+    		<h4>{this.state.api[0][this.props.match.params.index-1].title_bg}</h4>
+        <p>{this.state.api[0][this.props.match.params.index-1].description_bg}</p>
+        <img src={"http://dev.winbet-bg.com/uploads/images/newsImages/" + this.state.api[0][this.props.match.params.index-1].photos[0].link} />
+        <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
       </MainLayout>
     );
   }

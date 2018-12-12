@@ -2,7 +2,7 @@ import React from "react";
 import MainLayout from '../../layout/en/MainLayout.js';
 import {Link} from "react-router-dom";
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42b08020441f4682a7cfd75a8e51a1e5';
+const url = 'https://dev.winbet-bg.com/api/';
 
 class SingleNews extends React.Component {
 
@@ -21,7 +21,7 @@ class SingleNews extends React.Component {
       })
       .then(api => {
         this.setState({ 
-          api: api.articles,
+          api: api,
           loading: false
         });
       })
@@ -29,7 +29,6 @@ class SingleNews extends React.Component {
       });      
   }
   render() {
-  	console.log(this.state.api[0])
   	if (this.state.loading) {
       return (
         <div className="wait-page">
@@ -41,7 +40,8 @@ class SingleNews extends React.Component {
     return (
     	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
     	  <Link  to="/news">Back</Link>
-    		<h4>{this.state.api[this.props.match.params.index-1].title} en</h4>
+    		<h4>{this.state.api[0][this.props.match.params.index-1].title_en}</h4>
+    		<p>{this.state.api[0][this.props.match.params.index-1].description_en}</p>
       </MainLayout>
     );
   }

@@ -3,7 +3,7 @@ import MainLayout from '../../layout/en/MainLayout.js';
 import AllNews from '../../templates/en/AllNews.js'
 import '../styles/main.css';
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=42b08020441f4682a7cfd75a8e51a1e5';
+const url = 'https://dev.winbet-bg.com/api/';
 
 class NewsPageBg extends React.Component {
 
@@ -22,7 +22,7 @@ class NewsPageBg extends React.Component {
       })
       .then(api => {
         this.setState({ 
-          api: api.articles,
+          api: api,
           loading: false
         });
       })

@@ -6,12 +6,12 @@ class AllNews extends React.Component {
 
   render() {
 
-    const news = this.props.api.map((filters, index) =>
+    const news = this.props.api[0].map((filters, index) =>
       <div key={index}>
-        <Link  to={{pathname: `/news${index + 1}`}}>
+        <Link  to={{pathname: `/article${index + 1}`}}>
           <ul className="bet-info">
             <li id="match">
-              <span>{filters.title}</span>
+              <span>{filters.title_en}</span>
             </li>
           </ul>
         </Link>
