@@ -43,7 +43,11 @@ class NewsPageBg extends React.Component {
     }
 	  return (
 	  	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
-        <AllNews api={this.state.api}/>
+        <div className="news-page">
+          <div className="container">
+            <AllNews api={this.state.api}/>
+          </div>
+        </div>
       </MainLayout>
 	  );
 	}

@@ -6,18 +6,14 @@ class AllNews extends React.Component {
 
   render() {
     const news = this.props.api[0].map((filters, index) =>
-      <div key={index}>
+      <div className="news-box-content" key={index}>
         <Link  to={{pathname: `/article${index + 1}`}}>
-          <ul className="bet-info">
-            <li id="match">
-              <span>{filters.title_bg}</span>
-            </li>
-          </ul>
+          <span>{filters.title_bg}</span>
         </Link>
       </div>
     );
     return (
-      <div className="bet-content">
+      <div className="news-box">
         {news}
       </div>
     );

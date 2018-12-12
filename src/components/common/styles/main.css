@@ -449,8 +449,7 @@ textarea::-ms-input-placeholder {
 }
 /*---------------------------------Single News Slider----------------------*/
 .single-news-slider{
-  max-width: 900px;
-  margin-left: 40px;
+  max-width: 100%;
 }
 .single-news-slider-img{
   max-height: 150px;

@@ -45,22 +45,28 @@ class SingleNewsBg extends React.Component {
     }
     return (
     	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
-        <div className="container">
-          <div className="row">
-            <article className="article-box col-md-9">
-              <div className="single-news-title-date">
-                <span>{this.state.api[0][this.props.match.params.index-1].date}</span>
+        <div className="single-atricle-page">
+          <div className="container">
+            <div className="row">
+              <article className="single-article-box col-md-9">
+                <div className="single-news-title-date">
+                  <span>{this.state.api[0][this.props.match.params.index-1].date}</span>
+                </div>
+                <div className="single-article-navigation">
+                  <Link  to="/news">Обратно</Link>
+                  <Link  to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : " Следваща"}</Link>
+                </div>
+                <div className="single-article-content">
+                  <h2 className="single-article-title">{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>
+                  <h4 className="single-article-sub-title">{this.state.api[0][this.props.match.params.index-1].subtitle_bg}</h4>
+                  <img className="single-article-main-image" src={"http://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name} alt={this.state.api[0][this.props.match.params.index-1].image_name}/>
+                  {renderHTML(this.state.api[0][this.props.match.params.index-1].description_bg)} 
+                  <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
+                </div>
+              </article>
+              <div className="col-md-3">
+                <LatestNews data={this.state.api[0]}/>
               </div>
-          	  <Link  to="/news">Обратно</Link>
-              <Link  to={next>this.state.api[0].length ? "/news" : "/article"+next}>{next>this.state.api[0].length ? "" : " Следваща"}</Link>
-          		<h2>{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>
-              <h4>{this.state.api[0][this.props.match.params.index-1].subtitle_bg}</h4>
-              <img src={"http://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name} alt={this.state.api[0][this.props.match.params.index-1].image_name}/>
-              {renderHTML(this.state.api[0][this.props.match.params.index-1].description_bg)} 
-              <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
-            </article>
-            <div className="col-md-3">
-              <LatestNews data={this.state.api[0]}/>
             </div>
           </div>
         </div>

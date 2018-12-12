@@ -9,7 +9,7 @@ class LatestNews extends React.Component {
     var length = this.props.data.length;
 
     return (
-      <div className="news-sidebar">
+      <div className="single-article-sidebar">
         <div className="single-sidebar-article">
           <span>{this.props.data[length-1].date}</span>
           <h4>{this.props.data[length-1].title_bg}</h4>
