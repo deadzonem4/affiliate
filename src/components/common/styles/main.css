@@ -449,11 +449,11 @@ textarea::-ms-input-placeholder {
 }
 /*---------------------------------Single News Slider----------------------*/
 .single-news-slider{
-  max-width: 400px;
+  max-width: 900px;
   margin-left: 40px;
 }
 .single-news-slider-img{
-  max-height: 250px;
+  max-height: 150px;
 }
 .single-news-slider .slick-prev:before, .single-news-slider .slick-next:before{
   color: #000;

@@ -11,19 +11,17 @@ class SingleNewsSlider extends React.Component {
       </div>
     );
     var settings = {
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
-      pauseOnHover: false,
-      autoplaySpeed: 5000,
+      autoplay: false,
       infinite: true,
       speed: 400,
-      fade: true,
+      fade: false,
       arrows: true,
       cssEase: 'linear'
     };
   return (
-      <Slider {...settings} className="full-width-slider single-news-slider">
+      <Slider {...settings} className="single-news-slider">
         {images}
       </Slider>
   );

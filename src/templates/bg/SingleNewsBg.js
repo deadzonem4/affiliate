@@ -31,6 +31,10 @@ class SingleNewsBg extends React.Component {
       });      
   }
   render() {
+    var test = parseInt(this.props.match.params.index);
+    var final = test + 1;
+
+    console.log(this.state.api[0])
   	if (this.state.loading) {
       return (
         <div className="wait-page">
@@ -41,10 +45,15 @@ class SingleNewsBg extends React.Component {
     }
     return (
     	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
+        <div className="single-news-title-date">
+          <span>{this.state.api[0][this.props.match.params.index-1].date}</span>
+        </div>
     	  <Link  to="/news">Назад</Link>
-    		<h4>{this.state.api[0][this.props.match.params.index-1].title_bg}</h4>
+        <Link  to={final>this.state.api[0].length ? "/news" : "/article"+final}>{final>this.state.api[0].length ? "" : "следваща"}</Link>
+    		<h2>{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>
+        <h4>{this.state.api[0][this.props.match.params.index-1].subtitle_bg}</h4>
+        <img src={"http://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name}/>
         <p>{this.state.api[0][this.props.match.params.index-1].description_bg}</p>
-        <img src={"http://dev.winbet-bg.com/uploads/images/newsImages/" + this.state.api[0][this.props.match.params.index-1].photos[0].link} />
         <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
       </MainLayout>
     );
