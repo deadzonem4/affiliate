@@ -53,7 +53,7 @@ class SingleNewsBg extends React.Component {
             </div>
             <div className="single-article-navigation">
               <Link  to="/news">{"< Обратно"}</Link>
-              <Link  to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
+              <Link className={next > this.state.api[0].length ? "emty-block" : "" } to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
             </div>
             <div className="single-article-header">
               <h2 className="single-article-title">{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>
@@ -75,8 +75,8 @@ class SingleNewsBg extends React.Component {
                   </p>
                 </div>
               </article>
-              <div className="col-md-3">
-                <LatestNews data={this.state.api[0]}/>
+              <div className="col-md-3 latest-news-sidebar">
+                <LatestNews data={this.state.api[0]} apiLink={this.state.api[0][this.props.match.params.index-1]}/>
               </div>
             </div>
           </div>
