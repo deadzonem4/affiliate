@@ -450,14 +450,21 @@ textarea::-ms-input-placeholder {
 /*---------------------------------Single News Slider----------------------*/
 .single-news-slider{
   max-width: 100%;
+  margin: 35px 0;
+}
+.single-news-slider .slide{
+  padding: 0 10px;
 }
 .single-news-slider-img{
-  max-height: 150px;
+  height: 250px;
+  width: 250px;
 }
 .single-news-slider .slick-prev:before, .single-news-slider .slick-next:before{
   color: #000;
 }
-
+.single-news-slider .slick-arrow{
+  background: url(../../../images/slider/right-arrow.png);;
+}
 
 
 
