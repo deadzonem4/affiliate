@@ -13,7 +13,7 @@ const LogoBox = (props) => {
       		<img className="logo" src={logo}  alt="Affiliate"/>
         </Link>
         <div className="logo-buttons">
-          <LogModal button="вход" logButton="вход" title="Заглавие" user="Потребител" password="Парола"/>
+          <LogModal button="вход" logButton="вход" title="Попълнете вашите данни" user="Потребител" password="Парола"/>
         	<a className="register" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
       			<span>{props.buttonReg}</span>
         	</a>

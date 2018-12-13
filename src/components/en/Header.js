@@ -10,8 +10,6 @@ const Header = (props) => {
       <MainMenu
         home="Home"
         about="About us"
-        info="Information"
-        promo="Promotions"
         news="News"
         contact="Contacts"
         />

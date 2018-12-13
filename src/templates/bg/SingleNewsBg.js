@@ -1,7 +1,9 @@
 import React from "react";
 import MainLayout from '../../layout/bg/MainLayout.js';
 import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
+import SocialIcons from '../../components/common/SocialIcons.js';
 import LatestNews from './LatestNews.js';
+import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 
@@ -38,10 +40,7 @@ class SingleNewsBg extends React.Component {
     const renderHTML = (rawHTML: string) => React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
   	if (this.state.loading) {
       return (
-        <div className="wait-page">
-          <i className="fas fa-spinner"></i>
-          <h4>Моля изчакайте</h4>
-        </div>
+        <WaitPageBg/>
       );
     }
     return (
@@ -54,6 +53,7 @@ class SingleNewsBg extends React.Component {
             <div className="single-article-navigation">
               <Link  to="/news">{"< Обратно"}</Link>
               <Link className={next > this.state.api[0].length ? "emty-block" : "" } to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
+              <SocialIcons/>
             </div>
             <div className="single-article-header">
               <h2 className="single-article-title">{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>

@@ -2,6 +2,7 @@ import React from 'react';
 import MainLayout from '../../layout/bg/MainLayout.js';
 import AllNews from '../../templates/bg/AllNews.js'
 import '../styles/main.css';
+import WaitPageBg from './WaitPageBg.js';
 
 const url = 'https://dev.winbet-bg.com/api/';
 
@@ -35,10 +36,7 @@ class NewsPageBg extends React.Component {
   render() {
     if (this.state.loading) {
       return (
-        <div className="wait-page">
-          <i className="fas fa-spinner"></i>
-          <h4>Моля изчакайте</h4>
-        </div>
+        <WaitPageBg/>
       );
     }
 	  return (
