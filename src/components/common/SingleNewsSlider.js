@@ -9,7 +9,7 @@ class SingleNewsSlider extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      test: ""
+      imgLink: ""
     };
 
     this.toggle = this.toggle.bind(this);
@@ -17,7 +17,7 @@ class SingleNewsSlider extends React.Component {
   toggle(e) {
     this.setState({
       modal: !this.state.modal,
-      test: e.target.getAttribute("src")
+      imgLink: e.target.getAttribute("src")
     });
    
   }
@@ -29,7 +29,7 @@ class SingleNewsSlider extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="article-image-view">
           <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
           <ModalBody>
-            <img  src={this.state.test} alt="winbet news"/>
+            <img  src={this.state.imgLink} alt="winbet news"/>
           </ModalBody>
         </Modal>
       </div>
@@ -47,7 +47,6 @@ class SingleNewsSlider extends React.Component {
     return (
       <Slider {...settings} className="single-news-slider">
         {images}
-
       </Slider>
     );
   }

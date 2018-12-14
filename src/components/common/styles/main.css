@@ -457,6 +457,7 @@ textarea::-ms-input-placeholder {
 }
 .single-news-slider-img{
   height: 234px;
+  cursor: pointer;
 }
 .single-news-slider .slick-prev:before, .single-news-slider .slick-next:before{
   content: '';

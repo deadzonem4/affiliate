@@ -2,12 +2,13 @@ import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
 import AllNews from '../../templates/en/AllNews.js'
 import '../styles/main.css';
+import WaitPage from './WaitPage.js';
 
 const url = 'https://dev.winbet-bg.com/api/';
 
-class NewsPageBg extends React.Component {
+class NewsPage extends React.Component {
 
-	constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       loading : true,
@@ -25,26 +26,29 @@ class NewsPageBg extends React.Component {
           api: api,
           loading: false
         });
+
       })
       .catch(error => {
-      });
+
+      });      
   }
 
   render() {
     if (this.state.loading) {
       return (
-        <div className="wait-page">
-          <i className="fas fa-spinner"></i>
-          <h4>Please wait</h4>
-        </div>
+        <WaitPage/>
       );
     }
-	  return (
-	  	<MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
-      	<AllNews api={this.state.api}/>
+    return (
+      <MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
+        <div className="news-page">
+          <div className="container">
+            <AllNews api={this.state.api}/>
+          </div>
+        </div>
       </MainLayout>
-	  );
-	}
+    );
+  }
 }
 
-export default NewsPageBg;
+export default NewsPage;
