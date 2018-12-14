@@ -18,6 +18,30 @@
 .single-article-navigation .emty-block{
 	display: none;
 }
+.single-article-navigation{
+	display: flex;
+	justify-content: space-between;
+}
+.single-article-navigation ul{
+	margin-bottom: 0;
+}
+.single-article-navigation .social-item{
+	background-color: transparent;
+	margin-left: 4px;
+	margin-right: 0;
+	width: auto;
+	height: auto;
+}
+.single-article-navigation .social-item a{
+	border-radius: 100px;
+	margin-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 27px;
+  width: 27px;
+  font-size: 17px;
+}
 .single-article-navigation a:hover, .single-article-navigation a:focus{
 	color: #fff;
 	background-color: #a31a20;
@@ -66,7 +90,7 @@
 .single-sidebar-article{
 	border-bottom: solid 1px #cc2027;
   padding: 0 0 5px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 .single-sidebar-article span{
 	font-size: 13px;

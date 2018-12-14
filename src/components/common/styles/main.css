@@ -469,5 +469,27 @@ textarea::-ms-input-placeholder {
   background: url(../../../images/slider/left-arrow.png) center no-repeat;
   background-size: contain;
 }
-
-
+/*---------------------------------Single News Image Modal----------------------*/
+.article-image-view{
+  margin-top: 30vh;
+  width: 300px;
+}
+.article-image-view .modal-header{
+  background-color: #000;
+  border: none;
+  border-radius: 0;
+}
+.article-image-view .modal-header button{
+  top: 11px;
+  color: #fff;
+}
+.article-image-view .modal-header button:hover{
+  color: #fff!important;
+}
+.article-image-view .modal-body{
+  text-align: center;
+  background-color: #000;
+}
+.article-image-view .modal-body img{
+  height: auto;
+}

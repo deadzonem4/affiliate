@@ -51,9 +51,11 @@ class SingleNewsBg extends React.Component {
               <span>{this.state.api[0][this.props.match.params.index-1].date}</span>
             </div>
             <div className="single-article-navigation">
-              <Link  to="/news">{"< Обратно"}</Link>
-              <Link className={next > this.state.api[0].length ? "emty-block" : "" } to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
-              <SocialIcons/>
+              <div className="single-article-navigation-buttons">
+                <Link  to="/news">{"< Обратно"}</Link>
+                <Link className={next > this.state.api[0].length ? "emty-block" : "" } to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
+              </div>
+              <SocialIcons col=""/>
             </div>
             <div className="single-article-header">
               <h2 className="single-article-title">{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>

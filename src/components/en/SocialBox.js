@@ -10,7 +10,7 @@ const SocialBox = (props) => {
 	    <div className="container">
 	      <div className="social-box-content">
 	      	<div className="row">
-		      	<SocialIcons/>
+		      	<SocialIcons col="col-12"/>
 		        <SocialText 
 			        title="This is title section 1"
 			        text1="some text here 1"

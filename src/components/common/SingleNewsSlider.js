@@ -1,12 +1,37 @@
 import React from "react";
 import Slider from "react-slick";
+import {Modal, ModalBody, ModalHeader} from 'reactstrap';
 import './styles/main.css';
 
 class SingleNewsSlider extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false,
+      test: ""
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+  toggle(e) {
+    this.setState({
+      modal: !this.state.modal,
+      test: e.target.getAttribute("src")
+    });
+   
+  }
+
   render() {
     const images = this.props.info.map((img, index) =>
       <div className="slide" key={index}>
-        <img className="single-news-slider-img" src={"http://dev.winbet-bg.com/uploads/images/newsImages/" + img.link} alt={img.link}/>
+        <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"http://dev.winbet-bg.com/uploads/images/newsImages/" + img.link} alt={img.link}/>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="article-image-view">
+          <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
+          <ModalBody>
+            <img  src={this.state.test} alt="winbet news"/>
+          </ModalBody>
+        </Modal>
       </div>
     );
     var settings = {
@@ -22,6 +47,7 @@ class SingleNewsSlider extends React.Component {
     return (
       <Slider {...settings} className="single-news-slider">
         {images}
+
       </Slider>
     );
   }
