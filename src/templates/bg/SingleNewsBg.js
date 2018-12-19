@@ -6,6 +6,8 @@ import LatestNews from './LatestNews.js';
 import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
+import Viewer from 'react-viewer';
+import 'react-viewer/dist/index.css';
 
 const url = 'https://dev.winbet-bg.com/api/bg/news';
 
@@ -15,6 +17,7 @@ class SingleNewsBg extends React.Component {
     super(props);
     this.state = {
       loading : true,
+      visible: false,
       api: ''
     };
   }
@@ -63,7 +66,12 @@ class SingleNewsBg extends React.Component {
             <div className="row">
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
-                  <img className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
+                        <Viewer 
+                        visible={this.state.visible}
+                        onClose={() => { this.setState({ visible: false }); } }
+                        images={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name, alt: ''}]}
+                        />
+                  <img onClick={() => { this.setState({ visible: !this.state.visible }); } } className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
                   <div dangerouslySetInnerHTML={{__html: this.state.api[this.props.match.params.index-1].description_bg}} />
                   <SingleNewsSlider info={this.state.api[this.props.match.params.index-1].photos}/>
                 </div>

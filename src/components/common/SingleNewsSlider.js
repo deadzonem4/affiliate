@@ -1,7 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import {Modal, ModalBody, ModalHeader} from 'reactstrap';
 import './styles/main.css';
+import Viewer from 'react-viewer';
+import 'react-viewer/dist/index.css';
 
 class SingleNewsSlider extends React.Component {
 
@@ -9,6 +10,7 @@ class SingleNewsSlider extends React.Component {
     super(props);
     this.state = {
       modal: false,
+      visible: false,
       imgLink: ""
     };
 
@@ -16,22 +18,15 @@ class SingleNewsSlider extends React.Component {
   }
   toggle(e) {
     this.setState({
-      modal: !this.state.modal,
+      visible: true,
       imgLink: e.target.getAttribute("src")
     });
   }
 
   render() {
-    console.log(this.props.info);
     const images = this.props.info.map((img, index) =>
       <div className="slide" key={index}>
         <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="article-image-view">
-          <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
-          <ModalBody>
-            <img  src={this.state.imgLink} alt="winbet news"/>
-          </ModalBody>
-        </Modal>
       </div>
     );
     var settings = {
@@ -45,9 +40,16 @@ class SingleNewsSlider extends React.Component {
       cssEase: 'linear'
     };
     return (
-      <Slider {...settings} className="single-news-slider">
-        {images}
-      </Slider>
+      <div>
+        <Viewer 
+          visible={this.state.visible}
+          onClose={() => { this.setState({ visible: false }); } }
+          images={[{src: this.state.imgLink, alt: ''}]}
+        />
+        <Slider {...settings} className="single-news-slider">
+          {images}
+        </Slider>
+      </div>
     );
   }
 }
