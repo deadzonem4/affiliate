@@ -7,7 +7,7 @@ import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 
-const url = 'https://dev.winbet-bg.com/api/';
+const url = 'https://dev.winbet-bg.com/api/bg/news';
 
 class SingleNewsBg extends React.Component {
 
@@ -37,7 +37,6 @@ class SingleNewsBg extends React.Component {
   render() {
     const newsIndex = parseInt(this.props.match.params.index);
     const next = newsIndex + 1;
-    const renderHTML = (rawHTML: string) => React.createElement("div", { dangerouslySetInnerHTML: { __html: rawHTML } });
   	if (this.state.loading) {
       return (
         <WaitPageBg/>
@@ -48,25 +47,25 @@ class SingleNewsBg extends React.Component {
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
-              <span>{this.state.api[0][this.props.match.params.index-1].date}</span>
+              <span>{this.state.api[this.props.match.params.index-1].date}</span>
             </div>
             <div className="single-article-navigation">
               <div className="single-article-navigation-buttons">
                 <Link  to="/news">{"< Обратно"}</Link>
-                <Link className={next > this.state.api[0].length ? "emty-block" : "" } to={next > this.state.api[0].length ? "/news" : "/article"+next}>{next > this.state.api[0].length ? "" : "Следваща >" }</Link>
+                <Link className={next > this.state.api.length ? "emty-block" : "" } to={next > this.state.api.length ? "/news" : "/article"+next}>{next > this.state.api.length ? "" : "Следваща >" }</Link>
               </div>
               <SocialIcons col=""/>
             </div>
             <div className="single-article-header">
-              <h2 className="single-article-title">{this.state.api[0][this.props.match.params.index-1].title_bg}</h2>
-              <h4 className="single-article-sub-title">{this.state.api[0][this.props.match.params.index-1].subtitle_bg}</h4>
+              <h2 className="single-article-title">{this.state.api[this.props.match.params.index-1].title_bg}</h2>
+              <h4 className="single-article-sub-title">{this.state.api[this.props.match.params.index-1].subtitle_bg}</h4>
             </div>
             <div className="row">
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
-                  <img className="single-article-main-image" src={"http://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name} alt={this.state.api[0][this.props.match.params.index-1].image_name}/>
-                  {renderHTML(this.state.api[0][this.props.match.params.index-1].description_bg)} 
-                  <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
+                  <img className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
+                  <div dangerouslySetInnerHTML={{__html: this.state.api[this.props.match.params.index-1].description_bg}} />
+                  <SingleNewsSlider info={this.state.api[this.props.match.params.index-1].photos}/>
                 </div>
                 <div className="single-article-about">
                   <h4>За Winbet</h4>
@@ -78,7 +77,7 @@ class SingleNewsBg extends React.Component {
                 </div>
               </article>
               <div className="col-md-3 latest-news-sidebar">
-                <LatestNews data={this.state.api[0]} apiLink={this.state.api[0][this.props.match.params.index-1]}/>
+                <LatestNews data={this.state.api} apiLink={this.state.api}/>
               </div>
             </div>
           </div>

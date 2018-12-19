@@ -19,13 +19,13 @@ class SingleNewsSlider extends React.Component {
       modal: !this.state.modal,
       imgLink: e.target.getAttribute("src")
     });
-   
   }
 
   render() {
+    console.log(this.props.info);
     const images = this.props.info.map((img, index) =>
       <div className="slide" key={index}>
-        <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"http://dev.winbet-bg.com/uploads/images/newsImages/" + img.link} alt={img.link}/>
+        <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="article-image-view">
           <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
           <ModalBody>

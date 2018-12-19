@@ -473,15 +473,17 @@ textarea::-ms-input-placeholder {
 /*---------------------------------Single News Image Modal----------------------*/
 .article-image-view{
   margin-top: 30vh;
-  width: 300px;
+  width: 250px;
 }
 .article-image-view .modal-header{
   background-color: #000;
   border: none;
   border-radius: 0;
+  padding: 0;
 }
 .article-image-view .modal-header button{
-  top: 11px;
+  top: -35px;
+  right: -30px;
   color: #fff;
 }
 .article-image-view .modal-header button:hover{
@@ -490,6 +492,7 @@ textarea::-ms-input-placeholder {
 .article-image-view .modal-body{
   text-align: center;
   background-color: #000;
+  padding: 0;
 }
 .article-image-view .modal-body img{
   height: auto;

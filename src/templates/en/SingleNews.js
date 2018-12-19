@@ -64,7 +64,7 @@ class SingleNews extends React.Component {
             <div className="row">
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
-                  <img className="single-article-main-image" src={"http://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name} alt={this.state.api[0][this.props.match.params.index-1].image_name}/>
+                  <img className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[0][this.props.match.params.index-1].image_name} alt={this.state.api[0][this.props.match.params.index-1].image_name}/>
                   {renderHTML(this.state.api[0][this.props.match.params.index-1].description_en)} 
                   <SingleNewsSlider info={this.state.api[0][this.props.match.params.index-1].photos}/>
                 </div>

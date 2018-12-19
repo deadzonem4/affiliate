@@ -5,12 +5,48 @@ import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
 import ContactForm from '../../components/common/ContactForm.js';
+import WaitPageBg from './WaitPageBg.js';
+import '../styles/main.css';
 
-const HomePageBg = (props) => {
 
-  return (
+const url = 'https://dev.winbet-bg.com/api/';
+
+class HomePageBg extends React.Component {
+
+	constructor(props) {
+    super(props);
+    this.state = {
+      loading : true,
+      api: ''
+    };
+  }
+  componentWillMount(){
+    fetch(url)
+      .then(response => {
+        if (!response.ok) { throw response }
+        return response.json()
+      })
+      .then(api => {
+        this.setState({ 
+          api: api,
+          loading: false
+        });
+
+      })
+      .catch(error => {
+
+      });      
+  }
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <WaitPageBg/>
+      );
+    }
+return (
   	<div>
-      <MainLayout bg={props.languageBg} en={props.languageEn}>
+      <MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
 				<MainSlider 
 					registerbutton="Регистрация" 
 					logbutton="Вход" 
@@ -45,17 +81,9 @@ const HomePageBg = (props) => {
 						използван в печатарската и типографската индустрия, стандарт от около 1500 година, когато неизвестен печатар взема"
 				/>
 				<NewsSlider
+					data = {this.state.api[1]}
 					title="Последни новини"
 					button="Всички новини"
-					date1="29/10/2018"
-					text1="Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
-	            типографската индустрия. Lorem Ipsum е индустриален стандарт от около 1500 година, 
-	            когато неизвестен печатар."
-
-					date2="21/10/2018"
-					text2="Lorem Ipsum е индустриален стандарт от около 1500 година, 
-	            когато неизвестен печатар. Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
-	            типографската индустрия. "
 				/>
 				<ContactForm
           title ="Свържете се с нас"
@@ -69,6 +97,7 @@ const HomePageBg = (props) => {
 			</MainLayout>
     </div>
   );
+	}
 }
 
 export default HomePageBg;
