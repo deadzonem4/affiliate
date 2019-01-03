@@ -29,11 +29,12 @@ class SingleNewsSlider extends React.Component {
         <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
       </div>
     );
+
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
       autoplay: false,
-      infinite: true,
+      infinite: false,
       speed: 400,
       fade: false,
       arrows: true,
