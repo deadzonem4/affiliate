@@ -9,8 +9,6 @@ class SingleNewsSlider extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false,
-      visible: false,
       isOpen: false,
       currImg: 0
     };
@@ -50,7 +48,7 @@ class SingleNewsSlider extends React.Component {
       </div>
     );
     const addProps = this.props.info.map((link, index) =>
-     <img src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + link}/>
+     <img src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + link} alt="winbet-gallery"/>
     );
     var imgProps = [];
     for(var i=0; i<addProps.length;i++){      
@@ -75,6 +73,10 @@ class SingleNewsSlider extends React.Component {
           onClickPrev={this.gotoPrev}
           onClickNext={this.gotoNext}
           onClose={this.closeImgsViewer}
+          backdropCloseable={true}
+          leftArrowTitle={"left"}
+          rightArrowTitle={"right"}
+          closeBtnTitle={"close"}
         />
         <Slider {...settings} className="single-news-slider">
           {images}

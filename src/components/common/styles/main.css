@@ -477,10 +477,10 @@ textarea::-ms-input-placeholder {
   margin-left: 0!important
 }
 /*Detail view*/
-#viewerBackdrop .content_e296pg{
+#viewerBackdrop ._e296pg, #viewerBackdrop .content_e296pg{
   margin-top: -25vh;
 }
-#viewerBackdrop .arrow_12iocnn-o_O-arrow__direction__right_6eoou0-o_O-arrow__size__medium_5gm619, #viewerBackdrop .arrow_12iocnn-o_O-arrow__direction__left_lg4jz7-o_O-arrow__size__medium_5gm619{
+#viewerBackdrop button[title="right"], #viewerBackdrop button[title="left"]{
   margin-top: -20vh;
 }
 #viewerBackdrop button:focus{
