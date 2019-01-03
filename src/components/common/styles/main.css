@@ -476,3 +476,13 @@ textarea::-ms-input-placeholder {
 .single-news-slider .slick-track{
   margin-left: 0!important
 }
+/*Detail view*/
+#viewerBackdrop .content_e296pg{
+  margin-top: -25vh;
+}
+#viewerBackdrop .arrow_12iocnn-o_O-arrow__direction__right_6eoou0-o_O-arrow__size__medium_5gm619, #viewerBackdrop .arrow_12iocnn-o_O-arrow__direction__left_lg4jz7-o_O-arrow__size__medium_5gm619{
+  margin-top: -20vh;
+}
+#viewerBackdrop button:focus{
+  outline: none;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import './styles/main.css';
-import Viewer from 'react-viewer';
+import ImgsViewer from 'react-images-viewer'
 import 'react-viewer/dist/index.css';
 
 class SingleNewsSlider extends React.Component {
@@ -11,25 +11,51 @@ class SingleNewsSlider extends React.Component {
     this.state = {
       modal: false,
       visible: false,
-      imgLink: ""
+      isOpen: false,
+      currImg: 0
     };
-
-    this.toggle = this.toggle.bind(this);
+    this.closeImgsViewer = this.closeImgsViewer.bind(this)
+    this.openImgsViewer = this.openImgsViewer.bind(this)
+    this.gotoNext = this.gotoNext.bind(this)
+    this.gotoPrev = this.gotoPrev.bind(this)
   }
-  toggle(e) {
+  gotoPrev () {
     this.setState({
-      visible: true,
-      imgLink: e.target.getAttribute("src")
-    });
+      currImg: this.state.currImg - 1
+    })
+  }
+  gotoNext () {
+    this.setState({
+      currImg: this.state.currImg + 1
+    })
+  }
+  closeImgsViewer () {
+    this.setState({
+      currImg: 0,
+      isOpen: false,
+    })
+  }
+  openImgsViewer (index, e) {
+    this.setState({
+      currImg: index,
+      isOpen: true,
+    })
   }
 
   render() {
+
     const images = this.props.info.map((img, index) =>
       <div className="slide" key={index}>
-        <img onClick={this.toggle} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
+        <img onClick={(e) => this.openImgsViewer(index, e)} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
       </div>
     );
-
+    const addProps = this.props.info.map((link, index) =>
+     <img src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + link}/>
+    );
+    var imgProps = [];
+    for(var i=0; i<addProps.length;i++){      
+      imgProps.push(addProps[i].props)  
+    };
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -42,10 +68,13 @@ class SingleNewsSlider extends React.Component {
     };
     return (
       <div>
-        <Viewer 
-          visible={this.state.visible}
-          onClose={() => { this.setState({ visible: false }); } }
-          images={[{src: this.state.imgLink, alt: ''}]}
+        <ImgsViewer
+          imgs={imgProps}
+          currImg={this.state.currImg}
+          isOpen={this.state.isOpen}
+          onClickPrev={this.gotoPrev}
+          onClickNext={this.gotoNext}
+          onClose={this.closeImgsViewer}
         />
         <Slider {...settings} className="single-news-slider">
           {images}
