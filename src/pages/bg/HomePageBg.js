@@ -5,57 +5,17 @@ import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
 import ContactForm from '../../components/common/ContactForm.js';
-import WaitPageBg from './WaitPageBg.js';
+import ApiData from '../../templates/ApiData.js';
 import '../styles/main.css';
 
 
-const url = 'https://dev.winbet-bg.com/api/';
+const HomePageBg = (props) => {
 
-class HomePageBg extends React.Component {
-
-	constructor(props) {
-    super(props);
-    this.state = {
-      loading : true,
-      api: ''
-    };
-  }
-  componentWillMount(){
-    fetch(url)
-      .then(response => {
-        if (!response.ok) { throw response }
-        return response.json()
-      })
-      .then(api => {
-        this.setState({ 
-          api: api,
-          loading: false
-        });
-
-      })
-      .catch(error => {
-
-      });      
-  }
-
-  render() {
-    if (this.state.loading) {
-      return (
-        <WaitPageBg/>
-      );
-    }
-return (
-  	<div>
-      <MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
-				<MainSlider 
-					registerbutton="Регистрация" 
-					logbutton="Вход" 
-					text="Lorem Ipsum е елементарен примерен текст, използван в печатарската и 
-	            типографската индустрия. Lorem Ipsum е индустриален стандарт от около 1500 година, 
-	            когато неизвестен печатар взема няколко печатарски букви и ги разбърква, за да напечата с 
-	            тях книга с примерни шрифтове." 
-					title="победата е на върха на пръстите Ви!"
-				/>
+  return (
+      <MainLayout bg={props.languageBg} en={props.languageEn}>
+        <ApiData dataLink="https://dev.winbet-bg.com/api/bg/sliders">
+	         <MainSlider/>
+        </ApiData>
 				<CasinoBox 
 					title="Примерен текст"
 					text="Lorem Ipsum е елементарен примерен текст, 
@@ -80,11 +40,12 @@ return (
 					box3Text="Lorem Ipsum е елементарен примерен текст, 
 						използван в печатарската и типографската индустрия, стандарт от около 1500 година, когато неизвестен печатар взема"
 				/>
-				<NewsSlider
-					data = {this.state.api[1]}
-					title="Последни новини"
-					button="Всички новини"
-				/>
+			  <ApiData dataLink="https://dev.winbet-bg.com/api/bg/news-slider">
+	        <NewsSlider
+						title="Последни новини"
+						button="Всички новини"
+					/>
+        </ApiData>
 				<ContactForm
           title ="Свържете се с нас"
           subtitle = "Eлементарен примерен текст в печатарската индустрия"
@@ -95,9 +56,7 @@ return (
           message="Съобщение"
         />
 			</MainLayout>
-    </div>
   );
-	}
 }
 
 export default HomePageBg;

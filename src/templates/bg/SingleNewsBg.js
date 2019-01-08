@@ -6,8 +6,7 @@ import LatestNews from './LatestNews.js';
 import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
-import Viewer from 'react-viewer';
-import 'react-viewer/dist/index.css';
+import ImgsViewer from 'react-images-viewer'
 
 const url = 'https://dev.winbet-bg.com/api/bg/news';
 
@@ -17,9 +16,10 @@ class SingleNewsBg extends React.Component {
     super(props);
     this.state = {
       loading : true,
-      visible: false,
+      isOpen: false,
       api: ''
     };
+    this.closeImgsViewer = this.closeImgsViewer.bind(this)
   }
   componentWillMount(){
     fetch(url)
@@ -36,6 +36,16 @@ class SingleNewsBg extends React.Component {
       })
       .catch(error => {
       });      
+  }
+  closeImgsViewer () {
+    this.setState({
+      isOpen: false
+    })
+  }
+  openImgsViewer () {
+    this.setState({
+      isOpen: true
+    })
   }
   render() {
     const newsIndex = parseInt(this.props.match.params.index);
@@ -66,12 +76,17 @@ class SingleNewsBg extends React.Component {
             <div className="row">
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
-                        <Viewer 
-                        visible={this.state.visible}
-                        onClose={() => { this.setState({ visible: false }); } }
-                        images={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name, alt: ''}]}
-                        />
-                  <img onClick={() => { this.setState({ visible: !this.state.visible }); } } className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
+                  <ImgsViewer
+                    imgs={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name, alt: ''}]}
+                    isOpen={this.state.isOpen}
+                    onClose={this.closeImgsViewer}
+                    backdropCloseable={true}
+                    leftArrowTitle={"left"}
+                    rightArrowTitle={"right"}
+                    closeBtnTitle={"close"}
+                    showImgCount={false}
+                  />
+                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
                   <div dangerouslySetInnerHTML={{__html: this.state.api[this.props.match.params.index-1].description_bg}} />
                   <SingleNewsSlider info={this.state.api[this.props.match.params.index-1].photos}/>
                 </div>

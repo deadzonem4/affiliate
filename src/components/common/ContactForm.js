@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import $ from 'jquery'
 class ContactForm extends Component {
   constructor (props) {
     super(props);
@@ -32,18 +32,10 @@ class ContactForm extends Component {
       subject: this.state.subject,
       message: this.state.message
     }
-    let contact = JSON.stringify(formSuccess)
-    console.log(formSuccess)     //javascript object
-    console.log(contact)       //JSON text
-
-    // const fs = require('fs');
-    // fs.writeFileSync('contact.json', contact); 
-
-
-// var xhr = (window.XMLHttpRequest) ? new XMLHttpRequest() : new activeXObject("Microsoft.XMLHTTP");
-// xhr.open( 'post', '/json', true );
-// xhr.send(contact);
-
+    // const contact = JSON.stringify(formSuccess);
+    // console.log(formSuccess)     //javascript object
+    // console.log(contact);       //JSON text
+    $.post( "https://dev.winbet-bg.com/api/contacts/create", formSuccess );
   }
 
   validateField(fieldName, value) {
@@ -93,7 +85,7 @@ class ContactForm extends Component {
   render () {
     return (
       <div className="container">
-        <form className="winbetForm">
+        <form className="winbetForm" method="post">
           <h2 className="dark-title">{this.props.title}</h2>
           <div className="title-red-line"></div>
           <p className="subtitle-text">{this.props.subtitle}</p>

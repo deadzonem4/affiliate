@@ -3,8 +3,18 @@ import Slider from "react-slick";
 import './styles/main.css';
 import { Link } from 'react-router-dom';
 
+
+
 class NewsSlider extends React.Component {
+
   render() {
+    console.log(this.props.api)
+    const slides = this.props.api.map((data, index) =>
+      <div className="slide" key={index}>
+          <h4>{data.date}</h4>
+          <p>{data.short_description_bg}</p>
+      </div>
+    );
     var settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -16,27 +26,20 @@ class NewsSlider extends React.Component {
       fade: true,
       cssEase: 'linear'
     };
-  return (
+    return (
     <div className="news-slider">
       <div className="news-slider-title">
         <h2 className="white-title">{this.props.title}</h2>
         <div className="title-white-line"></div>
       </div>
       <Slider {...settings} className="full-width-slider">
-        <div className="slide">
-          <h4>{this.props.date1}</h4>
-          <p>{this.props.text1}</p>
-        </div>
-        <div className="slide">
-          <h4>{this.props.date2}</h4>
-          <p>{this.props.text2}</p>
-        </div>
+        {slides}
       </Slider>
       <Link className="all-news" to="/news">
           <span>{this.props.button}</span>
       </Link>
     </div>
-  );
+    );
   }
 }
 

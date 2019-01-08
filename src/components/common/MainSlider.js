@@ -1,11 +1,26 @@
 import React from "react";
 import Slider from "react-slick";
-import slide1 from '../../images/slider/slide1.jpg';
 import logo from '../../images/slider/logo.png';
 import './styles/main.css';
 
+
+
 class MainSlider extends React.Component {
+
   render() {
+    const images = this.props.api.map((data, index) =>
+      <div className="slide" key={index}>
+        <img src={"https://dev.winbet-bg.com/uploads/images/sliders/" + data.image_name} alt=''/>
+        <div className="slider-overlay">
+          <img src={logo} alt={logo}/>
+          <h2>{data.title_bg}</h2>
+          <p>{data.description_bg} 
+          </p>
+          <div className={data.button_text1_bg == null ? 'slider-register-emty' : 'slider-register'}><span>{data.button_text1_bg}</span></div>
+          <div className={data.button_text2_bg == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data.button_text2_bg}</span></div>
+        </div>
+      </div>
+    );
     var settings = {
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -17,29 +32,15 @@ class MainSlider extends React.Component {
       fade: true,
       cssEase: 'linear'
     };
-
-  return (
-    <div className="main-slider">
-      <Slider {...settings} className="full-width-slider">
-        <div className="slide">
-          <img src={slide1} alt={slide1}/>
-          <div className="slider-overlay">
-            <img src={logo} alt={logo}/>
-            <h2>{this.props.title}</h2>
-            <p>{this.props.text} 
-            </p>
-            <div className={this.props.registerbutton == null ? 'slider-register-emty' : 'slider-register'}><span>{this.props.registerbutton}</span></div>
-            <div className={this.props.logbutton == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{this.props.logbutton}</span></div>
-          </div>
-        </div>
-
-      </Slider>
-    </div>
-  );
+    return (
+      <div className="main-slider">
+        <Slider {...settings} className="full-width-slider">
+          {images}
+        </Slider>
+      </div>
+    );
   }
 }
 
 export default MainSlider;
 
-
-        

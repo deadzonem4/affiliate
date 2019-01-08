@@ -1,33 +1,34 @@
 import React from 'react';
-import WaitPageBg from '../../pages/bg/WaitPageBg.js';
+import WaitPageBg from '../pages/bg/WaitPageBg.js';
 
-const url = 'https://dev.winbet-bg.com/api/bg/news';
 
-class NewsData extends React.Component {
+
+class ApiData extends React.Component {
 
 	constructor(props) {
     super(props);
     this.state = {
       loading : true,
-      api: ''
+      api: '',
+      url: this.props.dataLink
     };
   }
   componentWillMount(){
-    fetch(url)
+    fetch(this.state.url)
       .then(response => {
         if (!response.ok) { throw response }
         return response.json()
       })
-      .then(api => {
-        this.setState({ 
-          api: api,
-          loading: false
-        });
+    .then(api => {
+      this.setState({ 
+        api: api,
+        loading: false
+      });
 
-      })
-      .catch(error => {
-console.log('error');
-      });      
+    })
+    .catch(error => {
+      console.log('error');
+    });      
   }
   render() {
     if (this.state.loading) {
@@ -43,4 +44,4 @@ console.log('error');
 	}
 }
 
-export default NewsData;
+export default ApiData;

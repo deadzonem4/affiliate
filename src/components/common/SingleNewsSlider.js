@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import './styles/main.css';
 import ImgsViewer from 'react-images-viewer'
-import 'react-viewer/dist/index.css';
 
 class SingleNewsSlider extends React.Component {
 

@@ -2,7 +2,7 @@ import React from 'react';
 import MainLayout from '../../layout/bg/MainLayout.js';
 import AllNews from '../../templates/bg/AllNews.js'
 import '../styles/main.css';
-import NewsData from '../../templates/bg/NewsData.js';
+import ApiData from '../../templates/ApiData.js';
 
 
 const NewsPageBg = (props) => {
@@ -11,9 +11,9 @@ const NewsPageBg = (props) => {
     <MainLayout bg={props.languageBg} en={props.languageEn}>
       <div className="news-page">
         <div className="container">
-          <NewsData>
+          <ApiData dataLink="https://dev.winbet-bg.com/api/bg/news">
             <AllNews />
-          </NewsData>
+          </ApiData>
         </div>
       </div>
     </MainLayout>
