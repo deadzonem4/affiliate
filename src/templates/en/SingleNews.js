@@ -1,15 +1,12 @@
 import React from "react";
-import MainLayout from '../../layout/en/MainLayout.js';
 import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
 import SocialIcons from '../../components/common/SocialIcons.js';
 import LatestNews from './LatestNews.js';
-import WaitPageBg from '../../pages/en/WaitPage.js';
+import WaitPage from '../../pages/en/WaitPage.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
-import ImgsViewer from 'react-images-viewer';
+import ImgsViewer from 'react-images-viewer'
 
-
-const url = 'https://dev.winbet-bg.com/api/en/news';
 
 class SingleNews extends React.Component {
 
@@ -17,26 +14,15 @@ class SingleNews extends React.Component {
     super(props);
     this.state = {
       loading : true,
-      isOpen: false,
-      api: ''
+      isOpen: false
     };
     this.closeImgsViewer = this.closeImgsViewer.bind(this)
   }
   componentWillMount(){
-    fetch(url)
-      .then(response => {
-        if (!response.ok) { throw response }
-        return response.json()
-      })
-      .then(api => {
-
-        this.setState({ 
-          api: api,
-          loading: false
-        });
-      })
-      .catch(error => {
-      });      
+    this.setState({ 
+      loading: false
+    });
+    
   }
   closeImgsViewer () {
     this.setState({
@@ -49,36 +35,35 @@ class SingleNews extends React.Component {
     })
   }
   render() {
-    const newsIndex = parseInt(this.props.match.params.index);
+    const newsIndex = parseInt(this.props.param);
     const next = newsIndex + 1;
     if (this.state.loading) {
       return (
-        <WaitPageBg/>
+        <WaitPage/>
       );
     }
     return (
-      <MainLayout bg={this.props.languageBg} en={this.props.languageEn}>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
-              <span>{this.state.api[this.props.match.params.index-1].date}</span>
+              <span>{this.props.api[this.props.param-1].date}</span>
             </div>
             <div className="single-article-navigation">
               <div className="single-article-navigation-buttons">
                 <Link  to="/news">{"< Back"}</Link>
-                <Link className={next > this.state.api.length ? "emty-block" : "" } to={next > this.state.api.length ? "/news" : "/article"+next}>{next > this.state.api.length ? "" : "Next >" }</Link>
+                <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/news" : "/article"+next}>{next > this.props.api.length ? "" : "Next >" }</Link>
               </div>
               <SocialIcons col=""/>
             </div>
             <div className="single-article-header">
-              <h2 className="single-article-title">{this.state.api[this.props.match.params.index-1].title_en}</h2>
-              <h4 className="single-article-sub-title">{this.state.api[this.props.match.params.index-1].subtitle_en}</h4>
+              <h2 className="single-article-title">{this.props.api[this.props.param-1].title_en}</h2>
+              <h4 className="single-article-sub-title">{this.props.api[this.props.param-1].subtitle_en}</h4>
             </div>
             <div className="row">
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
                   <ImgsViewer
-                    imgs={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name, alt: ''}]}
+                    imgs={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name, alt: ''}]}
                     isOpen={this.state.isOpen}
                     onClose={this.closeImgsViewer}
                     backdropCloseable={true}
@@ -87,9 +72,9 @@ class SingleNews extends React.Component {
                     closeBtnTitle={"close"}
                     showImgCount={false}
                   />
-                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.state.api[this.props.match.params.index-1].image_name} alt={this.state.api[this.props.match.params.index-1].image_name}/>
-                  <div dangerouslySetInnerHTML={{__html: this.state.api[this.props.match.params.index-1].description_en}} />
-                  <SingleNewsSlider info={this.state.api[this.props.match.params.index-1].photos}/>
+                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name} alt={this.props.api[this.props.param-1].image_name}/>
+                  <div dangerouslySetInnerHTML={{__html: this.props.api[this.props.param-1].description_en}} />
+                  <SingleNewsSlider info={this.props.api[this.props.param-1].photos}/>
                 </div>
                 <div className="single-article-about">
                   <h4>About Winbet</h4>
@@ -103,18 +88,16 @@ class SingleNews extends React.Component {
                 </div>
               </article>
               <div className="col-md-3 latest-news-sidebar">
-                <LatestNews data={this.state.api} apiLink={this.state.api}/>
+                <LatestNews data={this.props.api}/>
               </div>
             </div>
           </div>
         </div>
-      </MainLayout>
     );
   }
 }
 
 export default SingleNews;
-
 
 
 

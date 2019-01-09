@@ -1,3 +1,4 @@
+/* eslint-disable import/first */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Switch, Route, HashRouter } from 'react-router-dom';
@@ -13,7 +14,7 @@ import PromoPage from './pages/en/PromoPage.js';
 import NewsPage from './pages/en/NewsPage.js';
 import ContactPage from './pages/en/ContactPage.js';
 import ErrorPage from './pages/en/ErrorPage.js';
-import SingleNews from './templates/en/SingleNews.js';
+import SingleNewsPage from './pages/en/SingleNewsPage.js';
 //-------bg
 import HomePageBg from './pages/bg/HomePageBg.js';
 import AboutPageBg from './pages/bg/AboutPageBg.js';
@@ -22,7 +23,7 @@ import PromoPageBg from './pages/bg/PromoPageBg.js';
 import NewsPageBg from './pages/bg/NewsPageBg.js';
 import ContactPageBg from './pages/bg/ContactPageBg.js';
 import ErrorPageBg from './pages/bg/ErrorPageBg.js';
-import SingleNewsBg from './templates/bg/SingleNewsBg.js';
+import SingleNewsPageBg from './pages/bg/SingleNewsPageBg.js';
 
 
 
@@ -58,7 +59,7 @@ class App extends Component {
           <Route path="/promotions/" render={(props) => <PromoPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/news/" render={(props) => <NewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path={"/article:index"} render={(props) => <SingleNews {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/article:index"} render={(props) => <SingleNewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>
@@ -71,7 +72,7 @@ class App extends Component {
           <Route path="/promotions/" render={(props) => <PromoPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path={"/article:index"} render={(props) => <SingleNewsBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/article:index"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>
