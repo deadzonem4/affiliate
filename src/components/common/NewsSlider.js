@@ -8,11 +8,10 @@ import { Link } from 'react-router-dom';
 class NewsSlider extends React.Component {
 
   render() {
-    console.log(this.props.api)
     const slides = this.props.api.map((data, index) =>
       <div className="slide" key={index}>
-          <h4>{data.date}</h4>
-          <p>{data.short_description_bg}</p>
+          <h4>{data[this.props.date]}</h4>
+          <p>{data[this.props.description]}</p>
       </div>
     );
     var settings = {

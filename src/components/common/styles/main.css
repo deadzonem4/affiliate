@@ -473,6 +473,9 @@ textarea::-ms-input-placeholder {
 .slick-disabled {
     display: none !important;
 }
+.single-news-slider .not-visible{
+  height: 0;
+}
 .single-news-slider .slick-track{
   margin-left: 0!important
 }

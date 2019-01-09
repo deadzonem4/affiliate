@@ -8,16 +8,17 @@ import './styles/main.css';
 class MainSlider extends React.Component {
 
   render() {
+    
     const images = this.props.api.map((data, index) =>
       <div className="slide" key={index}>
         <img src={"https://dev.winbet-bg.com/uploads/images/sliders/" + data.image_name} alt=''/>
         <div className="slider-overlay">
           <img src={logo} alt={logo}/>
-          <h2>{data.title_bg}</h2>
-          <p>{data.description_bg} 
+          <h2>{data[this.props.title]}</h2>
+          <p>{data[this.props.description]} 
           </p>
-          <div className={data.button_text1_bg == null ? 'slider-register-emty' : 'slider-register'}><span>{data.button_text1_bg}</span></div>
-          <div className={data.button_text2_bg == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data.button_text2_bg}</span></div>
+          <div className={data[this.props.button1] == null ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></div>
+          <div className={data[this.props.button2] == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data[this.props.button2]}</span></div>
         </div>
       </div>
     );

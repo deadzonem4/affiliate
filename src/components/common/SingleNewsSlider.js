@@ -40,9 +40,8 @@ class SingleNewsSlider extends React.Component {
   }
 
   render() {
-
     const images = this.props.info.map((img, index) =>
-      <div className="slide" key={index}>
+      <div className={img===''? "slide not-visible": "slide"} key={index}>
         <img onClick={(e) => this.openImgsViewer(index, e)} className={"single-news-slider-img " + index} src={"https://dev.winbet-bg.com/uploads/images/newsImages/" + img} alt={img}/>
       </div>
     );

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 class AllNews extends React.Component {
   
   render() {
-    const news = this.props.api[0].map((filters, index) =>
+    const news = this.props.api.map((filters, index) =>
       <div className="news-box-content" key={index}>
         <Link  to={{pathname: `/article${index + 1}`}}>
           <span>{filters.title_en}</span>

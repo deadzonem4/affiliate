@@ -14,7 +14,7 @@ const HomePageBg = (props) => {
   return (
       <MainLayout bg={props.languageBg} en={props.languageEn}>
         <ApiData dataLink="https://dev.winbet-bg.com/api/bg/sliders">
-	         <MainSlider/>
+	         <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
         </ApiData>
 				<CasinoBox 
 					title="Примерен текст"
@@ -44,6 +44,8 @@ const HomePageBg = (props) => {
 	        <NewsSlider
 						title="Последни новини"
 						button="Всички новини"
+						date="date"
+						description="short_description_bg"
 					/>
         </ApiData>
 				<ContactForm
