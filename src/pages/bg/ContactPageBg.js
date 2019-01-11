@@ -16,6 +16,7 @@ const ContactPageBg = (props) => {
           email="Имейл"
           subject="Относно"
           message="Съобщение"
+          succeed="Вашето съобщение е изпратено успешно!"
         />
 			</MainLayout>
     </div>

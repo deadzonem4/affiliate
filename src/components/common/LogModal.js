@@ -33,7 +33,7 @@ class LogModal extends React.Component {
                 <input type="password" className="form-control" id="password" name="password" placeholder={this.props.password} />
               </div>
               <button type="submit" className="log-in-modal" id="loginSubmit">{this.props.logButton}</button>
-          </form>
+            </form>
           </ModalBody>
         </Modal>
       </div>

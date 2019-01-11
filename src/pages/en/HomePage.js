@@ -59,6 +59,7 @@ const HomePage = (props) => {
         email="Email"
         subject="Subject"
         message="Message"
+        succeed="Your message has been sent successfully!"
       />
 		</MainLayout>
   );

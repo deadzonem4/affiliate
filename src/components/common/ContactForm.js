@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import $ from 'jquery'
+import $ from 'jquery';
+import {Modal, ModalHeader} from 'reactstrap';
 class ContactForm extends Component {
   constructor (props) {
     super(props);
@@ -13,8 +14,10 @@ class ContactForm extends Component {
       nameValid: false,
       subjectValid: false,
       messageValid: false,
-      formValid: false
+      formValid: false,
+      modal: false
     }
+    this.toggle = this.toggle.bind(this);
   }
 
   handleUserInput = (e) => {
@@ -36,6 +39,20 @@ class ContactForm extends Component {
     // console.log(formSuccess)     //javascript object
     // console.log(contact);       //JSON text
     $.post( "https://dev.winbet-bg.com/api/contacts/create", formSuccess );
+    //clear data
+    this.setState({
+      name : "",
+      email: "",
+      subject: "",
+      message: "",
+      modal: !this.state.modal
+    })
+  }
+
+  toggle() {
+    this.setState({
+      modal: !this.state.modal
+    });
   }
 
   validateField(fieldName, value) {
@@ -138,6 +155,9 @@ class ContactForm extends Component {
             {this.props.button}
           </button>
         </form>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="succeed-modal">
+          <ModalHeader toggle={this.toggle}>{this.props.succeed}</ModalHeader>
+        </Modal>
       </div>
     )
   }
