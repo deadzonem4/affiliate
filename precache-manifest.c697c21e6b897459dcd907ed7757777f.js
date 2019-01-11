@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/botevVr.471f1b22.png"
   },
   {
-    "revision": "7832aa803ad57aff8175",
-    "url": "/affiliate/static/css/main.1fc58079.chunk.css"
+    "revision": "9392d65d243a8704247d",
+    "url": "/affiliate/static/css/main.27b36842.chunk.css"
   },
   {
-    "revision": "ced611daf7709cc778da928fec876475",
-    "url": "/affiliate/static/media/slick.ced611da.eot"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
-    "revision": "ca2c4304feb8d7f7b047",
-    "url": "/affiliate/static/js/1.ca2c4304.chunk.js"
+    "revision": "0c9b996192aeeeedf67a",
+    "url": "/affiliate/static/js/1.0c9b9961.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/dunav.2fae6291.png"
   },
   {
-    "revision": "7832aa803ad57aff8175",
-    "url": "/affiliate/static/js/main.7832aa80.chunk.js"
+    "revision": "9392d65d243a8704247d",
+    "url": "/affiliate/static/js/main.9392d65d.chunk.js"
   },
   {
     "revision": "5dc5c1e2bed412d91f0635830452cc64",
@@ -56,23 +56,23 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/bfb.93b1f1d3.png"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
-  },
-  {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
+    "revision": "ced611daf7709cc778da928fec876475",
+    "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "ca2c4304feb8d7f7b047",
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+  },
+  {
+    "revision": "0c9b996192aeeeedf67a",
     "url": "/affiliate/static/css/1.b6a817e9.chunk.css"
   },
   {
-    "revision": "0e06b84b48280838b1a6804f8721f577",
+    "revision": "7c9653c36e806f7680792fb14f45d343",
     "url": "/affiliate/index.html"
   }
 ];
