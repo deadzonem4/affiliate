@@ -8,20 +8,16 @@ import house from '../../images/payments/house.png';
 import easypay from '../../images/payments/easypay.png';
 import epay from '../../images/payments/epay.png';
 import cashterminal from '../../images/payments/cashterminal.png';
-// partners
-import cska from '../../images/partners/cska.png';
-import etyr from '../../images/partners/etyr.png';
-import dunav from '../../images/partners/dunav.png';
-import botevVr from '../../images/partners/botevVr.png';
-import chernomorec from '../../images/partners/chernomorec.png';
-import botevBorba from '../../images/partners/botevBorba.png';
-import pobeda from '../../images/partners/pobeda.png';
-import bfb from '../../images/partners/bfb.png';
-import privacy from '../../images/partners/privacy.png';
 
 
 const Footer = (props) => {
-    
+
+const images = props.api.map((data, index) =>
+  <li key={index}>
+    <img src={"https://dev.winbet-bg.com/uploads/images/partners_logo/" + data.img_name} alt='winbet partner'/>
+  </li>
+);
+
   return (
     <footer id="footer">
       <div className="container">
@@ -36,15 +32,7 @@ const Footer = (props) => {
         </ul>
         <h4 className="list-title">Официални партньори:</h4>
         <ul className="partner-list">
-          <li><img src={cska} alt="cska"/></li>
-          <li><img src={etyr} alt="etyr"/></li>
-          <li><img src={dunav} alt="dunav"/></li>
-          <li><img src={botevVr} alt="botevVr"/></li>
-          <li><img src={chernomorec} alt="chernomorec"/></li>
-          <li><img src={botevBorba} alt="botevBorba"/></li>
-          <li><img src={pobeda} alt="pobeda"/></li>
-          <li><img src={bfb} alt="bfb"/></li>
-          <li><img src={privacy} alt="privacy"/></li>
+          {images}
         </ul>
         <div className="copy-right">
           <p>

@@ -4,6 +4,7 @@ import Footer from '../../components/bg/Footer.js';
 import '../styles/main.css';
 import Language from '../../components/common/Language.js';
 import SocialBox from '../../components/bg/SocialBox.js';
+import ApiData from '../../templates/ApiData.js';
 
 const MainLayout = (props) => {
 
@@ -15,7 +16,9 @@ const MainLayout = (props) => {
 	        {props.children}
 	      </main>
 	      <SocialBox/>
-	      <Footer/>
+			  <ApiData dataLink="https://dev.winbet-bg.com/api/partners-logo">
+	      	<Footer/>
+	      </ApiData>
 	    </div>
     );
 }

@@ -20,7 +20,7 @@ class LogModal extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="log-button-box">
         <Button className="log-in"  onClick={this.toggle}>{this.props.button}</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>{this.props.title}</ModalHeader>
