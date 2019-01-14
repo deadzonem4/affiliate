@@ -82,7 +82,7 @@
   width: 280px;
   margin: 13vh 0 4vh;
 }
-.slick-slide{
+.main-slider .slick-slide{
   visibility: hidden!important;
 }
 .main-slider .slick-slide.slick-active.slick-current{
