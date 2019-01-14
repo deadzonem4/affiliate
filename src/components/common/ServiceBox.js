@@ -13,17 +13,17 @@ const ServiceBox = (props) => {
         </div>
         <div className="service-content">
           <div className="row">
-            <div className="service-box col-sm-4">
+            <div className="service-box col-md-4">
               <i className="fas fa-dollar-sign"></i>
               <h4>{props.box1Title}</h4>
               <p>{props.box1Text}</p>
             </div>
-            <div className="service-box col-sm-4">
+            <div className="service-box col-md-4">
               <i className="far fa-thumbs-up"></i>
               <h4>{props.box2Title}</h4>
               <p>{props.box2Text}</p>
             </div>
-            <div className="service-box col-sm-4">
+            <div className="service-box col-md-4">
               <i className="fas fa-headphones"></i>
               <h4>{props.box3Title}</h4>
               <p>{props.box3Text}</p>

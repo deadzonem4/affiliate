@@ -28,6 +28,13 @@
 .navbar-collapse{
   justify-content: center;
 }
+@media only screen and (max-width: 500px){
+  .bg-custom-header.navbar{
+    padding: 0;
+    background-color: #222222;
+    min-height: 35px;
+  }
+}
 /*---------------------------Clock-------------*/
 .time-clock{
   position: absolute;
@@ -52,6 +59,14 @@
 	font-size: 14px;
 	font-weight: 600;
 }
+@media only screen and (max-width: 500px){
+  .current-time, .time-clock span{
+    font-size: 12px;
+  }
+  .fa-clock{
+    font-size: 14px;
+  }
+}
 /*---------------------------Lang bar-------------*/
 .lang-bar{
   position: absolute;
@@ -73,6 +88,20 @@
 }
 .lang-bar span:hover{
 	background-color: #cc2027;
+}
+@media only screen and (max-width: 991px){
+  .lang-bar span{
+    font-size: 14px;
+    padding: 11px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .lang-bar{
+    top: 3px;
+  }
+  .lang-bar span {
+    padding: 10px;
+  }
 }
 /*-------------------------Slider--------------------*/
 .slide img{
@@ -151,6 +180,96 @@
 .main-slider .slider-register:hover{
   background-color: #940f14;
 }
+@media only screen and (max-width: 1400px){
+  .slider-overlay img{
+    width: 200px;
+    margin: 7vh 0 4vh;
+  }
+  .slider-overlay h2{
+    font-size: 30px;
+    max-width: 330px;
+    margin: 0 0 5vh;
+  }
+  .slider-overlay p {
+    max-width: 360px;
+    font-size: 15px;
+  }
+  .slider-register, .slider-log-in{
+    min-width: 150px;
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+}
+@media only screen and (max-width: 1100px){
+  .slider-overlay img{
+    width: 160px;
+    margin: 5vh 0 3vh;
+  }
+  .slider-overlay h2{
+    font-size: 26px;
+    max-width: 280px;
+    margin: 0 0 4vh;
+  }
+  .slider-overlay p {
+    max-width: 330px;
+    font-size: 14px;
+    margin-bottom: 3vh;
+  }
+  .slider-register, .slider-log-in{
+    min-width: 150px;
+    font-size: 14px;
+    padding: 10px 25px;
+  }
+  .slider-overlay{
+    left: 25px;
+  }
+}
+@media only screen and (max-width: 900px){
+  .slider-overlay img{
+    width: 100px;
+    margin: 21px 0 10px;
+  }
+  .slider-overlay h2{
+    font-size: 18px;
+    max-width: 200px;
+    margin: 0 0 15px;
+  }
+  .slider-overlay p {
+    max-width: 275px;
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  .slider-register, .slider-log-in{
+    min-width: 120px;
+    font-size: 13px;
+    padding: 8px 17px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .slider-overlay img{
+    margin: 10vh 0 15px;
+  }
+  .slider-overlay p {
+    display: none;
+  }
+  .slider-overlay h2 {
+    margin-bottom: 30px;
+  }
+}
+@media only screen and (max-width: 500px){
+  .slider-overlay img{
+    margin: 7vh 0 10px;
+    width: 80px;
+  }
+  .slider-overlay h2 {
+    font-size: 14px;
+    max-width: 145px;
+  }
+  .slider-register, .slider-log-in{
+    display: none;
+  }
+}
+
 /*-------------------------Casino Box-------------------*/
 .casino-box-content{
   display: flex;
@@ -198,6 +317,71 @@
   line-height: 1.45;
   color: #86878b;
 }
+@media only screen and (max-width: 1350px){
+  .casino-box-content{
+    padding: 20px 40px;
+  }
+}
+@media only screen and (max-width: 1150px){
+  .casino-box-content a {
+    font-size: 16px;
+  }
+  .casino-box-text p{
+    font-size: 14px;
+    max-width: 310px;
+  }
+  .casino-box-text h4{
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 900px){
+  .casino-box-content{
+    flex-wrap: wrap;
+  }
+  .casino-box-text{
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .casino-box-text p, .casino-box-text h4{
+    text-align: center;
+  }
+  .casino-box-text p{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 560px){
+  .casino-box-content a {
+      font-size: 14px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+  }
+  .casino-box-content object{
+    width: 100%;
+    order: 0;
+  }
+  .casino-box-content svg{
+    margin-left: 0;
+  }
+  .casino-box-content a span{
+    order: 1;
+    line-height: 1.2;
+    margin-top: 5px;
+  }
+    .casino-box-content{
+    padding: 20px 0;
+  }
+}
+@media only screen and (max-width: 380px){
+  .casino-live span{
+    max-width: 100px
+  }
+}
 /*----------------------------Service Box--------------------*/
 .service-placeholder{
   text-align: center;
@@ -242,6 +426,26 @@
   font-size: 15px;
   line-height: 1.45;
   color: #86878b;
+}
+@media only screen and (max-width: 767px){
+  .service-placeholder {
+    padding: 50px 0;
+  }
+  .service-title-box {
+    margin-bottom: 60px;
+  }
+  .service-box h4{
+    font-size: 19px;
+    margin: 15px 0 20px;
+  }
+  .service-box p{
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .service-box i{
+    font-size: 25px;
+    width: 53px;
+  }
 }
 /*--------------------------------News Slider----------------------*/
 .news-slider{
@@ -290,6 +494,24 @@
 .news-slider .all-news span:hover{
   background-color: #fff;
   color: rgba(49, 49, 49, 1);
+}
+@media only screen and (max-width: 991px){
+  .news-slider p{
+    font-size: 14px;
+    max-width: 530px
+  }
+  .news-slider .all-news span{
+    font-size: 14px;
+  }
+  .news-slider h4{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 560px){
+  .news-slider p{
+    max-width: 290px;
+    margin-bottom: 40px;
+  }
 }
 /*--------------------------------ContactForm----------------------------*/
 .winbetForm{
@@ -361,6 +583,18 @@ textarea:-ms-input-placeholder {
 textarea::-ms-input-placeholder {
   color: #d2d2d2!important;
 }
+@media only screen and (max-width: 767px){
+  .winbetForm {
+      text-align: center;
+      padding: 50px 10px;
+  }
+  .winbetForm textarea{
+    margin-top: 30px;
+  }
+  .form-fields {
+    padding: 45px 0 60px;
+  }
+}
 /*----------------------------------------Succeed modal-------------------------*/
 .succeed-modal .modal-header{
   border:none!important;
@@ -416,6 +650,14 @@ textarea::-ms-input-placeholder {
 .social-text h4{
   font-weight: 800;
   margin-bottom: 12px;
+}
+@media only screen and (max-width: 991px){
+  .social-text h4, .social-text li{
+    text-align: center;
+  }
+  .social-text ul{
+    margin-bottom: 20px
+  }
 }
 /*---------------------------------Log in---------------------------*/
 .login-form{

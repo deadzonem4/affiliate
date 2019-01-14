@@ -4,7 +4,7 @@ import './styles/main.css';
 const SocialText = (props) => {
 
   return (
-    <div className="social-text col-sm-3">
+    <div className="social-text col-sm-6 col-lg-3">
     	<h4>{props.title}</h4>
     	<ul>
     		<li>{props.text1}</li>

@@ -108,7 +108,7 @@ class ContactForm extends Component {
           <p className="subtitle-text">{this.props.subtitle}</p>
           <div className="form-fields">
             <div className="row">
-              <div className="col-sm-6 left-col">
+              <div className="col-md-6 left-col">
                 <input 
                   type="email" 
                   required 
@@ -135,7 +135,7 @@ class ContactForm extends Component {
                   onChange={this.handleUserInput}  
                 />
               </div>
-              <div className="col-sm-6 right-col">
+              <div className="col-md-6 right-col">
                 <textarea 
                   className={`form-control ${this.errorClass(this.state.formErrors.message)}`} 
                   name="message"

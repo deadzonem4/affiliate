@@ -115,7 +115,8 @@ footer{
     background-size: cover!important;
   }
   .mobile-menu .navbar-nav{
-    width: 100%
+    width: 100%;
+    margin-top: 15px;
   }
   .mobile-menu .navbar-toggler{
     position: absolute;
@@ -131,10 +132,10 @@ footer{
   .nav-link:hover, .nav-link:focus {
     background-color: transparent;
   }
-  .mobile-menu .log-in{
-    background: transparent;
+  .mobile-menu .log-in, .mobile-menu .log-in:hover, .mobile-menu .log-in:focus{
+    background: transparent!important;
     border: none;
-    box-shadow: none;
+    box-shadow: none!important;
     font-size: 14px;
     padding: 0;
     margin: 0;

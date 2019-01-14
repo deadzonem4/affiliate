@@ -45,17 +45,3 @@
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
-/*. 
-  bg
-    info="Информация"
-    promo="Промоции"  
-  en
-    info="Information"
-    promo="Promotions" 
-  <NavItem>
-    <NavLink tag={RRNavLink} className="nav-link" to="/information" activeClassName="active" exact path="/information">{this.props.info}</NavLink>
-  </NavItem>
-  <NavItem>
-    <NavLink tag={RRNavLink} className="nav-link" to="/promotions" activeClassName="active" exact path="/promotions">{this.props.promo}</NavLink>
-  </NavItem>
-*/
