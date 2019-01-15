@@ -594,6 +594,9 @@ textarea::-ms-input-placeholder {
   .form-fields {
     padding: 45px 0 60px;
   }
+  .btn-submit {
+    padding: 10px 35px;
+  }
 }
 /*----------------------------------------Succeed modal-------------------------*/
 .succeed-modal .modal-header{
@@ -605,6 +608,20 @@ textarea::-ms-input-placeholder {
 }
 .succeed-modal .modal-header button{
   color: #fff!important;
+}
+@media only screen and (max-width: 575px){
+  .succeed-modal.modal-dialog {
+    margin: 25vh auto;
+    max-width: 200px;
+  }
+  .succeed-modal .modal-title{
+    font-size: 14px;
+  }
+  .succeed-modal .close{
+    position: absolute;
+    top: 0;
+    right: 4px;
+  }
 }
 /*------------------------------------------SocialBox-------------------------------*/
 .social-box{
@@ -698,6 +715,27 @@ textarea::-ms-input-placeholder {
 }
 .modal-dialog{
   margin: 10vh auto;
+}
+.login-form .form-control{
+    outline: none!important;
+    border: none!important;
+    box-shadow: none!important;
+    border-radius: 0;
+    border-bottom: solid 1px #d2d2d2!important;
+}
+@media only screen and (max-width: 575px){
+  .log-modal-box{
+    max-width: 280px;
+  }
+  .log-modal-box .modal-title{
+    font-size: 15px;
+  }
+  .log-modal-box .form-control{
+    font-size: 14px;
+  }
+  .log-modal-box .log-in-modal{
+    font-size: 15px;
+  }
 }
 /*---------------------------------Single News Slider----------------------*/
 .single-news-slider{

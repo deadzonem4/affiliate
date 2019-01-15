@@ -18,6 +18,12 @@ const LogoBox = (props) => {
           about="За нас"
           news="Новини"
           contact="Контакти"
+          regButton="Регистрация"
+          signButton="Вход"
+          logButton="вход"
+          title="Попълнете вашите данни"
+          user="Потребител"
+          password="Парола"
         />
         <div className="logo-buttons">
           <LogModal button="вход" logButton="вход" title="Попълнете вашите данни" user="Потребител" password="Парола"/>

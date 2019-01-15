@@ -3,6 +3,7 @@ import { NavLink as RRNavLink } from 'react-router-dom';
 import './styles/main.css';
 import LogModal from './LogModal.js';
 import logo from '../../images/logo.png';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   NavbarToggler,
@@ -26,9 +27,9 @@ class MobileMenu extends React.Component {
   render() {
     return (
       <div className="mobile-menu">
-        <NavLink className="navbar-brand-mobile" to="/">
+        <Link className="navbar-brand-mobile" to="/">
           <img className="logo" src={logo}  alt="Affiliate"/>
-        </NavLink>
+        </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
@@ -45,12 +46,19 @@ class MobileMenu extends React.Component {
                 <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
               </NavItem>
               <NavItem>
-                <LogModal button="вход" logButton="вход" title="Попълнете вашите данни" user="Потребител" password="Парола"/>
+                <a className="nav-link" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
+                    <span>{this.props.regButton}</span>
+                </a>
               </NavItem>
               <NavItem>
-                <a className="nav-link" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">
-                    <span>Регистрация</span>
-                </a>
+                <LogModal
+                  className="log-modal-box"
+                  button={this.props.signButton}
+                  logButton={this.props.logButton}
+                  title={this.props.title}
+                  user={this.props.user}
+                  password={this.props.password}                
+                />
               </NavItem>
             </Nav>
           </Collapse>
