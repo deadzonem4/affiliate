@@ -71,17 +71,19 @@
 .lang-bar{
   position: absolute;
   right: 0px;
-  top: 8px;
+  top: 0px;
   z-index: 99;
 }
 .lang-bar span{
 	background-color: #7b0005;
-  padding: 10px;
   color: #fff;
   margin-right: 3px;
   cursor: pointer;
   border-radius: 0px;
   transition: ease .2s;
+  display: inline-block;
+  height: 41px;
+  padding: 9px 10px;
 }
 .lang-bar span:last-of-type{
   margin: 0;
@@ -96,11 +98,9 @@
   }
 }
 @media only screen and (max-width: 500px){
-  .lang-bar{
-    top: 3px;
-  }
   .lang-bar span {
-    padding: 10px;
+    padding: 7px 12px;
+    height: 35px;
   }
 }
 /*-------------------------Slider--------------------*/
