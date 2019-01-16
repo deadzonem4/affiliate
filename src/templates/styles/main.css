@@ -126,6 +126,9 @@
 	.single-news-slider {
     margin: 25px;
 	}
+	.single-news-slider .slide {
+    padding: 0 3px;
+	}
 }
 @media only screen and (max-width: 360px){
 	.single-article-navigation a{

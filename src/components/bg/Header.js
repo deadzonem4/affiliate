@@ -10,6 +10,7 @@ const Header = (props) => {
         <MainMenu
         home="Начало"
         about="За нас"
+        information="Информация"
         news="Новини"
         contact="Контакти"
         />

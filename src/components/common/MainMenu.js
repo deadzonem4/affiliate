@@ -3,18 +3,24 @@ import { NavLink as RRNavLink } from 'react-router-dom';
 import './styles/main.css';
 import LiveClock from '../common/LiveClock.js';
 import {
-  Collapse,
-  Navbar,
-  Nav,
-  NavItem,
-  NavLink
-  } from 'reactstrap';
+  Collapse, Navbar, Nav, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu
+  } 
+from 'reactstrap';
 
 
 class MainMenuBg extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isOpen: false};
+    this.state = {
+      isOpen: false,
+      dropdownOpen: false
+    };
+    this.toggle = this.toggle.bind(this);
+  }
+  toggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen
+    }));
   }
   render() {
     return (
@@ -34,13 +40,23 @@ class MainMenuBg extends React.Component {
                   <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
                 </NavItem>
                 <NavItem>
+                  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <DropdownToggle caret>
+                      {this.props.information}
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/news" activeClassName="active" exact path="/news">{this.props.news}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
+                    </DropdownMenu>
+                  </Dropdown>
+                </NavItem>
+                <NavItem>
                   <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
-            
           </div>
-          
         </Navbar>
       </div>
     );

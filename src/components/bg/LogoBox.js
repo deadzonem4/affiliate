@@ -24,6 +24,7 @@ const LogoBox = (props) => {
           title="Попълнете вашите данни"
           user="Потребител"
           password="Парола"
+          information="Информация"
         />
         <div className="logo-buttons">
           <LogModal button="вход" logButton="вход" title="Попълнете вашите данни" user="Потребител" password="Парола"/>
