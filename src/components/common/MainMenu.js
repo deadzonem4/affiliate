@@ -11,16 +11,23 @@ from 'reactstrap';
 class MainMenuBg extends React.Component {
   constructor(props) {
     super(props);
+    this.toggle = this.toggle.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
     this.state = {
-      isOpen: false,
       dropdownOpen: false
     };
-    this.toggle = this.toggle.bind(this);
   }
   toggle() {
     this.setState(prevState => ({
       dropdownOpen: !prevState.dropdownOpen
     }));
+  }
+  onMouseEnter() {
+    this.setState({dropdownOpen: true});
+  }
+  onMouseLeave() {
+    this.setState({dropdownOpen: false});
   }
   render() {
     return (
@@ -40,11 +47,11 @@ class MainMenuBg extends React.Component {
                   <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
                 </NavItem>
                 <NavItem>
-                  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle caret>
+                  <Dropdown onMouseOver={this.onMouseEnter} onMouseLeave={this.onMouseLeave} isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <DropdownToggle caret onMouseOver={this.onMouseEnter}>
                       {this.props.information}
                     </DropdownToggle>
-                    <DropdownMenu>
+                    <DropdownMenu onMouseOver={this.onMouseEnter}>
                       <NavLink tag={RRNavLink} className="nav-link" to="/terms-and-coditions" activeClassName="active" exact path="/terms-and-coditions">{this.props.terms}</NavLink>
                       <NavLink tag={RRNavLink} className="nav-link" to="/commission" activeClassName="active" exact path="/commission">{this.props.commission}</NavLink>
                       <NavLink tag={RRNavLink} className="nav-link" to="/f-a-q" activeClassName="active" exact path="/f-a-q">{this.props.faq}</NavLink>

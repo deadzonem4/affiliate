@@ -172,9 +172,11 @@ footer{
   height: 100%;
 }
 .nav-item .dropdown-menu{
+  margin-top: 0!important;
   padding: 0!important;
   border-radius: 0!important;
   min-width: 15rem;
+  border: 0!important;
 }
 .dropdown-menu .nav-link{
   margin: 0;

@@ -157,3 +157,122 @@
 	line-height: 1.1;
 	color: #212121;
 }
+/*-----------------------------------------All News--------------------------------------*/
+#page-numbers{
+	display: flex;
+	justify-content: center;
+	border-top: solid 1px #cc2027;
+	padding-top: 15px;
+	max-width: 600px;
+	margin: 60px auto 80px
+}
+#page-numbers li{
+  height: 28px;
+  background: #d80015;
+  width: 28px;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: .3s;
+  display: flex;
+  align-items: center;
+}
+#page-numbers li:hover, #page-numbers li:focus{
+	background: #982016;
+}
+.news-box-content{
+	display: flex;
+	justify-content: space-between;
+}
+.all-news-img{
+	width: 30%;
+	height: 250px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+}
+.all-news-img img{
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    margin: auto;
+    height: 100%;
+    width: auto;
+    transition: all 0.4s ease;
+}
+.all-news-img img:hover{
+	-webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.news-box{
+	margin-bottom: 40px;
+}
+.all-news-page{
+	margin-top: 80px;
+}
+.all-news-page .dark-title{
+	text-align: center;
+}
+.all-news{
+	margin-top: 80px;
+}
+.all-news-date span{
+	font-size: 14px;
+  color: #cc2027;
+  font-weight: 600; 
+}
+.all-news-date{
+  border-bottom: solid 1px #cc2027;
+  margin-bottom: 10px;
+}
+.all-news-content{
+	width: calc(70% - 10px);
+	position: relative;
+}
+.all-news-title h4{
+  color: #cc2027;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.all-news-text p{
+	font-size: 15px;
+	line-height: 1.2
+}
+.all-news-link{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	padding: 5px 15px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	background-color: #cc2027;
+	transition: ease .3s;
+	cursor: pointer;
+}
+.all-news-link:hover, .all-news-link:focus{
+	color: #fff;
+	text-decoration: none;
+	background-color: #982016;
+}
+
+
+
+
+
+
+
+
+
+

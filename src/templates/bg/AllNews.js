@@ -1,14 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import '../styles/main.css';
 
 class AllNews extends React.Component {
   
   constructor() {
     super();
     this.state = {
-      todos: ['a','b','c','d','e','f','g','h','i','j','k'],
       currentPage: 1,
-      todosPerPage: 4
+      ImgPerPage: 4
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -16,6 +16,7 @@ class AllNews extends React.Component {
       this.setState({
         currentPage: Number(event.target.id)
       });
+      window.scrollTo(0, 1100)
     }
 
   componentDidMount() {
@@ -23,27 +24,45 @@ class AllNews extends React.Component {
   }
   
   render() {
+
     const news = this.props.api.map((filters, index) =>
       <div className="news-box-content" key={index}>
-        <Link  to={{pathname: `/article${index + 1}`}}>
-          <span>{filters.title_bg}</span>
+        <Link className="all-news-img" to={{pathname: `/article${index + 1}`}}>
+ 
+            <img src={"https://dev.winbet-bg.com/uploads/images/news/" + filters.image_name} alt="winbet news"/>
+
         </Link>
+        <div className="all-news-content">
+          <div className="all-news-date">
+            <span>{filters.date}</span>
+          </div>
+          <div className="all-news-title">
+            <h4>{filters.title_bg}</h4>
+          </div>
+          <div className="all-news-text">
+            <p>{filters.short_description_bg}</p>
+          </div>
+          <Link className="all-news-link"  to={{pathname: `/article${index + 1}`}}>
+          {this.props.read}
+          </Link>
+        </div>
       </div>
     );
-    const {currentPage, todosPerPage } = this.state;
+    const data = news.reverse();
+    const {currentPage, ImgPerPage } = this.state;
 
-    // Logic for displaying todos
-    const indexOfLastTodo = currentPage * todosPerPage;
-    const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
-    const currentTodos = news.slice(indexOfFirstTodo, indexOfLastTodo);
+    // Logic for displaying news
+    const indexOfLastImg = currentPage * ImgPerPage;
+    const indexOfFirstImg = indexOfLastImg - ImgPerPage;
+    const currentImg = data.slice(indexOfFirstImg, indexOfLastImg);
 
-    const renderTodos = currentTodos.map((news, index) => {
+    const renderImg = currentImg.map((news, index) => {
       return <div className="news-box" key={index}>{news}</div>;
     });
 
     // Logic for displaying page numbers
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(news.length / todosPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(data.length / ImgPerPage); i++) {
       pageNumbers.push(i);
     }
 
@@ -60,9 +79,11 @@ class AllNews extends React.Component {
     });
 
     return (
-      <div>
-        <div className="news-box-content">
-          {renderTodos}
+      <div className="all-news-page">
+        <h2 className="dark-title">{this.props.title}</h2>
+        <div className="title-red-line"></div>
+        <div className="all-news">
+          {renderImg}
         </div>
         <ul id="page-numbers">
           {renderPageNumbers}

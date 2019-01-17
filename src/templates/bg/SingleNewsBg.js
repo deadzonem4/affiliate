@@ -22,7 +22,7 @@ class SingleNewsBg extends React.Component {
     this.setState({ 
       loading: false
     });
-    
+    window.scrollTo(0, 0);
   }
   closeImgsViewer () {
     this.setState({
