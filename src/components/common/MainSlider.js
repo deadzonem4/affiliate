@@ -15,6 +15,7 @@ class MainSlider extends React.Component {
         <div className="slider-overlay">
           <img src={logo} alt={logo}/>
           <h2>{data[this.props.title]}</h2>
+          <div className="title-white-line"></div>
           <p>{data[this.props.description]} 
           </p>
           <div className={data[this.props.button1] == null ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></div>
