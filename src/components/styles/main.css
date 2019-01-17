@@ -177,6 +177,7 @@ footer{
   border-radius: 0!important;
   min-width: 15rem;
   border: 0!important;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.13);
 }
 .dropdown-menu .nav-link{
   margin: 0;
