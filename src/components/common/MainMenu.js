@@ -45,9 +45,10 @@ class MainMenuBg extends React.Component {
                       {this.props.information}
                     </DropdownToggle>
                     <DropdownMenu>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/news" activeClassName="active" exact path="/news">{this.props.news}</NavLink>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/terms-and-coditions" activeClassName="active" exact path="/terms-and-coditions">{this.props.terms}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/commission" activeClassName="active" exact path="/commission">{this.props.commission}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/f-a-q" activeClassName="active" exact path="/f-a-q">{this.props.faq}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to="/responsible-betting" activeClassName="active" exact path="/responsible-betting">{this.props.betting}</NavLink>
                     </DropdownMenu>
                   </Dropdown>
                 </NavItem>

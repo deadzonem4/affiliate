@@ -10,8 +10,13 @@ const Header = (props) => {
       <MainMenu
         home="Home"
         about="About us"
+        information="Information"
         news="News"
         contact="Contacts"
+        terms="Terms and conditions"
+        commission="Commission"
+        faq="FAQ"
+        betting="Responsible betting"
         />
       <LogoBox buttonReg="Registration" buttonLog="Log in" />
     </header>

@@ -13,6 +13,10 @@ const Header = (props) => {
         information="Информация"
         news="Новини"
         contact="Контакти"
+        terms="Правила и условия"
+        commission="Комисионна"
+        faq="Често задавани въпроси"
+        betting="Отговорно залагане"
         />
         <LogoBox buttonReg="Регистрация" buttonLog="Вход"/>
       </header>

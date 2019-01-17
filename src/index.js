@@ -10,21 +10,26 @@ import * as serviceWorker from './serviceWorker';
 import HomePage from './pages/en/HomePage.js';
 import AboutPage from './pages/en/AboutPage.js';
 import InfoPage from './pages/en/InfoPage.js';
-import PromoPage from './pages/en/PromoPage.js';
 import NewsPage from './pages/en/NewsPage.js';
 import ContactPage from './pages/en/ContactPage.js';
 import ErrorPage from './pages/en/ErrorPage.js';
 import SingleNewsPage from './pages/en/SingleNewsPage.js';
+import TermsPage from './pages/en/TermsPage.js';
+import CommissionsPage from './pages/en/CommissionsPage.js';
+import FaqPage from './pages/en/FaqPage.js';
+import BettingPage from './pages/en/BettingPage.js';
 //-------bg
 import HomePageBg from './pages/bg/HomePageBg.js';
 import AboutPageBg from './pages/bg/AboutPageBg.js';
 import InfoPageBg from './pages/bg/InfoPageBg.js';
-import PromoPageBg from './pages/bg/PromoPageBg.js';
 import NewsPageBg from './pages/bg/NewsPageBg.js';
 import ContactPageBg from './pages/bg/ContactPageBg.js';
 import ErrorPageBg from './pages/bg/ErrorPageBg.js';
 import SingleNewsPageBg from './pages/bg/SingleNewsPageBg.js';
-
+import TermsPageBg from './pages/bg/TermsPageBg.js';
+import CommissionsPageBg from './pages/bg/CommissionsPageBg.js';
+import FaqPageBg from './pages/bg/FaqPageBg.js';
+import BettingPageBg from './pages/bg/BettingPageBg.js';
 
 
 class App extends Component {
@@ -56,7 +61,10 @@ class App extends Component {
           <Route exact path="/" render={(props) => <HomePage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/about-us/" render={(props) => <AboutPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/information/" render={(props) => <InfoPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/promotions/" render={(props) => <PromoPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/terms-and-coditions/" render={(props) => <TermsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/commission/" render={(props) => <CommissionsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/f-a-q/" render={(props) => <FaqPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/responsible-betting/" render={(props) => <BettingPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/news/" render={(props) => <NewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path={"/article:index"} render={(props) => <SingleNewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
@@ -69,7 +77,10 @@ class App extends Component {
           <Route exact path="/" render={(props) => <HomePageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/about-us/" render={(props) => <AboutPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/information/" render={(props) => <InfoPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/promotions/" render={(props) => <PromoPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/terms-and-coditions/" render={(props) => <TermsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/commission/" render={(props) => <CommissionsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/f-a-q/" render={(props) => <FaqPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/responsible-betting/" render={(props) => <BettingPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path={"/article:index"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>

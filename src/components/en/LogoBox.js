@@ -24,6 +24,11 @@ const LogoBox = (props) => {
           title="User login"
           user="Username"
           password="Password"
+          information="Information"
+          terms="Terms and conditions"
+          commission="Commission"
+          faq="FAQ"
+          betting="Responsible betting"
         />
         <div className="logo-buttons">
           <LogModal button="Log in" logButton="Log in" title="User login" user="Username" password="Password"/>
