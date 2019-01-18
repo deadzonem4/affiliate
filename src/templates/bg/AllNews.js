@@ -11,18 +11,28 @@ class AllNews extends React.Component {
       ImgPerPage: 4
     };
     this.handleClick = this.handleClick.bind(this);
+    this.myRef = React.createRef()
   }
   handleClick(event) {
       this.setState({
         currentPage: Number(event.target.id)
       });
-      window.scrollTo(0, 1100)
+      window.scrollTo({
+        top:this.myRef.current.offsetTop
+      })
     }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    this.timer = setTimeout(() =>   
+      window.scrollTo({
+        top:this.myRef.current.offsetTop, 
+        behavior: "smooth"
+      }),300,
+    );
   }
-  
+    componentWillUnmount() {
+      clearInterval(this.timer);
+    }
   render() {
 
     const news = this.props.api.map((filters, index) =>
@@ -79,7 +89,7 @@ class AllNews extends React.Component {
     });
 
     return (
-      <div className="all-news-page">
+      <div className="all-news-page" ref={this.myRef}>
         <h2 className="dark-title">{this.props.title}</h2>
         <div className="title-red-line"></div>
         <div className="all-news">

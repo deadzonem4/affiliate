@@ -6,6 +6,7 @@ class AllNews extends React.Component {
   
   constructor() {
     super();
+    this.myRef = React.createRef()
     this.state = {
       currentPage: 1,
       ImgPerPage: 4
@@ -16,11 +17,18 @@ class AllNews extends React.Component {
       this.setState({
         currentPage: Number(event.target.id)
       });
-      window.scrollTo(0, 1100)
+      window.scrollTo(0, 100)
     }
-
   componentDidMount() {
-    window.scrollTo(0, 0)
+    this.timer = setTimeout(() =>   
+      window.scrollTo({
+        top:this.myRef.current.offsetTop, 
+        behavior: "smooth"
+      }),300,
+    );
+  }
+  componentWillUnmount() {
+    clearInterval(this.timer);
   }
   
   render() {
@@ -79,7 +87,7 @@ class AllNews extends React.Component {
     });
 
     return (
-      <div className="all-news-page">
+      <div className="all-news-page" ref={this.myRef}>
         <h2 className="dark-title">{this.props.title}</h2>
         <div className="title-red-line"></div>
         <div className="all-news">

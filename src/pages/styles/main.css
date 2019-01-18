@@ -18,6 +18,9 @@
 	padding-left: 20px;
 	margin-bottom: 20px;
 }
+.about-text{
+  display: flex;
+}
 /*---------------------------Wait Page--------------------*/
 .wait-page{
   display: flex;
