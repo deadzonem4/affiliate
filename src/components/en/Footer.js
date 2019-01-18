@@ -36,13 +36,13 @@ const images = props.api.map((data, index) =>
         </ul>
         <div className="copy-right">
           <p>
-            Winbet is a registered trademark of Win Bet Online Ltd. (UIC 203294705), subject to regulation by the Gambling Commission of the Republic of Bulgaria and licensed under the Gambling Act with licenses number: 000030-8149 dated 10.07.2017. for organizing games in a casino, license number: 000030-3509 dated 30.03.2017. for organizing betting on results of sports competitions and races with horses and dogs and license number 000030 - 11266 dated 04.10.2017 for the organization of betting on chance events and betting related to knowledge of facts issued by the Government of the Republic of Bulgaria.
+            Winbet online is a registered trademark of “Win Bet Online” EOOD (UIC 203294705), the activity of which is subject to regulation by the State Commission on Gambling (SCG) of the Republic of Bulgaria, and is licensed according to the Gambling Act with Certificate number: 000030-14103 from 13.11.2018, reflecting the current status of a license for organizing games in a gaming casino, issued by virtue of Decision No. 000030-6257 from 29.06.2015; Certificate number: 000030-823 from 24.01.2018, reflecting the current status of a license for organizing bets on results from sporting competitions and horse and dog racing, issued by virtue of Decision No. 00030-8099 from 22.07.2016; and Certificate number: 000030-822 from 24.01.2018, reflecting the current status of a license for organizing bets on random events and bets related to knowledge of facts, issued by virtue of Decision No. 000030-11140 from 29.09.2017.
           </p>
           <p>
-            Office: address: Bulgaria: Sofia 1799, Mladost 2 str. Sveti Kipriyan, block 292
+            Address: Mladost 2 liv.d., Sveti Kipriyan St., block 292, Sofia 1799, Bulgaria
           </p>
           <p>
-            © 2018 Win Bet Online Ltd. - All Rights Reserved!
+            ©2019 All rights reserved.
           </p>
         </div>
       </div>

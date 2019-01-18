@@ -686,6 +686,13 @@ textarea::-ms-input-placeholder {
     margin-bottom: 20px
   }
 }
+@media only screen and (max-width: 575px){
+  .social-item {
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+  }
+}
 /*---------------------------------Log in---------------------------*/
 .login-form{
   max-width: 350px;
