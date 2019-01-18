@@ -6,18 +6,20 @@ class AllNews extends React.Component {
   
   constructor() {
     super();
-    this.myRef = React.createRef()
     this.state = {
       currentPage: 1,
       ImgPerPage: 4
     };
     this.handleClick = this.handleClick.bind(this);
+    this.myRef = React.createRef()
   }
   handleClick(event) {
       this.setState({
         currentPage: Number(event.target.id)
       });
-      window.scrollTo(0, 100)
+      window.scrollTo({
+        top:this.myRef.current.offsetTop
+      })
     }
   componentDidMount() {
     this.timer = setTimeout(() =>   
@@ -54,13 +56,12 @@ class AllNews extends React.Component {
         </div>
       </div>
     );
-    const data = news.reverse();
     const {currentPage, ImgPerPage } = this.state;
 
     // Logic for displaying news
     const indexOfLastImg = currentPage * ImgPerPage;
     const indexOfFirstImg = indexOfLastImg - ImgPerPage;
-    const currentImg = data.slice(indexOfFirstImg, indexOfLastImg);
+    const currentImg = news.slice(indexOfFirstImg, indexOfLastImg);
 
     const renderImg = currentImg.map((news, index) => {
       return <div className="news-box" key={index}>{news}</div>;
@@ -68,7 +69,7 @@ class AllNews extends React.Component {
 
     // Logic for displaying page numbers
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(data.length / ImgPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(news.length / ImgPerPage); i++) {
       pageNumbers.push(i);
     }
 
