@@ -14,7 +14,7 @@ const Header = (props) => {
         news="News"
         contact="Contacts"
         terms="Terms and conditions"
-        commission="Commission"
+        commission="Commission plan"
         faq="FAQ"
         betting="Responsible betting"
         />

@@ -36,9 +36,7 @@ class AllNews extends React.Component {
     const news = this.props.api.map((filters, index) =>
       <div className="news-box-content" key={index}>
         <Link className="all-news-img" to={{pathname: `/article${index + 1}`}}>
- 
-            <img src={"https://dev.winbet-bg.com/uploads/images/news/" + filters.image_name} alt="winbet news"/>
-
+          <img src={"https://dev.winbet-bg.com/uploads/images/news/" + filters.image_name} alt="winbet news"/>
         </Link>
         <div className="all-news-content">
           <div className="all-news-date">

@@ -21,6 +21,10 @@
 .about-text{
   display: flex;
 }
+.about-text img{
+  max-width: 100%;
+  height: auto;
+}
 /*---------------------------Wait Page--------------------*/
 .wait-page{
   display: flex;

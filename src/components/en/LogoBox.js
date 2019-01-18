@@ -26,7 +26,7 @@ const LogoBox = (props) => {
           password="Password"
           information="Information"
           terms="Terms and conditions"
-          commission="Commission"
+          commission="Commission plan"
           faq="FAQ"
           betting="Responsible betting"
         />
