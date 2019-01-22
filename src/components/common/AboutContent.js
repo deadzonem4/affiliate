@@ -1,7 +1,6 @@
 import React from "react";
 import './styles/main.css';
 
-
 const AboutContent = (props) => {
   return (
     <div className="container">

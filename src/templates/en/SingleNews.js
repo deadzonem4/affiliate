@@ -6,7 +6,7 @@ import WaitPage from '../../pages/en/WaitPage.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
-
+import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 
 class SingleNews extends React.Component {
 
@@ -43,6 +43,8 @@ class SingleNews extends React.Component {
       );
     }
     return (
+      <div>
+        <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree="Article"/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
@@ -93,6 +95,7 @@ class SingleNews extends React.Component {
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }

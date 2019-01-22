@@ -6,7 +6,7 @@ import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
-
+import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 
 class SingleNewsBg extends React.Component {
 
@@ -43,6 +43,8 @@ class SingleNewsBg extends React.Component {
       );
     }
     return (
+      <div>
+        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree="Статия"/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
@@ -91,6 +93,7 @@ class SingleNewsBg extends React.Component {
             </div>
           </div>
         </div>
+      </div>
     );
   }
 }

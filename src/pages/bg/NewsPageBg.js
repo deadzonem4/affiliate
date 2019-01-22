@@ -5,7 +5,7 @@ import '../styles/main.css';
 import ApiData from '../../templates/ApiData.js';
 import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
-
+import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 
 const NewsPageBg = (props) => {
 
@@ -22,6 +22,7 @@ const NewsPageBg = (props) => {
         secTwo="спорт"
         secThree="казино на живо"
       />
+      <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news"/>
       <div className="news-page">
         <div className="container">
           <ApiData dataLink="https://dev.winbet-bg.com/api/bg/news">

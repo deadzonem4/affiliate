@@ -102,7 +102,7 @@ class ContactForm extends Component {
   render () {
     return (
       <div className="container">
-        <form className="winbetForm" method="post">
+        <form id={this.props.formId} className="winbetForm" method="post">
           <h2 className="dark-title">{this.props.title}</h2>
           <div className="title-red-line"></div>
           <p className="subtitle-text">{this.props.subtitle}</p>
