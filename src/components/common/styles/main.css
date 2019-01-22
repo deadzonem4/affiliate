@@ -821,7 +821,7 @@ textarea::-ms-input-placeholder {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 370px){
+@media only screen and (max-width: 360px){
   .breadcrumbs-box{
     display: none;
   }
