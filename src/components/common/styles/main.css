@@ -184,6 +184,19 @@
 .main-slider .slider-register:hover{
   background-color: #940f14;
 }
+.main-slider .slick-slider{
+  position: static;
+}
+.main-slider .slick-dots{
+  bottom: 30px;
+}
+.main-slider .slick-dots li button:before{
+  color: #fff;
+  font-size: 12px;
+}
+.main-slider .slick-dots li{
+  margin: 0;
+}
 @media only screen and (max-width: 1400px){
   .slider-overlay img{
     width: 200px;
@@ -264,6 +277,19 @@
   }
   .main-slider .title-white-line{
     display: none;
+  }
+  .main-slider .slick-dots li button:before{
+    font-size: 9px;
+  }
+  .main-slider .slick-dots li, .main-slider .slick-dots li button, .main-slider .slick-dots li button:before{
+    width: 15px;
+    height: 15px;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 550px){
+  .main-slider .slick-dots{
+    bottom: 15px;
   }
 }
 @media only screen and (max-width: 500px){

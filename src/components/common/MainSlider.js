@@ -32,7 +32,8 @@ class MainSlider extends React.Component {
       infinite: true,
       speed: 400,
       fade: true,
-      cssEase: 'linear'
+      cssEase: 'linear',
+      dots: true
     };
     return (
       <div className="main-slider">
