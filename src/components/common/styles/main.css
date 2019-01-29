@@ -847,12 +847,111 @@ textarea::-ms-input-placeholder {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 460px){
   .breadcrumbs-box{
     display: none;
   }
 }
-
-
-
-
+/*-----------------------------------ProgressBars----------------------------*/
+.progressbar-item{
+  margin: 0 15px;
+  text-align: center;
+  position: relative;
+}
+.progressbar{
+  display: flex;
+  margin: 70px 0 40px;
+}
+.bar-legend{
+  font-size: 15px;
+  opacity: .6;
+  margin-top: 8px;
+  display: block;
+}
+.legend-value{
+  font-size: 12px;
+}
+.bar-total-text{
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  top: 92px;
+  left: 25px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 991px){
+  .progressbar-item{
+    margin: 0 5px;
+  }
+  .bar-legend{
+    font-size: 13px;
+  }
+  .legend-value{
+    font-size: 11px;
+  }
+  .bar-total-text {
+    font-size: 9px;
+    top: 79px;
+    left: 16px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .progressbar{
+    margin: 30px 0 20px;
+  }
+  .progressbar-item{
+    margin: 0 2px;
+  }
+  .bar-legend{
+    font-size: 10px;
+  }
+  .legend-value{
+    font-size: 8px;
+  }
+  .bar-total-text {
+    font-size: 8px;
+    top: 59px;
+    left: 7px;
+  }
+}
+@media only screen and (max-width: 550px){
+  .progressbar{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .progressbar-item{
+    margin: 20px 15px 0;
+    max-width: 105px;
+  }
+  .bar-legend{
+    font-size: 11px;
+  }
+  .legend-value{
+    font-size: 9px;
+  }
+  .bar-total-text {
+    font-size: 8px;
+    top: 63px;
+    left: 9px;
+  }
+}
+@media only screen and (max-width: 440px){
+  .progressbar-item{
+    width: 100%;
+    max-width: 200px;
+  }
+  .bar-legend{
+    font-size: 13px;
+  }
+  .legend-value{
+    font-size: 10px;
+  }
+  .CircularProgressbar{
+    width: 120px!important;
+  }
+  .bar-total-text {
+    font-size: 9px;
+    top: 72px;
+    left: 52px;
+  }
+}

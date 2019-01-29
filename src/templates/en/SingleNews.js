@@ -44,7 +44,7 @@ class SingleNews extends React.Component {
     }
     return (
       <div>
-        <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree="Article"/>
+        <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree={this.props.api[this.props.param-1].title_en}/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">

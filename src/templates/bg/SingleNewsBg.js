@@ -36,6 +36,7 @@ class SingleNewsBg extends React.Component {
   }
   render() {
     const newsIndex = parseInt(this.props.param);
+    console.log(this.props.params)
     const next = newsIndex + 1;
   	if (this.state.loading) {
       return (
@@ -44,7 +45,7 @@ class SingleNewsBg extends React.Component {
     }
     return (
       <div>
-        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree="Статия"/>
+        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree={this.props.api[this.props.param-1].title_bg}/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
