@@ -26,6 +26,7 @@ const CommissionContent = (props) => {
                 },
                 path: {
                   stroke: '#fff',
+                  transition: 'stroke-dashoffset 1s ease 0s',
                 },
                 trail: { stroke: 'transparent' },
               }}
@@ -49,6 +50,7 @@ const CommissionContent = (props) => {
                 },
                 path: {
                   stroke: '#fff',
+                  transition: 'stroke-dashoffset 1s ease 0s',
                 },
                 trail: { stroke: 'transparent' },
               }}
@@ -72,6 +74,7 @@ const CommissionContent = (props) => {
                 },
                 path: {
                   stroke: '#fff',
+                  transition: 'stroke-dashoffset 1s ease 0s',
                 },
                 trail: { stroke: 'transparent' },
               }}
@@ -95,6 +98,7 @@ const CommissionContent = (props) => {
                 },
                 path: {
                   stroke: '#fff',
+                  transition: 'stroke-dashoffset 1s ease 0s',
                 },
                 trail: { stroke: 'transparent' },
               }}
@@ -118,6 +122,7 @@ const CommissionContent = (props) => {
                 },
                 path: {
                   stroke: '#fff',
+                  transition: 'stroke-dashoffset 1s ease 0s',
                 },
                 trail: { stroke: 'transparent' },
               }}
