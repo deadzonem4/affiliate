@@ -8,10 +8,10 @@
   "runtime~main.js": "/affiliate/static/js/runtime~main.bd91b891.js",
   "runtime~main.js.map": "/affiliate/static/js/runtime~main.bd91b891.js.map",
   "static/media/main.css": "/affiliate/static/media/bars.80e519ba.png",
-  "static/media/slick-theme.css": "/affiliate/static/media/slick.d41f55a7.ttf",
-  "static/css/1.fb0ab2a5.chunk.css.map": "/affiliate/static/css/1.fb0ab2a5.chunk.css.map",
+  "static/media/slick-theme.css": "/affiliate/static/media/slick.b7c9e1e4.woff",
   "static/css/main.e5d711c5.chunk.css.map": "/affiliate/static/css/main.e5d711c5.chunk.css.map",
+  "static/css/1.fb0ab2a5.chunk.css.map": "/affiliate/static/css/1.fb0ab2a5.chunk.css.map",
   "index.html": "/affiliate/index.html",
-  "precache-manifest.c731697e339083bd67b6fc43cacfed68.js": "/affiliate/precache-manifest.c731697e339083bd67b6fc43cacfed68.js",
+  "precache-manifest.e26808fc024534483b656694e69491ee.js": "/affiliate/precache-manifest.e26808fc024534483b656694e69491ee.js",
   "service-worker.js": "/affiliate/service-worker.js"
 }
