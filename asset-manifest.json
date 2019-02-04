@@ -8,10 +8,10 @@
   "runtime~main.js": "/affiliate/static/js/runtime~main.bd91b891.js",
   "runtime~main.js.map": "/affiliate/static/js/runtime~main.bd91b891.js.map",
   "static/media/main.css": "/affiliate/static/media/bars.80e519ba.png",
-  "static/media/slick-theme.css": "/affiliate/static/media/slick.b7c9e1e4.woff",
+  "static/media/slick-theme.css": "/affiliate/static/media/slick.f97e3bbf.svg",
   "static/css/1.13286ee9.chunk.css.map": "/affiliate/static/css/1.13286ee9.chunk.css.map",
   "static/css/main.540c0dc7.chunk.css.map": "/affiliate/static/css/main.540c0dc7.chunk.css.map",
   "index.html": "/affiliate/index.html",
-  "precache-manifest.1a4db0359b134a169a44e0cf607cf57b.js": "/affiliate/precache-manifest.1a4db0359b134a169a44e0cf607cf57b.js",
+  "precache-manifest.86291b6006c108007558e3371196648f.js": "/affiliate/precache-manifest.86291b6006c108007558e3371196648f.js",
   "service-worker.js": "/affiliate/service-worker.js"
 }
