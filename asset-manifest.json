@@ -8,10 +8,10 @@
   "runtime~main.js": "/affiliate/static/js/runtime~main.bd91b891.js",
   "runtime~main.js.map": "/affiliate/static/js/runtime~main.bd91b891.js.map",
   "static/media/main.css": "/affiliate/static/media/bars.80e519ba.png",
-  "static/media/slick-theme.css": "/affiliate/static/media/slick.f97e3bbf.svg",
-  "static/css/1.fb0ab2a5.chunk.css.map": "/affiliate/static/css/1.fb0ab2a5.chunk.css.map",
+  "static/media/slick-theme.css": "/affiliate/static/media/slick.b7c9e1e4.woff",
   "static/css/main.e5d711c5.chunk.css.map": "/affiliate/static/css/main.e5d711c5.chunk.css.map",
+  "static/css/1.fb0ab2a5.chunk.css.map": "/affiliate/static/css/1.fb0ab2a5.chunk.css.map",
   "index.html": "/affiliate/index.html",
-  "precache-manifest.190941dcf3fdb42b64d1605da10736a5.js": "/affiliate/precache-manifest.190941dcf3fdb42b64d1605da10736a5.js",
+  "precache-manifest.bdefa51055eb5c2785f2bc172a472b2c.js": "/affiliate/precache-manifest.bdefa51055eb5c2785f2bc172a472b2c.js",
   "service-worker.js": "/affiliate/service-worker.js"
 }
