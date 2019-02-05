@@ -7,12 +7,13 @@ import NewsSlider from '../../components/common/NewsSlider.js';
 import ContactForm from '../../components/common/ContactForm.js';
 import ApiData from '../../templates/ApiData.js';
 import '../styles/main.css';
-
+import {ReactTitle} from 'react-meta-tags';
 
 const HomePageBg = (props) => {
 
   return (
       <MainLayout bg={props.languageBg} en={props.languageEn}>
+        <ReactTitle title={"Winbet - Начало"}/>
         <ApiData dataLink="https://dev.winbet-bg.com/api/bg/sliders">
 	         <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
         </ApiData>

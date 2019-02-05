@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
-// import MetaTags from 'react-meta-tags';
+import {ReactTitle} from 'react-meta-tags';
 
 class SingleNewsBg extends React.Component {
 
@@ -47,6 +47,7 @@ class SingleNewsBg extends React.Component {
     }
     return (
       <div>
+        <ReactTitle title={"Winbet - " + title}/>
         <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree={title}/>
         <div className="single-atricle-page">
           <div className="container">
@@ -78,7 +79,7 @@ class SingleNewsBg extends React.Component {
                     showImgCount={false}
                   />
                   <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name} alt={this.props.api[this.props.param-1].image_name}/>
-                  <div dangerouslySetInnerHTML={{__html: description}} />
+                  <div dangerouslySetInnerHTML={{__html: this.props.api[this.props.param-1].description_bg}} />
                   <SingleNewsSlider info={this.props.api[this.props.param-1].photos}/>
                 </div>
                 <div className="single-article-about">

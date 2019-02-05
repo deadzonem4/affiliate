@@ -4,7 +4,7 @@ import ApiData from '../../templates/ApiData.js';
 import AboutContent from '../../components/common/AboutContent.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 
-const AboutPageBg = (props) => {
+const AboutPage = (props) => {
   return (
   	<div>
       <MainLayout bg={props.languageBg} en={props.languageEn}>
@@ -17,4 +17,4 @@ const AboutPageBg = (props) => {
   );
 }
 
-export default AboutPageBg;
+export default AboutPage;

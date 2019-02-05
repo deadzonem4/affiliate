@@ -2,11 +2,13 @@ import React from "react";
 import './styles/main.css';
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import {ReactTitle} from 'react-meta-tags';
 
 const CommissionContent = (props) => {
   return (
     <div className="container">
       <div className="about-content">
+        <ReactTitle title={"Winbet - " + props.api[0][props.title]}/>
         <h2 className="dark-title">{props.api[0][props.title]}</h2>
         <div className="title-red-line"></div>
         <div className="progressbar">

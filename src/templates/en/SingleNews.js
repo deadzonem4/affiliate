@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
+import {ReactTitle} from 'react-meta-tags';
 
 class SingleNews extends React.Component {
 
@@ -46,6 +47,7 @@ class SingleNews extends React.Component {
     }
     return (
       <div>
+        <ReactTitle title={"Winbet - " + title}/>
         <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree={title}/>
         <div className="single-atricle-page">
           <div className="container">

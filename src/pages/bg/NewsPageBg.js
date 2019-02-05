@@ -6,11 +6,13 @@ import ApiData from '../../templates/ApiData.js';
 import MainSlider from '../../components/common/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
+import {ReactTitle} from 'react-meta-tags';
 
 const NewsPageBg = (props) => {
 
   return (
     <MainLayout bg={props.languageBg} en={props.languageEn}>
+      <ReactTitle title="Winbet - Новини"/>
       <ApiData dataLink="https://dev.winbet-bg.com/api/bg/sliders">
          <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
       </ApiData>

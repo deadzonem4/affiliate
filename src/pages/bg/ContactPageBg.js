@@ -3,11 +3,13 @@ import MainLayout from '../../layout/bg/MainLayout.js';
 import ContactForm from '../../components/common/ContactForm.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 import '../styles/main.css';
+import {ReactTitle} from 'react-meta-tags';
 
 const ContactPageBg = (props) => {
   return (
   	<div>
       <MainLayout bg={props.languageBg} en={props.languageEn}>
+        <ReactTitle title="Winbet - Контакти"/>
         <Breadcrumbs levelOne="Начало" levelTwo="Контакти" levelTwoLink="/contact"/>
 				<ContactForm
           formId="contact-page-form"
