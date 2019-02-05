@@ -37,6 +37,8 @@ class SingleNews extends React.Component {
   render() {
     const newsIndex = parseInt(this.props.param);
     const next = newsIndex + 1;
+    const title = this.props.api[this.props.param-1].title_en;
+    const subTitle = this.props.api[this.props.param-1].subtitle_en;
     if (this.state.loading) {
       return (
         <WaitPage/>
@@ -44,7 +46,7 @@ class SingleNews extends React.Component {
     }
     return (
       <div>
-        <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree={this.props.api[this.props.param-1].title_en}/>
+        <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news" levelThree={title}/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
@@ -58,8 +60,8 @@ class SingleNews extends React.Component {
               <SocialIcons col=""/>
             </div>
             <div className="single-article-header">
-              <h2 className="single-article-title">{this.props.api[this.props.param-1].title_en}</h2>
-              <h4 className="single-article-sub-title">{this.props.api[this.props.param-1].subtitle_en}</h4>
+              <h2 className="single-article-title">{title}</h2>
+              <h4 className="single-article-sub-title">{subTitle}</h4>
             </div>
             <div className="row">
               <article className="single-article-box col-md-9">

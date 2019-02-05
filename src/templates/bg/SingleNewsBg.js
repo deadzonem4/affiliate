@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
+// import MetaTags from 'react-meta-tags';
 
 class SingleNewsBg extends React.Component {
 
@@ -36,8 +37,9 @@ class SingleNewsBg extends React.Component {
   }
   render() {
     const newsIndex = parseInt(this.props.param);
-    console.log(this.props.params)
     const next = newsIndex + 1;
+    const title = this.props.api[this.props.param-1].title_bg;
+    const subTitle = this.props.api[this.props.param-1].subtitle_bg;
   	if (this.state.loading) {
       return (
         <WaitPageBg/>
@@ -45,7 +47,7 @@ class SingleNewsBg extends React.Component {
     }
     return (
       <div>
-        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree={this.props.api[this.props.param-1].title_bg}/>
+        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree={title}/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
@@ -59,8 +61,8 @@ class SingleNewsBg extends React.Component {
               <SocialIcons col=""/>
             </div>
             <div className="single-article-header">
-              <h2 className="single-article-title">{this.props.api[this.props.param-1].title_bg}</h2>
-              <h4 className="single-article-sub-title">{this.props.api[this.props.param-1].subtitle_bg}</h4>
+              <h2 className="single-article-title">{title}</h2>
+              <h4 className="single-article-sub-title">{subTitle}</h4>
             </div>
             <div className="row">
               <article className="single-article-box col-md-9">
@@ -76,7 +78,7 @@ class SingleNewsBg extends React.Component {
                     showImgCount={false}
                   />
                   <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name} alt={this.props.api[this.props.param-1].image_name}/>
-                  <div dangerouslySetInnerHTML={{__html: this.props.api[this.props.param-1].description_bg}} />
+                  <div dangerouslySetInnerHTML={{__html: description}} />
                   <SingleNewsSlider info={this.props.api[this.props.param-1].photos}/>
                 </div>
                 <div className="single-article-about">
