@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/bars.80e519ba.png"
   },
   {
-    "revision": "7fff3d4419e5e87a428e",
-    "url": "/affiliate/static/css/main.fa1b3f83.chunk.css"
+    "revision": "c21346cc0aba4099f689",
+    "url": "/affiliate/static/css/main.5027f4dd.chunk.css"
   },
   {
     "revision": "b7c9e1e479de3b53f1e4e30ebac2403a",
     "url": "/affiliate/static/media/slick.b7c9e1e4.woff"
   },
   {
-    "revision": "2ae19dd7131762563ed8",
-    "url": "/affiliate/static/js/1.2ae19dd7.chunk.js"
+    "revision": "2a4e3351730aed1f2eab",
+    "url": "/affiliate/static/js/1.2a4e3351.chunk.js"
   },
   {
     "revision": "bd91b891d36b1e469ed8",
@@ -24,31 +24,31 @@ self.__precacheManifest = [
     "url": "/affiliate/static/media/news-slider.14d14d1e.jpg"
   },
   {
-    "revision": "7fff3d4419e5e87a428e",
-    "url": "/affiliate/static/js/main.7fff3d44.chunk.js"
+    "revision": "c21346cc0aba4099f689",
+    "url": "/affiliate/static/js/main.c21346cc.chunk.js"
   },
   {
     "revision": "72e47dd1adf02aff89c830c111adc940",
     "url": "/affiliate/static/media/error.72e47dd1.png"
   },
   {
-    "revision": "d41f55a78e6f49a5512878df1737e58a",
-    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
+    "revision": "f97e3bbf73254b0112091d0192f17aec",
+    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
   },
   {
     "revision": "ced611daf7709cc778da928fec876475",
     "url": "/affiliate/static/media/slick.ced611da.eot"
   },
   {
-    "revision": "f97e3bbf73254b0112091d0192f17aec",
-    "url": "/affiliate/static/media/slick.f97e3bbf.svg"
+    "revision": "d41f55a78e6f49a5512878df1737e58a",
+    "url": "/affiliate/static/media/slick.d41f55a7.ttf"
   },
   {
-    "revision": "2ae19dd7131762563ed8",
-    "url": "/affiliate/static/css/1.3cf52726.chunk.css"
+    "revision": "2a4e3351730aed1f2eab",
+    "url": "/affiliate/static/css/1.abbf989a.chunk.css"
   },
   {
-    "revision": "ac367fd02fc262ae354ea33b15730a69",
+    "revision": "5eb2dcd07a8a31c85bb2dfe6caf16d62",
     "url": "/affiliate/index.html"
   }
 ];
