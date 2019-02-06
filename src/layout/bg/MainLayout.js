@@ -5,6 +5,7 @@ import '../styles/main.css';
 import Language from '../../components/common/Language.js';
 import SocialBox from '../../components/bg/SocialBox.js';
 import ApiData from '../../templates/ApiData.js';
+import Cookie from '../../components/common/Cookie.js';
 
 const MainLayout = (props) => {
 
@@ -19,6 +20,7 @@ const MainLayout = (props) => {
 			  <ApiData dataLink="https://dev.winbet-bg.com/api/partners-logo">
 	      	<Footer/>
 	      </ApiData>
+	      <Cookie text="Този сайт използва бисквитки, за да подобри представянето" button="Разбрах"/>
 	    </div>
     );
 }

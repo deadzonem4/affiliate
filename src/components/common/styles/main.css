@@ -955,3 +955,29 @@ textarea::-ms-input-placeholder {
     left: 52px;
   }
 }
+/*----------------------------------------------Cookie------------------------------*/
+.cookieConsent .cookie-text{
+  margin: 0 12px!important;
+  flex: none!important;
+  font-size: 14px;
+}
+.cookieConsent{
+  justify-content: space-around!important;
+}
+.cookieConsent button{
+  transition: .3s ease;
+}
+.cookieConsent button:hover, .cookieConsent button:focus{
+  background: #911d10!important;
+  outline: none;
+}
+@media only screen and (max-width: 550px){
+  .cookieConsent .cookie-text{
+    width: 100%;
+    margin: 5px 5px 0!important;
+    line-height: 1.2;
+  }
+  .cookieConsent{
+    text-align: center;
+  }
+}
