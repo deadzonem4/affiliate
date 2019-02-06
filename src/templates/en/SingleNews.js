@@ -1,6 +1,6 @@
 import React from "react";
 import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
-import SocialIcons from '../../components/common/SocialIcons.js';
+import ShareButtons from '../../components/common/ShareButtons.js';
 import LatestNews from './LatestNews.js';
 import WaitPage from '../../pages/en/WaitPage.js';
 import {Link} from "react-router-dom";
@@ -23,7 +23,7 @@ class SingleNews extends React.Component {
     this.setState({ 
       loading: false
     });
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }
   closeImgsViewer () {
     this.setState({
@@ -59,7 +59,7 @@ class SingleNews extends React.Component {
                 <Link  to="/news">{"< Back"}</Link>
                 <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/news" : "/article"+next}>{next > this.props.api.length ? "" : "Next >" }</Link>
               </div>
-              <SocialIcons col=""/>
+              <ShareButtons link={window.location.href}/>
             </div>
             <div className="single-article-header">
               <h2 className="single-article-title">{title}</h2>

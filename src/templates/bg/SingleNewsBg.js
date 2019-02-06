@@ -1,6 +1,6 @@
 import React from "react";
 import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
-import SocialIcons from '../../components/common/SocialIcons.js';
+import ShareButtons from '../../components/common/ShareButtons.js';
 import LatestNews from './LatestNews.js';
 import WaitPageBg from '../../pages/bg/WaitPageBg.js';
 import {Link} from "react-router-dom";
@@ -59,7 +59,7 @@ class SingleNewsBg extends React.Component {
                 <Link  to="/news">{"< Обратно"}</Link>
                 <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/news" : "/article"+next}>{next > this.props.api.length ? "" : "Следваща >" }</Link>
               </div>
-              <SocialIcons col=""/>
+              <ShareButtons link={window.location.href}/>
             </div>
             <div className="single-article-header">
               <h2 className="single-article-title">{title}</h2>
