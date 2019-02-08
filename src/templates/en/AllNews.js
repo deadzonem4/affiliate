@@ -14,14 +14,15 @@ class AllNews extends React.Component {
     this.myRef = React.createRef()
   }
   handleClick(event) {
-      this.setState({
-        currentPage: Number(event.target.id)
-      });
-      window.scrollTo({
-        top:this.myRef.current.offsetTop
-      })
-    }
+    this.setState({
+      currentPage: Number(event.target.id)
+    });
+    window.scrollTo({
+      top:this.myRef.current.offsetTop
+    })
+  }
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.timer = setTimeout(() =>   
       window.scrollTo({
         top:this.myRef.current.offsetTop, 
