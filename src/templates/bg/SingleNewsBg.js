@@ -38,6 +38,7 @@ class SingleNewsBg extends React.Component {
   render() {
     const newsIndex = parseInt(this.props.param);
     const next = newsIndex + 1;
+    const imgLink = "https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name;
     const title = this.props.api[this.props.param-1].title_bg;
     const subTitle = this.props.api[this.props.param-1].subtitle_bg;
   	if (this.state.loading) {
@@ -69,7 +70,7 @@ class SingleNewsBg extends React.Component {
               <article className="single-article-box col-md-9">
                 <div className="single-article-content">
                   <ImgsViewer
-                    imgs={[{src: "https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name, alt: ''}]}
+                    imgs={[{src: imgLink, alt: ''}]}
                     isOpen={this.state.isOpen}
                     onClose={this.closeImgsViewer}
                     backdropCloseable={true}
@@ -78,7 +79,7 @@ class SingleNewsBg extends React.Component {
                     closeBtnTitle={"close"}
                     showImgCount={false}
                   />
-                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={"https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name} alt={this.props.api[this.props.param-1].image_name}/>
+                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={imgLink} alt={this.props.api[this.props.param-1].image_name}/>
                   <div dangerouslySetInnerHTML={{__html: this.props.api[this.props.param-1].description_bg}} />
                   <SingleNewsSlider info={this.props.api[this.props.param-1].photos}/>
                 </div>

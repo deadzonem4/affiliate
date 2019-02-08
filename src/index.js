@@ -31,7 +31,8 @@ import CommissionsPageBg from './pages/bg/CommissionsPageBg.js';
 import FaqPageBg from './pages/bg/FaqPageBg.js';
 import BettingPageBg from './pages/bg/BettingPageBg.js';
 
-
+const langBg = "bg";
+const langEn = "en";
 class App extends Component {
 
   constructor(props) {
@@ -44,13 +45,19 @@ class App extends Component {
     this.setState({
       language: "bg"
     });
+    localStorage.setItem('language', langBg);
   }
   langChangeEn() {
     this.setState({
       language: "en"
     });
+    localStorage.setItem('language', langEn);
   }
-
+  componentWillMount(){
+    localStorage.getItem('language') && this.setState({
+      language: localStorage.getItem('language')
+    });
+  }
   render() {
     return (
       <div>
