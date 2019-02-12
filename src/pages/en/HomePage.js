@@ -1,11 +1,12 @@
 import React from 'react';
 import MainLayout from '../../layout/en/MainLayout.js';
-import MainSlider from '../../components/common/MainSlider.js';
+import MainSlider from '../../components/en/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import ServiceBox from '../../components/common/ServiceBox.js';
 import NewsSlider from '../../components/common/NewsSlider.js';
 import ContactForm from '../../components/common/ContactForm.js';
 import ApiData from '../../templates/ApiData.js';
+import StorageDataEn from '../../templates/StorageDataEn.js';
 import '../styles/main.css';
 import {ReactTitle} from 'react-meta-tags';
 
@@ -14,9 +15,9 @@ const HomePage = (props) => {
   return (
     <MainLayout bg={props.languageBg} en={props.languageEn}>
     	<ReactTitle title={"Winbet - Home"}/>
-      <ApiData dataLink="https://dev.winbet-bg.com/api/en/sliders">
+      <StorageDataEn dataLink="https://dev.winbet-bg.com/api/en/sliders">
          <MainSlider title="title_en" description="description_en" button1="button_text1_en" button2="button_text2_en"/>
-      </ApiData>
+      </StorageDataEn>
 			<CasinoBox 
 				title="Lorem ipsum dolor"
 				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

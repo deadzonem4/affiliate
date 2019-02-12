@@ -19,7 +19,13 @@ class AllNews extends React.Component {
     });
     window.scrollTo({
       top:this.myRef.current.offsetTop
-    })
+    });
+    sessionStorage.setItem('curPage', Number(event.target.id));
+  }
+  componentWillMount(){
+    sessionStorage.getItem('curPage') && this.setState({
+      currentPage: sessionStorage.getItem('curPage')
+    });
   }
   componentDidMount() {
     window.scrollTo(0, 0);

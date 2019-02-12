@@ -1,20 +1,28 @@
 import React from 'react';
 import WaitPageBg from '../pages/bg/WaitPageBg.js';
 
-
-class ApiData extends React.Component {
+class StorageData extends React.Component {
 
 	constructor(props) {
     super(props);
     this.state = {
       loading : true,
-      api: '',
+      ApiBg: [],
       url: this.props.dataLink,
-      data: []
     };
   }
+  componentWillMount(){
+    sessionStorage.getItem('ApiBg') && this.setState({
+      ApiBg: JSON.parse(sessionStorage.getItem('ApiBg')),
+      loading: false
+    })
+        
+  }
   componentDidMount(){
-    this.fetchData();
+    if (!sessionStorage.getItem('ApiBg')) {
+      this.fetchData();
+    }
+
   }
   fetchData(){
     fetch(this.state.url)
@@ -24,13 +32,15 @@ class ApiData extends React.Component {
       })
     .then(api => {
       this.setState({ 
-        api: api,
+        ApiBg: api,
         loading: false
       });
+      sessionStorage.setItem('ApiBg', JSON.stringify(this.state.ApiBg));
     })
     .catch(error => {
       console.log('error');
     });
+
   }
   render() {
     if (this.state.loading) {
@@ -40,10 +50,10 @@ class ApiData extends React.Component {
     }
 	  return (
       <div>
-        {React.cloneElement(this.props.children, { api: this.state.api })}
+        {React.cloneElement(this.props.children, { ApiBg: this.state.ApiBg })}
       </div>
 	  );
 	}
 }
 
-export default ApiData;
+export default StorageData;
