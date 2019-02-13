@@ -211,7 +211,7 @@ footer{
 }
 .slider-overlay img{
   width: 280px;
-  margin: 13vh 0 2vh;
+  margin: 13vh 0 2vh -7px;
 }
 .main-slider .slick-slide{
   visibility: hidden!important;
@@ -244,6 +244,10 @@ footer{
   position: relative;
   overflow: hidden;
   max-height: 85vh;
+  background: #000;
+}
+.main-slider .slick-slide > img{
+  display: inline-block!important;
 }
 .slider-overlay{
   position: absolute;
@@ -302,7 +306,7 @@ footer{
 @media only screen and (max-width: 1400px){
   .slider-overlay img{
     width: 200px;
-    margin: 7vh 0 2vh;
+    margin: 7vh 0 2vh -5px;
   }
   .slider-overlay h2{
     font-size: 30px;
@@ -322,7 +326,7 @@ footer{
 @media only screen and (max-width: 1100px){
   .slider-overlay img{
     width: 160px;
-    margin: 5vh 0 2vh;
+    margin: 5vh 0 2vh -4px;
   }
   .slider-overlay h2{
     font-size: 26px;
@@ -346,7 +350,7 @@ footer{
 @media only screen and (max-width: 900px){
   .slider-overlay img{
     width: 100px;
-    margin: 21px 0 10px;
+    margin: 21px 0 10px -3px;
   }
   .slider-overlay h2{
     font-size: 17px;
@@ -369,7 +373,7 @@ footer{
 }
 @media only screen and (max-width: 700px){
   .slider-overlay img{
-    margin: 10vh 0 15px;
+    margin: 10vh 0 15px -2px;
   }
   .slider-overlay p {
     display: none;
@@ -396,7 +400,7 @@ footer{
 }
 @media only screen and (max-width: 500px){
   .slider-overlay img{
-    margin: 7vh 0 10px;
+    margin: 7vh 0 10px -2px;
     width: 80px;
   }
   .slider-overlay h2 {

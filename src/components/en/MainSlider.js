@@ -14,8 +14,8 @@ class MainSlider extends React.Component {
           <div className="title-white-line"></div>
           <p>{data[this.props.description]} 
           </p>
-          <div className={data[this.props.button1] == null ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></div>
-          <div className={data[this.props.button2] == null ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data[this.props.button2]}</span></div>
+          <div className={data[this.props.button1] === '' ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></div>
+          <div className={data[this.props.button2] === '' ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data[this.props.button2]}</span></div>
         </div>
       </div>
     );
@@ -24,7 +24,7 @@ class MainSlider extends React.Component {
       slidesToScroll: 1,
       autoplay: true,
       pauseOnHover: false,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 8000,
       infinite: true,
       speed: 400,
       fade: true,
