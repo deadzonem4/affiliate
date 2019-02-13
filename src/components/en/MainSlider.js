@@ -14,8 +14,8 @@ class MainSlider extends React.Component {
           <div className="title-white-line"></div>
           <p>{data[this.props.description]} 
           </p>
-          <div className={data[this.props.button1] === '' ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></div>
-          <div className={data[this.props.button2] === '' ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data[this.props.button2]}</span></div>
+          <a target="_blank" rel="noopener noreferrer" href={data.button_1_en_url} className={data[this.props.button1] === '' ? 'slider-register-emty' : 'slider-register'}><span>{data[this.props.button1]}</span></a>
+          <a target="_blank" rel="noopener noreferrer" href={data.button_2_en_url} className={data[this.props.button2] === '' ? 'slider-log-in-emty' : 'slider-log-in'}><span>{data[this.props.button2]}</span></a>
         </div>
       </div>
     );

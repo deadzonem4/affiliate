@@ -233,7 +233,7 @@ footer{
   margin: 0 0 2vh;
 }
 .slider-overlay p{
-  max-width: 560px;
+  max-width: 450px;
   font-size: 17px;
   font-weight: 300;
   line-height: 1.43;
@@ -246,7 +246,7 @@ footer{
   max-height: 85vh;
   background: #000;
 }
-.main-slider .slick-slide > img{
+.main-slider .slide > img{
   display: inline-block!important;
 }
 .slider-overlay{
@@ -269,7 +269,7 @@ footer{
   cursor: pointer;
   min-width: 174px;
   text-align: center;
-  transition: ease .2s
+  transition: ease .2s;
 }
 .slider-log-in{
   display: inline-block;
@@ -281,7 +281,8 @@ footer{
   min-width: 174px;
   text-align: center;
   cursor: pointer;
-  transition: ease .2s
+  transition: ease .2s;
+  color: #ffffff;
 }
 .main-slider .slider-log-in:hover{
   background-color: #fff;
@@ -289,6 +290,7 @@ footer{
 }
 .main-slider .slider-register:hover{
   background-color: #940f14;
+  color: #fff;
 }
 .main-slider .slick-slider{
   position: static;

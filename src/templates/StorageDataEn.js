@@ -16,13 +16,11 @@ class StorageDataEn extends React.Component {
       ApiEn: JSON.parse(sessionStorage.getItem('ApiEn')),
       loading: false
     })
-        
   }
   componentDidMount(){
     if (!sessionStorage.getItem('ApiEn')) {
       this.fetchData();
     }
-
   }
   fetchData(){
     fetch(this.state.url)
