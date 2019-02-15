@@ -5,7 +5,7 @@ import '../styles/main.css';
 
 class MainSlider extends React.Component {
   render() {
-    const images = this.props.ApiEn.map((data, index) =>
+    const images = this.props.SliderEn.map((data, index) =>
       <div className="slide" key={index}>
         <img src={"https://dev.winbet-bg.com/uploads/images/sliders/" + data.image_name} alt=''/>
         <div className="slider-overlay">

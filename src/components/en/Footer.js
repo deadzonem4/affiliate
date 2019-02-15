@@ -12,7 +12,7 @@ import cashterminal from '../../images/payments/cashterminal.png';
 
 const Footer = (props) => {
 
-const images = props.api.map((data, index) =>
+const images = props.footer.map((data, index) =>
   <li key={index}>
     <img src={"https://dev.winbet-bg.com/uploads/images/partners_logo/" + data.img_name} alt='winbet partner'/>
   </li>

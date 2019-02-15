@@ -3,7 +3,7 @@ import MainLayout from '../../layout/bg/MainLayout.js';
 import AllNews from '../../templates/bg/AllNews.js'
 import '../styles/main.css';
 import ApiData from '../../templates/ApiData.js';
-import StorageDataBg from '../../templates/StorageDataBg.js';
+import StorageSliderBg from '../../templates/StorageSliderBg.js';
 import MainSlider from '../../components/bg/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
@@ -14,9 +14,9 @@ const NewsPageBg = (props) => {
   return (
     <MainLayout bg={props.languageBg} en={props.languageEn}>
       <ReactTitle title="Winbet - Новини"/>
-      <StorageDataBg dataLink="https://dev.winbet-bg.com/api/bg/sliders">
+      <StorageSliderBg dataLink="https://dev.winbet-bg.com/api/bg/sliders">
          <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
-      </StorageDataBg>
+      </StorageSliderBg>
       <CasinoBox 
         title="Примерен текст"
         text="Lorem Ipsum е елементарен примерен текст, 

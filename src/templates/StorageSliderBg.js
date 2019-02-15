@@ -1,26 +1,28 @@
 import React from 'react';
 import WaitPageBg from '../pages/bg/WaitPageBg.js';
 
-class StorageDataEn extends React.Component {
+class StorageSliderBg extends React.Component {
 
-  constructor(props) {
+	constructor(props) {
     super(props);
     this.state = {
       loading : true,
-      ApiEn: [],
+      SliderBg: [],
       url: this.props.dataLink,
     };
   }
   componentWillMount(){
-    sessionStorage.getItem('ApiEn') && this.setState({
-      ApiEn: JSON.parse(sessionStorage.getItem('ApiEn')),
+    sessionStorage.getItem('SliderBg') && this.setState({
+      SliderBg: JSON.parse(sessionStorage.getItem('SliderBg')),
       loading: false
     })
+        
   }
   componentDidMount(){
-    if (!sessionStorage.getItem('ApiEn')) {
+    if (!sessionStorage.getItem('SliderBg')) {
       this.fetchData();
     }
+
   }
   fetchData(){
     fetch(this.state.url)
@@ -30,10 +32,10 @@ class StorageDataEn extends React.Component {
       })
     .then(api => {
       this.setState({ 
-        ApiEn: api,
+        SliderBg: api,
         loading: false
       });
-      sessionStorage.setItem('ApiEn', JSON.stringify(this.state.ApiEn));
+      sessionStorage.setItem('SliderBg', JSON.stringify(this.state.SliderBg));
     })
     .catch(error => {
       console.log('error');
@@ -46,12 +48,12 @@ class StorageDataEn extends React.Component {
         <WaitPageBg/>
       );
     }
-    return (
+	  return (
       <div>
-        {React.cloneElement(this.props.children, { ApiEn: this.state.ApiEn })}
+        {React.cloneElement(this.props.children, { SliderBg: this.state.SliderBg })}
       </div>
-    );
-  }
+	  );
+	}
 }
 
-export default StorageDataEn;
+export default StorageSliderBg;

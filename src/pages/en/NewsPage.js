@@ -3,7 +3,7 @@ import MainLayout from '../../layout/en/MainLayout.js';
 import AllNews from '../../templates/en/AllNews.js'
 import '../styles/main.css';
 import ApiData from '../../templates/ApiData.js';
-import StorageDataEn from '../../templates/StorageDataEn.js';
+import StorageSliderEn from '../../templates/StorageSliderEn.js';
 import MainSlider from '../../components/en/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
@@ -14,9 +14,9 @@ const NewsPageBg = (props) => {
   return (
     <MainLayout bg={props.languageBg} en={props.languageEn}>
       <ReactTitle title="Winbet - News"/>
-      <StorageDataEn dataLink="https://dev.winbet-bg.com/api/en/sliders">
+      <StorageSliderEn dataLink="https://dev.winbet-bg.com/api/en/sliders">
          <MainSlider title="title_en" description="description_en" button1="button_text1_en" button2="button_text2_en"/>
-      </StorageDataEn>
+      </StorageSliderEn>
       <CasinoBox 
         title="Lorem ipsum dolor"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

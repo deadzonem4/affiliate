@@ -1,25 +1,25 @@
 import React from 'react';
 import WaitPageBg from '../pages/bg/WaitPageBg.js';
 
-class StorageData extends React.Component {
+class StorageFooter extends React.Component {
 
 	constructor(props) {
     super(props);
     this.state = {
       loading : true,
-      ApiBg: [],
+      footer: [],
       url: this.props.dataLink,
     };
   }
   componentWillMount(){
-    sessionStorage.getItem('ApiBg') && this.setState({
-      ApiBg: JSON.parse(sessionStorage.getItem('ApiBg')),
+    sessionStorage.getItem('footer') && this.setState({
+      footer: JSON.parse(sessionStorage.getItem('footer')),
       loading: false
     })
         
   }
   componentDidMount(){
-    if (!sessionStorage.getItem('ApiBg')) {
+    if (!sessionStorage.getItem('footer')) {
       this.fetchData();
     }
 
@@ -32,10 +32,10 @@ class StorageData extends React.Component {
       })
     .then(api => {
       this.setState({ 
-        ApiBg: api,
+        footer: api,
         loading: false
       });
-      sessionStorage.setItem('ApiBg', JSON.stringify(this.state.ApiBg));
+      sessionStorage.setItem('footer', JSON.stringify(this.state.footer));
     })
     .catch(error => {
       console.log('error');
@@ -50,10 +50,10 @@ class StorageData extends React.Component {
     }
 	  return (
       <div>
-        {React.cloneElement(this.props.children, { ApiBg: this.state.ApiBg })}
+        {React.cloneElement(this.props.children, { footer: this.state.footer })}
       </div>
 	  );
 	}
 }
 
-export default StorageData;
+export default StorageFooter;
