@@ -12,7 +12,7 @@ const ErrorPage = (props) => {
 	      <div className="error-page">
 	      	<div className="container">
 	      	<div className="row">
-		      	<div className="col-6">
+		      	<div className="col-sm-6 error-content">
 							<h4>The page you were looking for have been moved, deleted or does not exist.</h4>
 							<p>Here are some helpful links instead:</p>
 							<Link  to="/">Home</Link>
@@ -20,7 +20,7 @@ const ErrorPage = (props) => {
 							<Link  to="/contact">Contacts</Link>
 							<Link  to="/f-a-q">FAQ</Link>
 						</div>
-						<div className="col-6">
+						<div className="col-sm-6 error-img-box">
 		      		<img src={errorImage} alt="winbet error"/>
 		      	</div>
 					</div>
