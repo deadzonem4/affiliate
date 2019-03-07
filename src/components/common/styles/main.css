@@ -583,12 +583,24 @@ textarea::-ms-input-placeholder {
   max-width: 750px;
   margin: 35px auto;
 }
-.single-news-slider .slide{
+.single-news-slider .slick-slide{
   padding: 0 8px;
 }
+.single-news-slider .slide{
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+}
 .single-news-slider-img{
-  height: 234px;
   cursor: pointer;
+  position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    margin: auto;
+    height: 100%!important;
+    width: auto!important;
 }
 .single-news-slider .slick-prev:before, .single-news-slider .slick-next:before{
   content: '';
@@ -620,6 +632,24 @@ textarea::-ms-input-placeholder {
 #viewerBackdrop button:focus{
   outline: none;
 }
+@media only screen and (max-width: 1199px){
+  .single-news-slider .slide{
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 991px){
+  .single-news-slider .slide{
+    height: 150px;
+  }
+  .single-news-slider .slick-slide{
+    padding: 0 2px;
+  }
+}
+@media only screen and (max-width: 575px){
+  .single-news-slider .slide{
+    height: 100px;
+  }
+}
 /*-------------------------------Breadcrumbs-----------------------------*/
 .breadcrumbs-box{
   display: flex;
@@ -637,16 +667,6 @@ textarea::-ms-input-placeholder {
 @media only screen and (max-width: 991px){
   .breadcrumbs-box a, .breadcrumbs-box span{
     font-size: 15px;
-  }
-}
-@media only screen and (max-width: 767px){
-  .breadcrumbs-box a, .breadcrumbs-box span{
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 460px){
-  .breadcrumbs-box{
-    display: none;
   }
 }
 /*-----------------------------------ProgressBars----------------------------*/

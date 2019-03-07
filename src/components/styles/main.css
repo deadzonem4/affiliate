@@ -21,6 +21,9 @@ footer{
 	display: inline-block;
 	margin: 20px 7px;
 }
+.partner-list li:last-of-type{
+  width: 100%;
+}
 .partner-list img{
 	max-height: 73px;
 }

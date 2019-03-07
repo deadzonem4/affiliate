@@ -8,6 +8,7 @@ import house from '../../images/payments/house.png';
 import easypay from '../../images/payments/easypay.png';
 import epay from '../../images/payments/epay.png';
 import cashterminal from '../../images/payments/cashterminal.png';
+import skrill from '../../images/payments/skrill.png';
 
 const Footer = (props) => {
 
@@ -21,13 +22,14 @@ const images = props.footer.map((data, index) =>
     <footer id="footer">
       <div className="container">
         <ul className="payment-list">
-          <li><img src={visa} alt="visa"/></li>
-          <li><img src={visaelectron} alt="visaelectron"/></li>
-          <li><img src={mastercard} alt="mastercard"/></li>
-          <li><img src={house} alt="house"/></li>
-          <li><img src={easypay} alt="easypay"/></li>
-          <li><img src={epay} alt="epay"/></li>
-          <li><img src={cashterminal} alt="cashterminal"/></li>
+          <li><img src={visa} alt="winbet visa"/></li>
+          <li><img src={visaelectron} alt="winbet visaelectron"/></li>
+          <li><img src={mastercard} alt="winbet mastercard"/></li>
+          <li><img src={house} alt="winbet house"/></li>
+          <li><img src={easypay} alt="winbet easypay"/></li>
+          <li><img src={epay} alt="winbet epay"/></li>
+          <li><img src={cashterminal} alt="winbet cashterminal"/></li>
+          <li><img src={skrill} alt="winbet skrill"/></li>
         </ul>
         <h4 className="list-title">Официални партньори:</h4>
         <ul className="partner-list">
