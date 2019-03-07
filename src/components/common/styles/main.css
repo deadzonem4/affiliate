@@ -629,22 +629,12 @@ textarea::-ms-input-placeholder {
 .breadcrumbs-box a, .breadcrumbs-box span{
   background-color: transparent!important;
   color: #989898;
-  font-size: 16px;
+  font-size: 15px;
 }
 .breadcrumbs-box span{
   margin: 0 5px;
 }
 @media only screen and (max-width: 991px){
-  .breadcrumbs-box a, .breadcrumbs-box span{
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 767px){
-  .breadcrumbs-box a, .breadcrumbs-box span{
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 460px){
   .breadcrumbs-box{
     display: none;
   }

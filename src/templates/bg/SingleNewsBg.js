@@ -1,8 +1,9 @@
 import React from "react";
 import SingleNewsSlider from '../../components/common/SingleNewsSlider.js';
 import ShareButtons from '../../components/common/ShareButtons.js';
-import LatestNews from './LatestNews.js';
+// import LatestNews from './LatestNews.js';
 import WaitPageBg from '../../pages/bg/WaitPageBg.js';
+import NewsErrorPage from '../../pages/bg/NewsErrorPage.js';
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
@@ -15,15 +16,33 @@ class SingleNewsBg extends React.Component {
     super(props);
     this.state = {
       loading : true,
-      isOpen: false
+      isOpen: false,
+      newsId: 0
     };
-    this.closeImgsViewer = this.closeImgsViewer.bind(this)
+    this.closeImgsViewer = this.closeImgsViewer.bind(this);
+    this.nextNews = this.nextNews.bind(this);
+    this.latestClick = this.latestClick.bind(this)
   }
   componentWillMount(){
     this.setState({ 
       loading: false
     });
     window.scrollTo(0, 0);
+    localStorage.getItem('curNews') && this.setState({
+      newsId: localStorage.getItem('curNews')
+    });
+  }
+  nextNews(){
+    localStorage.setItem('curNews', `${parseInt(this.state.newsId) + 1}`);
+    localStorage.getItem('curNews') && this.setState({
+      newsId: localStorage.getItem('curNews')
+    });
+  }
+  latestClick(event) {
+    localStorage.setItem('curNews', event.target.getAttribute('value'));
+    localStorage.getItem('curNews') && this.setState({
+      newsId: localStorage.getItem('curNews')
+    });
   }
   closeImgsViewer () {
     this.setState({
@@ -36,14 +55,22 @@ class SingleNewsBg extends React.Component {
     })
   }
   render() {
-    const newsIndex = parseInt(this.props.param);
-    const next = newsIndex + 1;
-    const imgLink = "https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.props.param-1].image_name;
-    const title = this.props.api[this.props.param-1].title_bg;
-    const subTitle = this.props.api[this.props.param-1].subtitle_bg;
+    const url = window.location.href.split("/");
+    const lastSegment = url.pop() || url.pop();
+    console.log(lastSegment);
+    const next = parseInt(this.state.newsId);
+    const imgLink = "https://dev.winbet-bg.com/uploads/images/news/" + this.props.api[this.state.newsId].image_name;
+    const title = this.props.api[this.state.newsId].title_bg;
+    const subTitle = this.props.api[this.state.newsId].subtitle_bg;
+    console.log(subTitle);
   	if (this.state.loading) {
       return (
         <WaitPageBg/>
+      );
+    }
+    else if(subTitle !== lastSegment){
+      return (
+        <NewsErrorPage/>
       );
     }
     return (
@@ -53,12 +80,12 @@ class SingleNewsBg extends React.Component {
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">
-              <span>{this.props.api[this.props.param-1].date}</span>
+              <span>{this.props.api[this.state.newsId].date}</span>
             </div>
             <div className="single-article-navigation">
               <div className="single-article-navigation-buttons">
                 <Link  to="/news">{"< Обратно"}</Link>
-                <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/news" : "/article"+next}>{next > this.props.api.length ? "" : "Следваща >" }</Link>
+                <Link onClick={this.nextNews} className={next + 1 >= this.props.api.length ? "emty-block" : "" } to={next + 1 >= this.props.api.length ? this.props.api[next].subtitle_bg : this.props.api[next+1].subtitle_bg}>{next > this.props.api.length ? "" : "Следваща >" }</Link>
               </div>
               <ShareButtons link={window.location.href}/>
             </div>
@@ -79,9 +106,9 @@ class SingleNewsBg extends React.Component {
                     closeBtnTitle={"close"}
                     showImgCount={false}
                   />
-                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={imgLink} alt={this.props.api[this.props.param-1].image_name}/>
-                  <div dangerouslySetInnerHTML={{__html: this.props.api[this.props.param-1].description_bg}} />
-                  <SingleNewsSlider info={this.props.api[this.props.param-1].photos}/>
+                  <img onClick={(e) => this.openImgsViewer()} className="single-article-main-image" src={imgLink} alt={this.props.api[this.state.newsId].image_name}/>
+                  <div dangerouslySetInnerHTML={{__html: this.props.api[this.state.newsId].description_bg}} />
+                  <SingleNewsSlider info={this.props.api[this.state.newsId].photos}/>
                 </div>
                 <div className="single-article-about">
                   <h4>За Winbet</h4>
@@ -93,7 +120,26 @@ class SingleNewsBg extends React.Component {
                 </div>
               </article>
               <div className="col-md-3 latest-news-sidebar">
-                <LatestNews data={this.props.api}/>
+                <div className="single-article-sidebar">
+                  <Link onClick={this.latestClick} to={{pathname: this.props.api[0].subtitle_bg}}>
+                    <div className="single-sidebar-article">
+                      <span>{this.props.api[0].date}</span>
+                      <h4 value="0">{this.props.api[0].title_bg}</h4>
+                    </div>
+                  </Link>
+                  <Link onClick={this.latestClick} to={{pathname: this.props.api[1].subtitle_bg}}>
+                    <div className="single-sidebar-article">
+                      <span>{this.props.api[1].date}</span>
+                      <h4 value="1">{this.props.api[1].title_bg}</h4>
+                    </div>
+                  </Link>
+                  <Link onClick={this.latestClick} to={{pathname: this.props.api[2].subtitle_bg}}>
+                    <div className="single-sidebar-article">
+                      <span>{this.props.api[2].date}</span>
+                      <h4 value="2">{this.props.api[2].title_bg}</h4>
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

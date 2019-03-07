@@ -2,29 +2,42 @@ import React from "react";
 import {Link} from "react-router-dom";
 import '../styles/main.css';
 
-const LatestNews = (props) => {
-  return (
-    <div className="single-article-sidebar">
-      <Link  to={{pathname: `/article${1}`}}>
-        <div className="single-sidebar-article">
-          <span>{props.data[0].date}</span>
-          <h4>{props.data[0].title_bg}</h4>
-        </div>
-      </Link>
-      <Link  to={{pathname: `/article${2}`}}>
-        <div className="single-sidebar-article">
-          <span>{props.data[1].date}</span>
-          <h4>{props.data[1].title_bg}</h4>
-        </div>
-      </Link>
-      <Link  to={{pathname: `/article${3}`}}>
-        <div className="single-sidebar-article">
-          <span>{props.data[2].date}</span>
-          <h4>{props.data[2].title_bg}</h4>
-        </div>
-      </Link>
-    </div>
-  );
+class LatestNews extends React.Component {
+  constructor(props) {
+    super(props);
+    this.latestClick = this.latestClick.bind(this)
+  }
+  latestClick(event) {
+    localStorage.setItem('curNews', event.target.getAttribute('value'));
+     console.log(this.staste.newsId);
+  }
+  render() {
+    return (
+      <div className="single-article-sidebar">
+        <Link onClick={this.latestClick} to={{pathname: this.props.data[0].title_bg}}>
+          <div className="single-sidebar-article">
+            <span>{this.props.data[0].date}</span>
+            <h4 value="0">{this.props.data[0].title_bg}</h4>
+          </div>
+        </Link>
+        <Link onClick={this.latestClick} to={{pathname: this.props.data[1].title_bg}}>
+          <div className="single-sidebar-article">
+            <span>{this.props.data[1].date}</span>
+            <h4 value="1">{this.props.data[1].title_bg}</h4>
+          </div>
+        </Link>
+        <Link onClick={this.latestClick} to={{pathname: this.props.data[2].title_bg}}>
+          <div className="single-sidebar-article">
+            <span>{this.props.data[2].date}</span>
+            <h4 value="2">{this.props.data[2].title_bg}</h4>
+          </div>
+        </Link>
+      </div>
+    );
+  }
 }
 
-export default LatestNews
+export default LatestNews;
+
+
+

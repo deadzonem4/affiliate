@@ -89,7 +89,7 @@ class App extends Component {
           <Route path="/responsible-betting/" render={(props) => <BettingPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route path="/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path={"/article:index"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/:newsTitle"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>
