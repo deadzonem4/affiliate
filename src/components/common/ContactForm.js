@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import {Modal, ModalHeader} from 'reactstrap';
+
 class ContactForm extends Component {
   constructor (props) {
     super(props);

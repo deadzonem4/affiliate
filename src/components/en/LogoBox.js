@@ -10,10 +10,11 @@ const LogoBox = (props) => {
   return (
     <div className="logo-box">
       <div className="logo-box-content">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to={props.lang + "/"}>
           <img className="logo" src={logo}  alt="Affiliate"/>
         </Link>
-        <MobileMenu 
+        <MobileMenu
+          lang="/en" 
           home="Home"
           about="About us"
           news="News"

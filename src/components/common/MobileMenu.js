@@ -39,13 +39,13 @@ class MobileMenu extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink tag={RRNavLink} className="nav-link" to="/" activeClassName="active" exact path="/">{this.props.home}</NavLink>
+                <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/"} activeClassName="active" exact path="/">{this.props.home}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} className="nav-link" to="/news" activeClassName="active" exact path="/news">{this.props.news}</NavLink>
+                <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/news"} activeClassName="active" exact path="/news">{this.props.news}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} className="nav-link" to="/about-us" activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
+                <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/about-us"} activeClassName="active" exact path="/about-us">{this.props.about}</NavLink>
               </NavItem>
               <NavItem>
                 <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
@@ -53,15 +53,15 @@ class MobileMenu extends React.Component {
                     {this.props.information}
                   </DropdownToggle>
                   <DropdownMenu>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/terms-and-coditions" activeClassName="active" exact path="/terms-and-coditions">{this.props.terms}</NavLink>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/commission" activeClassName="active" exact path="/commission">{this.props.commission}</NavLink>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/f-a-q" activeClassName="active" exact path="/f-a-q">{this.props.faq}</NavLink>
-                      <NavLink tag={RRNavLink} className="nav-link" to="/responsible-betting" activeClassName="active" exact path="/responsible-betting">{this.props.betting}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/terms-and-coditions"} activeClassName="active" exact path="/terms-and-coditions">{this.props.terms}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/commission"} activeClassName="active" exact path="/commission">{this.props.commission}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/f-a-q"} activeClassName="active" exact path="/f-a-q">{this.props.faq}</NavLink>
+                      <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/responsible-betting"} activeClassName="active" exact path="/responsible-betting">{this.props.betting}</NavLink>
                   </DropdownMenu>
                 </Dropdown>
               </NavItem>
               <NavItem>
-                <NavLink tag={RRNavLink} className="nav-link" to="/contact" activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
+                <NavLink tag={RRNavLink} className="nav-link" to={this.props.lang + "/contact"} activeClassName="active" exact path="/contact">{this.props.contact}</NavLink>
               </NavItem>
               <NavItem>
                 <a className="nav-link" rel="noopener noreferrer" target="_blank" href="https://affiliates.winbetaffiliates.bg/signup.php">

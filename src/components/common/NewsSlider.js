@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import './styles/main.css';
 import { Link } from 'react-router-dom';
 
-
-
 class NewsSlider extends React.Component {
 
   render() {

@@ -9,6 +9,7 @@ const Header = (props) => {
       <header>
         <MainMenu
         home="Начало"
+        lang="/bg"
         about="За нас"
         information="Информация"
         news="Новини"
@@ -18,7 +19,7 @@ const Header = (props) => {
         faq="Често задавани въпроси"
         betting="Отговорно залагане"
         />
-        <LogoBox buttonReg="Регистрация" buttonLog="Вход"/>
+        <LogoBox buttonReg="Регистрация" buttonLog="Вход" lang="/bg"/>
       </header>
     );
 }

@@ -57,8 +57,8 @@ class SingleNewsBg extends React.Component {
             </div>
             <div className="single-article-navigation">
               <div className="single-article-navigation-buttons">
-                <Link  to="/news">{"< Обратно"}</Link>
-                <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/news" : "/article"+next}>{next > this.props.api.length ? "" : "Следваща >" }</Link>
+                <Link  to="/bg/news">{"< Обратно"}</Link>
+                <Link className={next > this.props.api.length ? "emty-block" : "" } to={next > this.props.api.length ? "/bg/news" : "/bg/news"+next}>{next > this.props.api.length ? "" : "Следваща >" }</Link>
               </div>
               <ShareButtons link={window.location.href}/>
             </div>

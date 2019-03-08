@@ -59,37 +59,40 @@ class App extends Component {
     });
   }
   render() {
+    const url = window.location.href.split("/");
     return (
       <div>
-      {this.state.language === "en" ?
+      {url[5] === "en" ?
       <HashRouter>
         <Switch>
-          <Route exact path="/" render={(props) => <HomePage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/about-us/" render={(props) => <AboutPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/information/" render={(props) => <InfoPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/terms-and-coditions/" render={(props) => <TermsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/commission/" render={(props) => <CommissionsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/f-a-q/" render={(props) => <FaqPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/responsible-betting/" render={(props) => <BettingPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/news/" render={(props) => <NewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/contact/" render={(props) => <ContactPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path={"/article:index"} render={(props) => <SingleNewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+        <Route exact path={"/"} render={(props) => <HomePage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route exact path={"/en/"} render={(props) => <HomePage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/about-us/" render={(props) => <AboutPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/information/" render={(props) => <InfoPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/terms-and-coditions/" render={(props) => <TermsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/commission/" render={(props) => <CommissionsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/f-a-q/" render={(props) => <FaqPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/responsible-betting/" render={(props) => <BettingPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/news/" render={(props) => <NewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/en/contact/" render={(props) => <ContactPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/en/news:index"} render={(props) => <SingleNewsPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>
       :
       <HashRouter>
         <Switch>
-          <Route exact path="/" render={(props) => <HomePageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/about-us/" render={(props) => <AboutPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/information/" render={(props) => <InfoPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/terms-and-coditions/" render={(props) => <TermsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/commission/" render={(props) => <CommissionsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/f-a-q/" render={(props) => <FaqPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/responsible-betting/" render={(props) => <BettingPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path="/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
-          <Route path={"/article:index"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+         <Route exact path="/" render={(props) => <HomePageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route exact path={"/bg/"} render={(props) => <HomePageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/about-us/" render={(props) => <AboutPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/information/" render={(props) => <InfoPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/terms-and-coditions/" render={(props) => <TermsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/commission/" render={(props) => <CommissionsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/f-a-q/" render={(props) => <FaqPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/responsible-betting/" render={(props) => <BettingPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/news/" render={(props) => <NewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path="/bg/contact/" render={(props) => <ContactPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
+          <Route path={"/bg/news:index"} render={(props) => <SingleNewsPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>
           <Route render={(props) => <ErrorPageBg {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/> />
         </Switch>
       </HashRouter>

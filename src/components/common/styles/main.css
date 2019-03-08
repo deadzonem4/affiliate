@@ -85,7 +85,7 @@
   height: 41px;
   padding: 9px 10px;
 }
-.lang-bar span:last-of-type{
+.lang-bar a:last-of-type span{
   margin: 0;
 }
 .lang-bar span:hover{
