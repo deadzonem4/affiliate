@@ -1,12 +1,14 @@
 import React from 'react';
 import MainLayout from '../../layout/bg/MainLayout.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
+import Language from '../../components/common/Language.js';
 
 const InfoPageBg = (props) => {
   return (
   	<div>
-      <MainLayout bg={props.languageBg} en={props.languageEn}>
-      	<Breadcrumbs levelOne="Начало" levelTwo="Информация" levelTwoLink="/information"/>
+      <MainLayout>
+      	<Language bg={props.languageBg} en={props.languageEn} urlBg="/bg/information" urlEn="/en/information"/>
+      	<Breadcrumbs levelOne="Начало" levelTwo="Информация" levelTwoLink="/bg/information"/>
 				<div className="container">
 		      <div className="about-content">
 		        <h2 className="dark-title">Информация</h2>

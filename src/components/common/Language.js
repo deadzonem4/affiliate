@@ -6,12 +6,12 @@ const Language = (props) => {
     
   return (
     <div className="lang-bar">
-<Link  to="/bg/">
-    	<span onClick={props.bg}>BG</span>
-</Link>
-<Link  to="/en/">
-      <span onClick={props.en}>EN</span>
-</Link>
+			<Link  to={props.urlBg}>
+    		<span onClick={props.bg}>BG</span>
+			</Link>
+			<Link  to={props.urlEn}>
+      	<span onClick={props.en}>EN</span>
+			</Link>
     </div>
   );
 }

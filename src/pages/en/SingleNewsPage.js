@@ -4,15 +4,15 @@ import SingleNews from '../../templates/en/SingleNews.js'
 import '../styles/main.css';
 import ApiData from '../../templates/ApiData.js';
 
-const SingleNewsPageBg = (props) => {
+const SingleNewsPage = (props) => {
 
   return (
-    <MainLayout bg={props.languageBg} en={props.languageEn}>
-          <ApiData dataLink="https://dev.winbet-bg.com/api/en/news">
-            <SingleNews param={props.match.params.index} />
-          </ApiData>
+    <MainLayout>
+      <ApiData dataLink="https://dev.winbet-bg.com/api/en/news">
+        <SingleNews languageBg={props.languageBg} languageEn={props.languageEn} param={props.match.params.index} />
+      </ApiData>
     </MainLayout>
   );
 }
 
-export default SingleNewsPageBg;
+export default SingleNewsPage;

@@ -62,7 +62,7 @@ class App extends Component {
     const url = window.location.href.split("/");
     return (
       <div>
-      {url[5] === "en" ?
+      {url[4] === "en" ?
       <HashRouter>
         <Switch>
         <Route exact path={"/"} render={(props) => <HomePage {...props} languageBg={this.langChangeBg = this.langChangeBg.bind(this)} languageEn={this.langChangeEn = this.langChangeEn.bind(this)} />}/>

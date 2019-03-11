@@ -8,6 +8,7 @@ import '../styles/main.css';
 import ImgsViewer from 'react-images-viewer'
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 import {ReactTitle} from 'react-meta-tags';
+import Language from '../../components/common/Language.js';
 
 class SingleNewsBg extends React.Component {
 
@@ -48,8 +49,9 @@ class SingleNewsBg extends React.Component {
     }
     return (
       <div>
+        <Language bg={this.props.languageBg} en={this.props.languageEn} urlBg={`/bg/news${newsIndex}`} urlEn={`/en/news${newsIndex}`}/>
         <ReactTitle title={"Winbet - " + title}/>
-        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/news" levelThree={title}/>
+        <Breadcrumbs levelOne="Начало" levelTwo="Новини" levelTwoLink="/bg/news" levelThree={title}/>
         <div className="single-atricle-page">
           <div className="container">
             <div className="single-news-title-date">

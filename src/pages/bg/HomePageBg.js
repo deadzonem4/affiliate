@@ -9,14 +9,16 @@ import ApiData from '../../templates/ApiData.js';
 import StorageSliderBg from '../../templates/StorageSliderBg.js';
 import '../styles/main.css';
 import {ReactTitle} from 'react-meta-tags';
+import Language from '../../components/common/Language.js';
 
 const HomePageBg = (props) => {
 
   return (
-    <MainLayout bg={props.languageBg} en={props.languageEn}>
+    <MainLayout>
+    	<Language bg={props.languageBg} en={props.languageEn} urlBg="/bg/" urlEn="/en/"/>
       <ReactTitle title={"Winbet - Начало"}/>
       <StorageSliderBg dataLink="https://dev.winbet-bg.com/api/bg/sliders">
-         <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
+        <MainSlider title="title_bg" description="description_bg" button1="button_text1_bg" button2="button_text2_bg"/>
       </StorageSliderBg>
 			<CasinoBox 
 				title="Примерен текст"

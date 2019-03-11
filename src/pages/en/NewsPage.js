@@ -8,11 +8,13 @@ import MainSlider from '../../components/en/MainSlider.js';
 import CasinoBox from '../../components/common/CasinoBox.js';
 import Breadcrumbs from '../../components/common/Breadcrumbs.js';
 import {ReactTitle} from 'react-meta-tags';
+import Language from '../../components/common/Language.js';
 
 const NewsPageBg = (props) => {
 
   return (
-    <MainLayout bg={props.languageBg} en={props.languageEn}>
+    <MainLayout>
+      <Language bg={props.languageBg} en={props.languageEn} urlBg="/bg/news" urlEn="/en/news"/>
       <ReactTitle title="Winbet - News"/>
       <StorageSliderEn dataLink="https://dev.winbet-bg.com/api/en/sliders">
          <MainSlider title="title_en" description="description_en" button1="button_text1_en" button2="button_text2_en"/>
@@ -25,7 +27,7 @@ const NewsPageBg = (props) => {
         secTwo="sport"
         secThree="casino live"
       />
-      <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/news"/>
+      <Breadcrumbs levelOne="Home" levelTwo="News" levelTwoLink="/en/news"/>
       <div className="news-page">
         <div className="container">
           <ApiData dataLink="https://dev.winbet-bg.com/api/en/news">
