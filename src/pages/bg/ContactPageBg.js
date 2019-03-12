@@ -16,11 +16,11 @@ const ContactPageBg = (props) => {
 				<ContactForm
           formId="contact-page-form"
           title ="Свържете се с нас"
-          subtitle = "Eлементарен примерен текст в печатарската индустрия"
+          subtitle = "Ако имате въпроси може да се свържете с нас като попълните и изпратите формата "
           button="Изпрати"
           name="Име"
           email="Имейл"
-          subject="Относно"
+          subject="Заглавие"
           message="Съобщение"
           succeed="Вашето съобщение е изпратено успешно!"
         />

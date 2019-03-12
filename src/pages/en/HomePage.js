@@ -57,11 +57,11 @@ const HomePage = (props) => {
       </ApiData>
 			<ContactForm
         title ="Contact us"
-        subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        subtitle = "If you have any questions, please contact us by filling in and submitting the form"
         button="Submit"
         name="Name"
         email="Email"
-        subject="Subject"
+        subject="Title"
         message="Message"
         succeed="Your message has been sent successfully!"
       />

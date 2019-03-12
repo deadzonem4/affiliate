@@ -262,7 +262,8 @@ footer{
 }
 .slider-register{
   display: inline-block;
-  padding: 14px 30px;
+  padding: 12px 28px;
+  border: solid 2px #c91f25;
   background-color: #c91f25;
   border-radius: 4px;
   font-size: 17px;
@@ -294,6 +295,7 @@ footer{
 .main-slider .slider-register:hover{
   background-color: #940f14;
   color: #fff;
+  border: solid 2px #940f14;
 }
 .main-slider .slick-slider{
   position: static;
