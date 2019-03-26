@@ -21,7 +21,7 @@ const HomePage = (props) => {
          <MainSlider title="title_en" description="description_en" button1="button_text1_en" button2="button_text2_en"/>
       </StorageSliderEn>
 			<CasinoBox 
-				title="Lorem ipsum dolor"
+				title="Our products"
 				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 					Aenean euismod bibendum laoreet."
 				secOne="casino"
@@ -29,23 +29,17 @@ const HomePage = (props) => {
 				secThree="casino live"
 			/>
 			<ServiceBox
-				title="Slogan Title"
-				description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+				title="Join our affiliate program!"
+				description="A variety of products and many opportunities"
 
-				box1Title="Box title 1"
-				box1Text="Lorem ipsum dolor sit amet, consectetur adipiscing 
-					elit. Aenean euismod bibendum laoreet. Proin gravida 
-					dolor sit amet lacus accumsan et viverra."
+				box1Title="Registration"
+				box1Text="Winbet's Affiliate Program offers you the highest quality products: slot games, live casino, sports stacks. Multiple payment methods, support and innovative software."
 
-				box2Title="Box title 2"
-				box2Text="Lorem ipsum dolor sit amet, consectetur adipiscing 
-					elit. Aenean euismod bibendum laoreet. Proin gravida 
-					dolor sit amet lacus accumsan et viverra."
+				box2Title="Advertisement"
+				box2Text="Winbet provides a wide variety of promotional materials to its partners. Reach new customers and grow together with us."
 
-				box3Title="Box title 3"
-				box3Text="Lorem ipsum dolor sit amet, consectetur adipiscing 
-					elit. Aenean euismod bibendum laoreet. Proin gravida 
-					dolor sit amet lacus accumsan et viverra."
+				box3Title="Earning"
+				box3Text="Provide your income through advertising. You receive a percentage of the funds played by the customers who have signed up through your ad. "
 			/>
 		  <ApiData dataLink="https://dev.winbet-bg.com/api/en/news-slider">
         <NewsSlider

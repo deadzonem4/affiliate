@@ -491,7 +491,7 @@ textarea::-ms-input-placeholder {
 .social-item a{
   color: #cf000d;
 }
-.social-text li, .social-text h4{
+.social-text li, .social-text h4, .social-text a{
   font-size: 13px;
   line-height: 1.69;
   text-align: left;
