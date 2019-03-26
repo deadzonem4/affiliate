@@ -32,7 +32,7 @@ class NewsSlider extends React.Component {
       <Slider {...settings} className="full-width-slider">
         {slides}
       </Slider>
-      <Link className="all-news" to="/news">
+      <Link className="all-news" to={this.props.link}>
           <span>{this.props.button}</span>
       </Link>
     </div>

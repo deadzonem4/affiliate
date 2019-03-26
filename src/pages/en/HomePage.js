@@ -22,8 +22,7 @@ const HomePage = (props) => {
       </StorageSliderEn>
 			<CasinoBox 
 				title="Our products"
-				text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-					Aenean euismod bibendum laoreet."
+				text="Become part of the Winbet family and take advantage of the chance of extra profit!"
 				secOne="casino"
 				secTwo="sport"
 				secThree="casino live"
@@ -43,6 +42,7 @@ const HomePage = (props) => {
 			/>
 		  <ApiData dataLink="https://dev.winbet-bg.com/api/en/news-slider">
         <NewsSlider
+        	link="/en/news"
 					title="Latest news"
 					button="All news"
 					date="date"

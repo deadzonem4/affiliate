@@ -22,8 +22,7 @@ const HomePageBg = (props) => {
       </StorageSliderBg>
 			<CasinoBox 
 				title="Нашите продукти"
-				text="Lorem Ipsum е елементарен примерен текст, 
-					използван в печатарската и типографската индустрия."
+				text="Станете част от семейството на Winbet и се възползвайте от шанса за допълнителна печалба!"
 				secOne="казино"
 				secTwo="спорт"
 				secThree="казино на живо"
@@ -47,6 +46,7 @@ const HomePageBg = (props) => {
 					button="Всички новини"
 					date="date"
 					description="short_description_bg"
+					link="/bg/news"
 				/>
       </ApiData>
 			<ContactForm
