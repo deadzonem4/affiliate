@@ -87,7 +87,8 @@ class SingleNews extends React.Component {
                 </div>
                 <div className="single-article-about">
                   <h4>About Winbet</h4>
-                  <p>For almost a decade, the success of the WINBET casino chain has been a continuous improvement in the products and services we offer. Modern, cozy, gaming machines from the world's finest manufacturers, our halls offer top-level service and numerous bonus games designed to suit the needs of the customer. The WINBET team guarantees its guests excellent service during their stay. Once visited the casino, customers remain our friends and come back permanently. Our goal is not only to meet their needs but also to surpass their expectations. The WINBET chain grows and develops among the first, thanks to our listening to your personal needs and preferences.
+                  <p>Winbet is a Bulgarian casino chain and a licensed bookmaker. The gaming halls have twenty years of history behind, with their total number now being 37, and by 2015 the company has been successfully developing its online platform.
+                  The main mission of Winbet's management and staff is not only to justify but also to exceed customer expectations, and the success of the brand lies in the continuous improvement of the products and services offered.
                   </p>
                 </div>
               </article>
